@@ -116,6 +116,20 @@ const future = () => {
     };
   }, [activePopup]); // Only run effect when popup changes
 
+  // ESC key functionality to close popup
+  useEffect(() => {
+    function handleEscapeKey(event: KeyboardEvent) {
+      if (event.key === 'Escape' && activePopup) {
+        closePopup();
+      }
+    }
+
+    document.addEventListener('keydown', handleEscapeKey);
+
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [activePopup]);
 
   useEffect(() => {
     // **MODIFIED: Only run pink box animation if user came from flashcard page**
@@ -333,8 +347,8 @@ const future = () => {
 
       <Header />
 
-      {/* Pink Box Animation */}
-      {showPinkBox && (
+      {/* Pink Box Animation - **MODIFIED: Only show if came from flashcard** */}
+      {showPinkBox && cameFromFlashcard && (
         <div className="fixed inset-0 z-50 pointer-events-none">
           <div className="pink-box-animation absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[#FFD1DF] opacity-90"></div>
         </div>
