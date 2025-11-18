@@ -338,7 +338,7 @@ const Sustainable = () => {
         <div className="absolute inset-0">
           <img
             src={sustain}
-            alt="Industrial welding background"
+            alt="Sustainable Banner"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0"></div>
@@ -377,28 +377,28 @@ const Sustainable = () => {
               <a href="/flashcards" className="cursor-pointer block">
                 <img
                   src={accaflashcard}
-                  alt="Industrial welding background"
+                  alt="Acca Flashcards"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
               <a href="" className="cursor-pointer block img-class">
                 <img
                   src={sustaindark}
-                  alt="Industrial welding background"
+                  alt="Sustainable Business"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
               <a href="/innovative" className="cursor-pointer block">
                 <img
                   src={inno}
-                  alt="Industrial welding background"
+                  alt="Innovative Tech"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
               <a href="/future" className="cursor-pointer block img-class">
                 <img
                   src={img4}
-                  alt="Industrial welding background"
+                  alt="Future SKills"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
