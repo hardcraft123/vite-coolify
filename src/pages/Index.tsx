@@ -60,7 +60,7 @@ const Index = () => {
         <div className="absolute inset-0">
           <img
             src={Banner}
-            alt="Industrial welding background"
+            alt="Home Page Banner"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0"></div>
@@ -108,7 +108,7 @@ const Index = () => {
               <div className="aspect-video relative">
                 <img
                   src={upskills2}
-                  alt="Industrial welding background"
+                  alt="Interview Prep Series"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -149,7 +149,7 @@ const Index = () => {
               <div className="aspect-video relative">
                 <img
                   src={upskills1}
-                  alt="Industrial welding background"
+                  alt="ACCA Flashcards"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -205,7 +205,7 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={optimized}
-                  alt="Industrial welding background"
+                  alt="Optimised interview readiness"
                   className="object-cover opacity-100" style={{}}
                 />
               </div>
@@ -218,7 +218,7 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={impactful}
-                  alt="Industrial welding background"
+                  alt="Impactful personal branding"
                   className="object-cover opacity-100" style={{}}
                 />
               </div>
@@ -231,7 +231,7 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={adaptive}
-                  alt="Industrial welding background"
+                  alt="Flexible and analytical thinking"
                   className="object-cover opacity-100" style={{}}
                 />
               </div>
@@ -244,7 +244,7 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={effective}
-                  alt="Industrial welding background"
+                  alt="Effective communication"
                   className="object-cover opacity-100" style={{}}
                 />
               </div>
@@ -258,7 +258,7 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={ethical}
-                  alt="Industrial welding background"
+                  alt="Ethical decision-making"
                   className="object-cover opacity-100" style={{}}
                 />
               </div>
@@ -272,7 +272,7 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={ethical}
-                  alt="Industrial welding background"
+                  alt="Ethical decision-making"
                   className="object-cover opacity-100" style={{}}
                 />
               </div>
