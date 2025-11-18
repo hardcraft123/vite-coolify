@@ -36,7 +36,7 @@ const Flashcards = () => {
                 <div className="absolute inset-0">
                     <img
                         src={flashcard}
-                        alt="Industrial welding background"
+                        alt="Flashcard Page Banner"
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0"></div>
@@ -164,7 +164,7 @@ const Flashcards = () => {
                                 >
                                     <img
                                         src={future}
-                                        alt="Future skills"
+                        alt="Future skills"
                                         className="absolute inset-0 w-full h-full object-cover"
                                     />
                                 </div>
