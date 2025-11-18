@@ -359,7 +359,7 @@ const future = () => {
         <div className="absolute inset-0">
           <img
             src={futureskillsbanner}
-            alt="Industrial welding background"
+            alt="Future Skills Banner"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0"></div>
@@ -397,28 +397,28 @@ const future = () => {
               <a href="/flashcards" className="cursor-pointer block">
                 <img
                   src={accaflashcard}
-                  alt="Industrial welding background"
+                  alt="Acca Flashcards"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
               <a href="/sustainable" className="cursor-pointer block img-class">
                 <img
                   src={sustainlight}
-                  alt="Industrial welding background"
+                  alt="Sustainable Business"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
               <a href="/innovative" className="cursor-pointer block">
                 <img
                   src={inno}
-                  alt="Industrial welding background"
+                  alt="Innovative Tech"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
               <a href="#" className="cursor-pointer block img-class">
                 <img
                   src={futuredark}
-                  alt="Industrial welding background"
+                  alt="Future SKills"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
