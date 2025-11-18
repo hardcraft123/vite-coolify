@@ -49,6 +49,7 @@ const Interview = () => {
 
     const videos = [
         {
+            id: "video1",
             img: Impactfulcv,
             title: "Create an impactful CV",
             desc: "Craft a CV that stands out and showcases your skills and experience.",
@@ -69,6 +70,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/6-liW6XjIHI", // embed format 
         },
         {
+            id: "video2",
             img: firstimpression,
             title: "Make a great first impression",
             desc: "Learn how to build confidence and present yourself professionally for interviews.",
@@ -76,6 +78,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/La_bgTB2KpQ", // embed format
         },
         {
+            id: "video3",
             img: linkedin,
             title: "Crafting a strong LinkedIn profile",
             desc: "Learn to craft a powerful LinkedIn profile that gets you noticed.",
@@ -83,6 +86,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube-nocookie.com/embed/VOj5X9UM6u0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=11", // embed format
         },
         {
+            id: "video4",
             img: dressing,
             title: "Dressing for interview success",
             desc: "Discover how the right attire and grooming can boost your confidence.",
@@ -90,6 +94,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/HWGRJMSFNtQ", // embed format
         },
         {
+            id: "video5",
             img: crafting1,
             title: "Crafting a strong introduction",
             desc: "Learn to craft an introduction that highlights your value and makes an impact.",
@@ -97,6 +102,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/5oAyw8_wkJA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=9", // embed format
         },
         {
+            id: "video6",
             img: questions1,
             title: " Questions on challenges faced",
             desc: "Learn to use the CAR model to answer tough questions with confidence.",
@@ -118,6 +124,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/_yC-krL_pFk?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=8", // embed format
         },
         {
+            id: "video7",
             img: stregnth,
             title: "Share strengths and growth areas",
             desc: "Learn to be authentic and show growth when discussing strengths and weaknesses.",
@@ -125,6 +132,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/x1dczGAiAdM?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=7", // embed format
         },
         {
+            id: "video8",
             img: learning,
             title: "Speak with impact about your learning",
             desc: "Learn to use the DLA model to showcase your skills and learning with impact.",
@@ -143,6 +151,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/z6jc1EWAdJM?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=1", // embed format
         },
         {
+            id: "video9",
             img: company,
             title: "Align with company values",
             desc: "Learn the KAD model to showcase your knowledge, attitude and drive.",
@@ -162,6 +171,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/2GlePBy_rNs?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=5", // embed format
         },
         {
+            id: "video10",
             img: conversation,
             title: "Navigate salary and growth conversations",
             desc: "Learn to navigate salary and career growth conversations with confidence.",
@@ -169,13 +179,15 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/Vt-3DNffKqY?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=6", // embed format
         },
         {
+            id: "video11",
             img: expertise,
             title: "Address questions beyond your expertise",
             desc: "Learn to show your adaptability and growth mindset in an interview.",
 
             youtubeUrl: "https://www.youtube.com/embed/Oiu77R4y6LA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=4", // embed format
         },
-        {       
+        {
+            id: "video12",
             img: asking2,
             title: "Ask the right questions",
             desc: "Learn what questions to ask in an interview to show initiative.",
@@ -183,6 +195,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/bAuMjFsX1b0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=3", // embed format
         },
         {
+            id: "video13",
             img:practice,
             title: "Top interview practice tips",
             desc: "Master your interview with our step-by-step guide to effective practice.",
@@ -190,6 +203,7 @@ const Interview = () => {
             youtubeUrl: "https://www.youtube.com/embed/sg3mZQaniF0", // embed format
         },
         {
+            id: "video14",
             img:reflect,
             title: "Reflect after your interview",
             desc: "Learn to manage post-interview stress and turn waiting into learning.",
@@ -219,7 +233,7 @@ const Interview = () => {
                 <div className="absolute inset-0">
                     <img
                         src={interviewbanner}
-                        alt="Industrial welding background"
+                        alt="Interview Page Banner"
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0"></div>
@@ -267,7 +281,7 @@ const Interview = () => {
                             <a href="/flashcards" className="cursor-pointer block">
                                 <img
                                     src={accaflashcard}
-                                    alt="Industrial welding background"
+                                    alt="ACCA Flashcards"
                                     className="w-full h-full object-cover ips-image"
                                 />
                             </a>
