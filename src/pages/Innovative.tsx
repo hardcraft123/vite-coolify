@@ -345,7 +345,7 @@ const Innovative = () => {
         <div className="absolute inset-0">
           <img
             src={innobanner}
-            alt="Industrial welding background"
+            alt="Innovative Banner"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0"></div>
@@ -383,28 +383,28 @@ const Innovative = () => {
               <a href="/flashcards" className="cursor-pointer block">
                 <img
                   src={accaflashcard}
-                  alt="Industrial welding background"
+                  alt="Acca Flashcards"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
               <a href="/sustainable" className="cursor-pointer block img-class">
                 <img
                   src={sustain10}
-                  alt="Industrial welding background"
+                  alt="Sustainable Business"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
               <a href="#" className="cursor-pointer block">
                 <img
                   src={innovativedark}
-                  alt="Industrial welding background"
+                  alt="Innovative Tech"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
               <a href="/future" className="cursor-pointer block img-class">
                 <img
                   src={future1}
-                  alt="Industrial welding background"
+                  alt="Future SKills"
                   className="w-full h-full object-cover ips-image"
                 />
               </a>
