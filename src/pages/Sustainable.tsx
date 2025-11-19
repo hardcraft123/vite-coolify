@@ -138,6 +138,7 @@ const Sustainable = () => {
       title: "What is Sustainable Business?",
       description: "Sustainable finance refers to financial tools and investments that support environmentally sustainable and socially responsible business practices. It promotes long-term value by integrating economic viability, social equity, and environmental protection into financial decision making.",
       image: rightbanner,
+      altText: "Aerial view of a large solar panel farm covering rolling hills at sunset, illustrating sustainable finance.", // ✅ ADDED: Separate alt text for What tab
       downloadId: "sbdf1",
       learnMoreId: "sblm1",
       downloadLink: swflashcard1, // What tab download link
@@ -163,6 +164,7 @@ const Sustainable = () => {
       title: "Why the need to implement sustainability?",
       description: "Climate and sustainability are significant drivers for organisations, both large and small. As governments recognise the need to address the climate emergency, organisations must respond with their own plans to achieve carbon neutrality, net-zero, or similar defined targets.",
       image: why,
+      altText: "Aerial view of a dense, healthy mangrove forest winding through blue-green waterways.", // ✅ ADDED: Separate alt text for Why tab
       downloadId: "sbdf2",
       learnMoreId: "sblm2",
       downloadLink: swhyflashcard1, // You can replace this with why-specific PDF when available
@@ -188,6 +190,7 @@ const Sustainable = () => {
       title: "Who creates the ESG framework?",
       description: "Accountants, in collaboration with sustainability leads and senior leadership, play a key role in creating ESG frameworks. They define material risks, set measurable KPIs, and ensure transparent disclosures, aligning ESG with strategy, reporting standards and investor expectations.",
       image: who,
+      altText: "Three colleagues in professional attire are discussing a topic during an office meeting.", // ✅ ADDED: Separate alt text for Who tab
       downloadId: "sbdf3",
       learnMoreId: "sblm3",
       downloadLink: swhoflashcard1, // You can replace this with who-specific PDF when available
@@ -207,6 +210,7 @@ const Sustainable = () => {
       title: "Where does accountancy play a role in ESG?",
       description: "Accountants are central to the ESG journey. They provide the frameworks, assurance and reporting expertise needed to drive meaningful sustainability outcomes. Their work touches strategy, risk, compliance, and decision support.",
       image: where,
+      altText: "A worker in a navy jacket holds a tablet, appearing to inspect a row of solar panels or industrial equipment.", // ✅ ADDED: Separate alt text for Where tab
       downloadId: "sbdf4",
       learnMoreId: "sblm4",
       downloadLink: swhflashcard1, // You can replace this with where-specific PDF when available
@@ -232,6 +236,7 @@ const Sustainable = () => {
       title: "How do organisations embed sustainability?",
       description: "Organisations embed sustainability by aligning ESG goals with strategy, ensuring governance oversight, using credible data, adopting green finance, and building team capabilities. Finance professionals play a key role in integrating ESG across planning, risk and reporting.",
       image: How,
+      altText: "Close-up of a finger pointing at complex numerical data on a spreadsheet or financial report.", // ✅ ADDED: Separate alt text for How tab
       downloadId: "sbdf5",
       learnMoreId: "sblm5",
       downloadLink: shflashcard1, // You can replace this with how-specific PDF when available
@@ -482,9 +487,10 @@ const Sustainable = () => {
                 {/* Right Content - Image with Interactive Icons */}
                 <div className="relative">
                   <div className="relative overflow-hidden">
+                    {/* ✅ UPDATED: Changed alt from content.title to content.altText */}
                     <img
                       src={content.image}
-                      alt={content.title}
+                      alt={content.altText}
                       className="w-full h-64 object-cover image-height"
                     />
 
