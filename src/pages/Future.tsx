@@ -174,6 +174,7 @@ const future = () => {
       title: "What are the key qualities of a finance leader?",
       description: "To lead through uncertainty and complexity, today's CFOs must cultivate five integrative thinking capabilities: continually becoming, empathising, exploring, co-creating, and empowering. These interconnected capabilities support leadership that is adaptive, inclusive and value-driven.",
       image: what111,
+      altText: "Aerial view of numerous small sailboats navigating across blue water, symbolising leadership through uncertainty.", // ✅ UPDATED: Separate alt text
       downloadId: "fsdf1",
       learnMoreId: "fslm1",
       downloadLink: fwhatflashcard,
@@ -194,6 +195,7 @@ const future = () => {
       title: "Why must a future-fit CFO be adaptable?",
       description: "The future-fit CFO must be adaptable to effectively guide their organisation through complex, interconnected risks while identifying new opportunities. \nAs custodians of critical strategic information, adaptable CFOs are better equipped to ensure transparency, drive agile decision-making, and uphold accountability in a rapidly changing business landscape.",
       image: why111,
+      altText: "Panoramic aerial view of a brightly lit, complex coastal city skyline at dusk, representing global complexity.", // ✅ UPDATED: Separate alt text
       downloadId: "fsdf2",
       learnMoreId: "fslm2",
       downloadLink: fwhyflashcard,
@@ -214,6 +216,7 @@ const future = () => {
       title: "Who are the key recipients of an organisation's value?",
       description: "Finance leaders must consider a broad range of stakeholders who benefit from the organisation's performance. These include investors, customers, employees, communities and regulators. Creating sustainable value across all groups is fundamental to long-term business success and responsible leadership.",
       image: who111,
+      altText: "A team of hikers ascending a snowy mountain ridge, representing stakeholders working towards a common goal.", // ✅ UPDATED: Separate alt text
       downloadId: "fsdf3",
       learnMoreId: "fslm3",
       downloadLink: fwhoflashcard,
@@ -234,6 +237,7 @@ const future = () => {
       title: "Where are finance professionals' roles changing?",
       description: "CFOs are expanding their influence across eight critical areas including strategy and business acumen, risk and control, technology and data, leadership, supply chain, investor management, consulting, and transactions. This shift reflects the evolving demands on finance professionals to lead digital transformation, drive sustainable value, and navigate complexity with confidence. As innovation continues to reshape business, developing the right capabilities across these areas is essential to staying competitive and future-ready.",
       image: where111,
+      altText: "A person stands on a bridge overlooking a modern, illuminated cityscape, symbolising a changing global role.", // ✅ UPDATED: Separate alt text
       downloadId: "fsdf4",
       learnMoreId: "fslm4",
       downloadLink: fwhereflashcard,
@@ -254,6 +258,7 @@ const future = () => {
       title: "How can organisations improve talent engagement and retention? ",
       description: "As technology, especially AI, reshapes roles, it's important to support the development of both digital capabilities and human-centred skills like creativity and judgement. Additionally, employers need to recognise that many employees are seeking better pay and clearer growth opportunities, often looking outside their organisations when these aren't available internally.",
       image: How111,
+      altText: "Abstract overhead view of a plant with bright pink tentacle-like flowers floating on water.", // ✅ UPDATED: Separate alt text
       downloadId: "fsdf5",
       learnMoreId: "fslm5",
       downloadLink: fhowflashcard,
@@ -504,7 +509,7 @@ const future = () => {
                   <div className="relative overflow-hidden">
                     <img
                       src={content.image}
-                      alt={content.title}
+                      alt={content.altText}
                       className="w-full h-64 object-cover image-height"
                     />
 
