@@ -60,7 +60,7 @@ const Index = () => {
         <div className="absolute inset-0">
           <img
             src={Banner}
-            alt="Home Page Banner"
+            alt="ACCA Virtual Skills Platform banner featuring white text on a red wall beside a lit escalator."
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0"></div>
@@ -108,7 +108,7 @@ const Index = () => {
               <div className="aspect-video relative">
                 <img
                   src={upskills2}
-                  alt="Interview Prep Series"
+                  alt="Close-up of a person in a suit adjusting a dark, patterned necktie."
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -149,7 +149,7 @@ const Index = () => {
               <div className="aspect-video relative">
                 <img
                   src={upskills1}
-                  alt="ACCA Flashcards"
+                  alt="Close-up of a person using a finger to tap the screen of a dark smartphone."
                   className="w-full h-full object-cover"
                 />
               </div>
