@@ -47,12 +47,16 @@ const Interview = () => {
         else if (theme === "future") navigate("/future");
     };
 
+    // ============================================
+    // ✨ UPDATED: Added unique alt text for each video
+    // ============================================
     const videos = [
         {
             id: "video1",
             img: Impactfulcv,
             title: "Create an impactful CV",
             desc: "Craft a CV that stands out and showcases your skills and experience.",
+            alt: "Video thumbnail: A man in a white shirt speaking about creating an impactful CV. Click to play the video.",
             additionalInfo: (
                 <>
                     Download our sample introductory letter and email template to kickstart your job application. You can{" "}
@@ -75,7 +79,7 @@ const Interview = () => {
             img: firstimpression,
             title: "Make a great first impression",
             desc: "Learn how to build confidence and present yourself professionally for interviews.",
-
+            alt: "Video thumbnail: A woman in a white shirt speaking about making a great first impression. Click to play the video.",
             youtubeUrl: "https://www.youtube.com/embed/La_bgTB2KpQ", // embed format
         },
         {
@@ -83,7 +87,7 @@ const Interview = () => {
             img: linkedin,
             title: "Crafting a strong LinkedIn profile",
             desc: "Learn to craft a powerful LinkedIn profile that gets you noticed.",
-
+            alt: "Video thumbnail: Video thumbnail: A lady and a man speaking on a split screen about crafting a strong LinkedIn profile. Click to play.",
             youtubeUrl: "https://www.youtube-nocookie.com/embed/VOj5X9UM6u0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=11", // embed format
         },
         {
@@ -91,7 +95,7 @@ const Interview = () => {
             img: dressing,
             title: "Dressing for interview success",
             desc: "Discover how the right attire and grooming can boost your confidence.",
-
+            alt: "Video thumbnail: A woman in a blue top speaking about dressing for interview success. Click to play the video.",
             youtubeUrl: "https://www.youtube.com/embed/HWGRJMSFNtQ", // embed format
         },
         {
@@ -99,7 +103,7 @@ const Interview = () => {
             img: crafting1,
             title: "Crafting a strong introduction",
             desc: "Learn to craft an introduction that highlights your value and makes an impact.",
-
+            alt: "Video thumbnail: A man in a white shirt smiling about crafting a strong introduction. Click to play the video.",
             youtubeUrl: "https://www.youtube.com/embed/5oAyw8_wkJA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=9", // embed format
         },
         {
@@ -107,6 +111,7 @@ const Interview = () => {
             img: questions1,
             title: " Questions on challenges faced",
             desc: "Learn to use the CAR model to answer tough questions with confidence.",
+            alt: "Video thumbnail: A man in a dark shirt speaking about challenges faced in an interview. Click to play the video.",
             additionalInfo: (
                 <>
                     <a
@@ -130,7 +135,7 @@ const Interview = () => {
             img: stregnth,
             title: "Share strengths and growth areas",
             desc: "Learn to be authentic and show growth when discussing strengths and weaknesses.",
-
+            alt: "Video thumbnail: Two presenters, a woman smiling and a man giving an 'OK' sign, on sharing strengths. Click to play.",
             youtubeUrl: "https://www.youtube.com/embed/x1dczGAiAdM?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=7", // embed format
         },
         {
@@ -138,6 +143,7 @@ const Interview = () => {
             img: learning,
             title: "Speak with impact about your learning",
             desc: "Learn to use the DLA model to showcase your skills and learning with impact.",
+            alt: "Video thumbnail of a woman speaking about learning and career impact. Click to play the video.",
             additionalInfo: (
                 <>
                     <a
@@ -158,6 +164,7 @@ const Interview = () => {
             img: company,
             title: "Align with company values",
             desc: "Learn the KAD model to showcase your knowledge, attitude and drive.",
+            alt: "Video thumbnail: Two ladies ladies on a split screen discussing aligning with company values. Click to play the video.",
             additionalInfo: (
                 <>
                     <a
@@ -179,7 +186,7 @@ const Interview = () => {
             img: conversation,
             title: "Navigate salary and growth conversations",
             desc: "Learn to navigate salary and career growth conversations with confidence.",
-
+            alt: "Video thumbnail: A man wearing a blue shirt discussing salary and growth conversations. Click to play the video.",
             youtubeUrl: "https://www.youtube.com/embed/Vt-3DNffKqY?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=6", // embed format
         },
         {
@@ -187,7 +194,7 @@ const Interview = () => {
             img: expertise,
             title: "Address questions beyond your expertise",
             desc: "Learn to show your adaptability and growth mindset in an interview.",
-
+            alt: "Video thumbnail: Three presenters on a split screen discussing questions beyond your expertise. Click to play.",
             youtubeUrl: "https://www.youtube.com/embed/Oiu77R4y6LA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=4", // embed format
         },
         {
@@ -195,7 +202,7 @@ const Interview = () => {
             img: asking2,
             title: "Ask the right questions",
             desc: "Learn what questions to ask in an interview to show initiative.",
-
+            alt: "Video thumbnail: A woman speaking about asking the right questions. Click to play the video.",
             youtubeUrl: "https://www.youtube.com/embed/bAuMjFsX1b0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=3", // embed format
         },
         {
@@ -203,7 +210,7 @@ const Interview = () => {
             img:practice,
             title: "Top interview practice tips",
             desc: "Master your interview with our step-by-step guide to effective practice.",
-
+            alt: "Video thumbnail: A man in a dark shirt speaking about top interview practice tips. Click to play the video.",
             youtubeUrl: "https://www.youtube.com/embed/sg3mZQaniF0", // embed format
         },
         {
@@ -211,7 +218,7 @@ const Interview = () => {
             img:reflect,
             title: "Reflect after your interview",
             desc: "Learn to manage post-interview stress and turn waiting into learning.",
-
+            alt: "Video thumbnail: Four presenters on a quad split screen speaking about reflecting after an interview. Click to play.",
             youtubeUrl: "https://www.youtube.com/embed/lZ6123JBNdg", // embed format
         },
 
@@ -237,7 +244,7 @@ const Interview = () => {
                 <div className="absolute inset-0">
                     <img
                         src={interviewbanner}
-                        alt="Interview Page Banner"
+                        alt="Interview Prep Series banner. Close-up of hands over a desk, one writing notes or providing feedback with a pen."
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0"></div>
@@ -301,6 +308,9 @@ const Interview = () => {
                             </p>
 
                             {/* Video Grid - 2 columns */}
+                            {/* ============================================ */}
+                            {/* ✨ UPDATED: Using video.alt instead of template literal */}
+                            {/* ============================================ */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 row-gaps">
                                 {videos.map((video, index) => (
                                     <div key={index} className="flex flex-col">
@@ -308,7 +318,7 @@ const Interview = () => {
                                             <div className="relative w-full h-full cursor-pointer">
                                                 <img
                                                     src={video.img}
-                                                    alt={`Video Thumbnail ${index + 1}`}
+                                                    alt={video.alt}
                                                     className="w-full h-full object-cover"
                                                 />
                                                 {/* Image Overlay */}
