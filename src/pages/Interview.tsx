@@ -57,6 +57,7 @@ const Interview = () => {
                 <>
                     Download our sample introductory letter and email template to kickstart your job application. You can{" "}
                     <a
+                        id="download-vid1"
                         href={sample}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -109,6 +110,7 @@ const Interview = () => {
             additionalInfo: (
                 <>
                     <a
+                        id="download-vid6"
                         href={car}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -139,6 +141,7 @@ const Interview = () => {
             additionalInfo: (
                 <>
                     <a
+                        id="download-vid8"
                         href={dla}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -158,6 +161,7 @@ const Interview = () => {
             additionalInfo: (
                 <>
                     <a
+                        id="download-vid9"
                         href={kad}
                         target="_blank"
                         rel="noopener noreferrer"
