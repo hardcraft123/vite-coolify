@@ -11,7 +11,7 @@ import Innovative from './pages/Innovative';
 import Future from './pages/Future'; 
 import Interview from './pages/Interview'; 
 import NotFound from "./pages/NotFound";
-import CookieConsent from './components/ui/CookieConsent';
+// import CookieConsent from './components/ui/CookieConsent';
 import './assets/styles/style.css';
  
 const queryClient = new QueryClient();
@@ -23,7 +23,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
       {/* ✅ Show cookie popup globally */}
-        <CookieConsent />
+        {/* <CookieConsent /> */}
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/flashcards" element={<Flashcards />} /> {/* ✅ Flashcards route */}
