@@ -255,7 +255,7 @@ const future = () => {
       ],
     },
     how: {
-      title: "How can organisations improve talent engagement and retention? ",
+      title: "How can organisations improve talent engagement and retention ",
       description: "As technology, especially AI, reshapes roles, it's important to support the development of both digital capabilities and human-centred skills like creativity and judgement. Additionally, employers need to recognise that many employees are seeking better pay and clearer growth opportunities, often looking outside their organisations when these aren't available internally.",
       image: How111,
       altText: "Abstract overhead view of a plant with bright pink tentacle-like flowers floating on water.", // ✅ UPDATED: Separate alt text
