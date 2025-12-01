@@ -207,8 +207,8 @@ const future = () => {
         3: "bottom-2 right-1", // Bottom right
       },
       popupImages: [
-        { id: 1, src: fwhy1, alt: "Why popup image 1" },
-        { id: 2, src: fwhy2, alt: "Why popup image 2" },
+        { id: 1, src: fwhy2, alt: "Why popup image 1" },
+        { id: 2, src: fwhy1, alt: "Why popup image 2" },
         { id: 3, src: why3, alt: "Why popup image 3" },
       ],
     },
