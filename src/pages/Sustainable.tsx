@@ -138,7 +138,7 @@ const Sustainable = () => {
       title: "What is Sustainable Business?",
       description: "Sustainable finance refers to financial tools and investments that support environmentally sustainable and socially responsible business practices. It promotes long-term value by integrating economic viability, social equity, and environmental protection into financial decision making.",
       image: rightbanner,
-      altText: "Aerial view of a large solar panel farm covering rolling hills at sunset, illustrating sustainable finance.", // ✅ ADDED: Separate alt text for What tab
+      altText: "Aerial view of a large solar panel farm covering rolling hills at sunset, illustrating sustainable finance. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for What tab
       downloadId: "sbdf1",
       learnMoreId: "sblm1",
       downloadLink: swflashcard1, // What tab download link
@@ -150,9 +150,9 @@ const Sustainable = () => {
         3: "bottom-4 right-4", // Bottom right
       },
       popupImages: [
-        { id: 1, src: what2, alt: "What popup image 1" },
-        { id: 2, src: what1, alt: "What popup image 2" },
-        { id: 3, src: what3, alt: "What popup image 3" },
+        { id: 1, src: what2, alt: "The triple bottom line formula for Sustainable Business: Economic Viability + Environmental Protection + Social Equity." },
+        { id: 2, src: what1, alt: "Quote by John Lelliott OBE, FCCA: A monumental migration to sustainable economies and businesses is required, and that is something that we as a profession want to be – and can be – one of the groups driving." },
+        { id: 3, src: what3, alt: "Bar chart showing global regional opportunities based on ACCA and IMA GECS 2023 survey." },
       ],
       popupSizes: {
         1: { width: '400px', rightOffset: '0px' }, // What tab, icon 1
@@ -164,7 +164,7 @@ const Sustainable = () => {
       title: "Why the need to implement sustainability?",
       description: "Climate and sustainability are significant drivers for organisations, both large and small. As governments recognise the need to address the climate emergency, organisations must respond with their own plans to achieve carbon neutrality, net-zero, or similar defined targets.",
       image: why,
-      altText: "Aerial view of a dense, healthy mangrove forest winding through blue-green waterways.", // ✅ ADDED: Separate alt text for Why tab
+      altText: "Aerial view of a dense, healthy mangrove forest winding through blue-green waterways. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for Why tab
       downloadId: "sbdf2",
       learnMoreId: "sblm2",
       downloadLink: swhyflashcard1, // You can replace this with why-specific PDF when available
@@ -176,9 +176,9 @@ const Sustainable = () => {
         3: "top-50% right-4 ", // Middle right
       },
       popupImages: [
-        { id: 1, src: why0, alt: "Why popup image 1" },
-        { id: 2, src: why000, alt: "Why popup image 2" },
-        { id: 3, src: why00, alt: "Why popup image 3" },
+        { id: 1, src: why0, alt: "81% of global finance professionals say significant change is needed to reach net-zero by source ACCA and IMA Global Economic Conditions Survey, Q2 2022." },
+        { id: 2, src: why000, alt: "Emmeline Skelton, Head of Sustainability, ACCA: Sustainability is a business approach to creating long-term value... built on the assumption that developing such strategies fosters company longevity." },
+        { id: 3, src: why00, alt: "A graphic showing business priorities: climate and sustainability, talent, information asset, digitalised customers, and supply chains, linked by continuous transformation." },
       ],
       popupSizes: {
         1: { width: '500px', rightOffset: '0px' }, // Why tab, icon 1
@@ -190,7 +190,7 @@ const Sustainable = () => {
       title: "Who creates the ESG framework?",
       description: "Accountants, in collaboration with sustainability leads and senior leadership, play a key role in creating ESG frameworks. They define material risks, set measurable KPIs, and ensure transparent disclosures, aligning ESG with strategy, reporting standards and investor expectations.",
       image: who,
-      altText: "Three colleagues in professional attire are discussing a topic during an office meeting.", // ✅ ADDED: Separate alt text for Who tab
+      altText: "Three colleagues in professional attire are discussing a topic during an office meeting. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for Who tab
       downloadId: "sbdf3",
       learnMoreId: "sblm3",
       downloadLink: swhoflashcard1, // You can replace this with who-specific PDF when available
@@ -200,7 +200,7 @@ const Sustainable = () => {
         1: "top-1/2 left-4 transform -translate-y-1/2", // Middle left
       },
       popupImages: [
-        { id: 1, src: who0, alt: "Who popup image 1" },
+        { id: 1, src: who0, alt: "Quote on the necessity of accountancy and finance professionals for ESG clarity and green transition funding by Emmeline Skelton, Head of Sustainability, ACCA." },
       ],
       popupSizes: {
         1: { width: '500px', rightOffset: '0px' }, // Who tab, icon 1
@@ -210,7 +210,7 @@ const Sustainable = () => {
       title: "Where does accountancy play a role in ESG?",
       description: "Accountants are central to the ESG journey. They provide the frameworks, assurance and reporting expertise needed to drive meaningful sustainability outcomes. Their work touches strategy, risk, compliance, and decision support.",
       image: where,
-      altText: "A worker in a navy jacket holds a tablet, appearing to inspect a row of solar panels or industrial equipment.", // ✅ ADDED: Separate alt text for Where tab
+      altText: "A worker in a navy jacket holds a tablet, appearing to inspect a row of solar panels or industrial equipment. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for Where tab
       downloadId: "sbdf4",
       learnMoreId: "sblm4",
       downloadLink: swhflashcard1, // You can replace this with where-specific PDF when available
@@ -222,9 +222,9 @@ const Sustainable = () => {
         3: "top-50% right-0 ", // Middle right
       },
       popupImages: [
-        { id: 1, src: where0, alt: "Where popup image 1" },
-        { id: 2, src: where000, alt: "Where popup image 2" },
-        { id: 3, src: where00, alt: "Where popup image 3" },
+        { id: 1, src: where0, alt: "Statistic: 63% of finance professionals consider using green finance but lack the internal skills to support it effectively, based on the GECS survey." },
+        { id: 2, src: where000, alt: "List of five ways to drive sustainability: Help define net-zero targets, Develop ESG strategies, Identify costs and opportunities, Enhance green finance understanding, and Set policies for ESG data." },
+        { id: 3, src: where00, alt: "List of 12 roles of a finance professional in ESG, including assessing maturity, defining models, implementing strategies, and managing data." },
       ],
       popupSizes: {
         1: { width: '500px', rightOffset: '0px' }, // Where tab, icon 1
@@ -236,7 +236,7 @@ const Sustainable = () => {
       title: "How do organisations embed sustainability?",
       description: "Organisations embed sustainability by aligning ESG goals with strategy, ensuring governance oversight, using credible data, adopting green finance, and building team capabilities. Finance professionals play a key role in integrating ESG across planning, risk and reporting.",
       image: How,
-      altText: "Close-up of a finger pointing at complex numerical data on a spreadsheet or financial report.", // ✅ ADDED: Separate alt text for How tab
+      altText: "Close-up of a finger pointing at complex numerical data on a spreadsheet or financial report. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for How tab
       downloadId: "sbdf5",
       learnMoreId: "sblm5",
       downloadLink: shflashcard1, // You can replace this with how-specific PDF when available
@@ -247,8 +247,8 @@ const Sustainable = () => {
         2: "top-4 right-4", // Top right
       },
       popupImages: [
-        { id: 1, src: how00, alt: "How popup image 1" },
-        { id: 2, src: how0, alt: "How popup image 2" },
+        { id: 1, src: how00, alt: "Emmeline Skelton, Head of Sustainability, ACCA: The sustainability journey that organisations need to embark on involves defining net-zero strategies and setting time-bound targets relevant to the value chain." },
+        { id: 2, src: how0, alt: "Diagram outlining the 8-step sustainability journey: Establish ESG strategy, Set targets, Define transition finance requirements, Enable ESG data management, and Establish ESG protocols and controls." },
       ],
       popupSizes: {
         1: { width: '480px', rightOffset: '0px' }, // How tab, icon 1

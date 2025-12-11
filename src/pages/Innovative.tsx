@@ -139,7 +139,7 @@ const Innovative = () => {
       title: "What are the skills needed for AI literacy?",
       description: "AI Literacy would mean combining technical insight with human insight and soft skills. Professionals must grasp programming, AI/ML concepts, and data governance while also strengthening problem-solving, ethical reasoning, and communication. These skills are essential for responsible and future-ready decision making.",
       image: what11,
-      altText: "Person wearing AR glasses and touching a large digital screen, representing AI literacy and future skills.", // ✅ UPDATED: Separate alt text
+      altText: "Person wearing AR glasses and touching a large digital screen, representing AI literacy and future skills. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "itdf1",
       learnMoreId: "itlm1",
       downloadLink: iwhatflashcard1, // What tab download link
@@ -156,8 +156,8 @@ const Innovative = () => {
         3: { width: "470px", rightOffset: "-0px" },
       },
       popupImages: [
-        { id: 1, src: iwhat2, alt: "What popup image 1" },
-        { id: 2, src: iwhat1, alt: "What popup image 2" },
+        { id: 1, src: iwhat2, alt: "Clive Webb, Lead author, ACCA: AI can help professionals make better decisions, optimise operations, and deliver improved insights." },
+        { id: 2, src: iwhat1, alt: "Technical skills: Programming and data analytics, AI and machine learning understanding, Data governance and management. Business and soft skills: Problem solving and critical thinking, Communicating complex insights, Ethical reasoning." },
         { id: 3, src: what3, alt: "What popup image 3" },
       ],
     },
@@ -165,7 +165,7 @@ const Innovative = () => {
       title: "Why are accountants still essential?",
       description: "AI has great potential to support people in accounting and other fields. Instead of replacing human skills, it is now seen as a tool that helps accountants do their work better.",
       image: why11,
-      altText: "A hand uses a smartphone resting on a monitor, representing the integration of AI tools in daily work.", // ✅ UPDATED: Separate alt text
+      altText: "A hand uses a smartphone resting on a monitor, representing the integration of AI tools in daily work. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "itdf2",
       learnMoreId: "itlm2",
       downloadLink: iwhyflashcard1, // What tab download link
@@ -182,8 +182,8 @@ const Innovative = () => {
         3: { width: "470px", rightOffset: "-45px" },
       },
       popupImages: [
-        { id: 1, src: iwhy1, alt: "Why popup image 1" },
-        { id: 2, src: iwhy2, alt: "Why popup image 2" },
+        { id: 1, src: iwhy1, alt: "Alistair Brisbourne, Head of Technology, ACCA: The adoption of AI increases rather than decreases the importance of experts." },
+        { id: 2, src: iwhy2, alt: "There has been only 1% increase in automation since 2020, and estimations in the expected level of automation have also receded slightly (from 47% of tasks to 42% of tasks). Source: World Economic Forum (WEF) Future of Jobs 2023 report." },
         { id: 3, src: why3, alt: "Why popup image 3" },
       ],
     },
@@ -191,7 +191,7 @@ const Innovative = () => {
       title: "Who drives AI adoption in accounting?",
       description: "Successful AI adoption depends on everyone from Entry-Level to the C-suite. Entry-level professionals typically develop data literacy and technical skills. Mid-level roles focus on analytics and compliance. Senior managers lead stakeholder engagement and risk management, while C-suite executives drive AI strategy and governance.",
       image: who11,
-      altText: "Three colleagues collaborate in a modern, well-lit office lounge, representing broad AI adoption.", // ✅ UPDATED: Separate alt text
+      altText: "Three colleagues collaborate in a modern, well-lit office lounge, representing broad AI adoption. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "itdf3",
       learnMoreId: "itlm3",
       downloadLink: iwhoflashcard1, // What tab download link
@@ -206,8 +206,8 @@ const Innovative = () => {
         3: { width: "470px", rightOffset: "-45px" },
       },
       popupImages: [
-        { id: 1, src: iwho1, alt: "Who popup image 1" },
-        { id: 2, src: iwho2, alt: "Who popup image 2" },
+        { id: 1, src: iwho1, alt: "Organizational relationships and creation of value diagram showing three layers: Recipients (Investors and other financial stakeholders, Customers, Employees, Community, Regulators), Converters (Performance management and measurement connecting Operations and processes, Data, and Technology), and Enablers (Financial, Manufactured, Intellectual, Human, Social and relationship, Natural). Arrows show flow and relationships between elements with Return loop." },
+        { id: 2, src: iwho2, alt: "Professionals adopting AI: Entry level professionals, Mid-level professionals, Senior managers and directors, C-suite executives." },
         { id: 3, src: what3, alt: "Who popup image 3" },
       ],
     },
@@ -215,7 +215,7 @@ const Innovative = () => {
       title: "Where does AI add value?",
       description: "AI offers clear value in four areas namely sustainability reporting, insight generation, compliance monitoring, and process efficiency. It enhances ESG analysis, automates control testing, and delivers real-time financial intelligence. Accountants use AI to improve decision quality while maintaining trust and transparency.",
       image: where11,
-      altText: "A man in a casual shirt interacts with a vibrant, illuminated digital screen.", // ✅ UPDATED: Separate alt text
+      altText: "A man in a casual shirt interacts with a vibrant, illuminated digital screen. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "itdf4",
       learnMoreId: "itlm4",
       downloadLink: iwhereflashcard1, // What tab download link
@@ -232,8 +232,8 @@ const Innovative = () => {
         3: { width: "470px", rightOffset: "-45px" },
       },
       popupImages: [
-        { id: 1, src: iwhere1, alt: "Where popup image 1" },
-        { id: 2, src: iwhere2, alt: "Where popup image 2" },
+        { id: 1, src: iwhere1, alt: "Levels of trust in AI: For 'AI can increase the amount of time I have to focus on business-critical tasks' - 70% Agree, 9% Disagree, 15% Neutral, 5% Don't know. For 'I would rely on AI to perform business-critical tasks (e.g. settlements, internal control)' - 50% Agree, 21% Disagree, 22% Neutral, 6% Don't know." },
+        { id: 2, src: iwhere2, alt: "The components of value diagram showing Value at the center connected to four components: Sustainability, Insight generation, Compliance and control, and Transactional efficiency." },
         { id: 3, src: where3, alt: "Where popup image 3" },
       ],
     }, 
@@ -241,7 +241,7 @@ const Innovative = () => {
       title: "How do leading firms adopt AI successfully?",
       description: "Top firms prioritise digital skills, strategic alignment, and ethical frameworks. They invest in continuous learning, promote experimentation, and collaborate across teams. These organisations view AI not just as a tool but as a strategic enabler of transformation.",
       image: how11,
-      altText: "Close-up of hands holding a tablet with a blurred business meeting in the background, illustrating technology adoption.", // ✅ UPDATED: Separate alt text
+      altText: "Close-up of hands holding a tablet with a blurred business meeting in the background, illustrating technology adoption. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "itdf5",
       learnMoreId: "itlm5",
       downloadLink: ihowflashcard1, // What tab download link
@@ -257,8 +257,8 @@ const Innovative = () => {
         3: { width: "470px", rightOffset: "-45px" },
       },
       popupImages: [
-        { id: 1, src: ihow2, alt: "How popup image 1" },
-        { id: 2, src: ihow1, alt: "How popup image 2" },
+        { id: 1, src: ihow2, alt: "Diagram showing AI as a strategic framework. A pentagon labeled 'AI literacy' sits at the center, surrounded by five interconnected boxes: 'Strategic vision' at the top, 'Investment financing' on the left, 'People, process, culture' at the bottom left, 'Data governance' at the bottom right, and 'Risk and compliance' on the right. Gray lines connect all elements in a circular flow." },
+        { id: 2, src: ihow1, alt: "Quote from Alistair Brisbourne, Head of Technology at ACCA, stating: 'Successful technology adoption is not just about implementing new systems but also about enabling people to use these systems effectively and to realise their personal benefits." },
         { id: 3, src: what3, alt: "How popup image 3" },
       ],
     },

@@ -174,7 +174,7 @@ const future = () => {
       title: "What are the key qualities of a finance leader?",
       description: "To lead through uncertainty and complexity, today's CFOs must cultivate five integrative thinking capabilities: continually becoming, empathising, exploring, co-creating, and empowering. These interconnected capabilities support leadership that is adaptive, inclusive and value-driven.",
       image: what111,
-      altText: "Aerial view of numerous small sailboats navigating across blue water, symbolising leadership through uncertainty.", // ✅ UPDATED: Separate alt text
+      altText: "Aerial view of numerous small sailboats navigating across blue water, symbolising leadership through uncertainty.  Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "fsdf1",
       learnMoreId: "fslm1",
       downloadLink: fwhatflashcard,
@@ -186,8 +186,8 @@ const future = () => {
         3: "bottom-2 right-1", // Bottom right
       },
       popupImages: [
-        { id: 1, src: fwhat1, alt: "What popup image 1" },
-        { id: 2, src: fwhat2, alt: "What popup image 2" },
+        { id: 1, src: fwhat1, alt: "Sharon Machado, FCCA, Head of Sustainable Business, Policy & Insights, ACCA, and Yen-Pei Chen, CA ACCA, Freelance integrated reporting consultant, stating: 'Our complex and interconnected world challenges CFOs to be forward-looking, adaptable, and strategically focused, with an ability to 'think outside the box.' " },
+        { id: 2, src: fwhat2, alt: "Diagram titled 'The five integrative-thinking capabilities' showing a 2x2 grid with Exploring, Co-creating, Empathising, and Empowering in quadrants, with 'Continually becoming' spanning the center." },
         { id: 3, src: what3, alt: "What popup image 3" },
       ],
     },
@@ -195,7 +195,7 @@ const future = () => {
       title: "Why must a future-fit CFO be adaptable?",
       description: "The future-fit CFO must be adaptable to effectively guide their organisation through complex, interconnected risks while identifying new opportunities. \nAs custodians of critical strategic information, adaptable CFOs are better equipped to ensure transparency, drive agile decision-making, and uphold accountability in a rapidly changing business landscape.",
       image: why111,
-      altText: "Panoramic aerial view of a brightly lit, complex coastal city skyline at dusk, representing global complexity.", // ✅ UPDATED: Separate alt text
+      altText: "Panoramic aerial view of a brightly lit, complex coastal city skyline at dusk, representing global complexity.  Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "fsdf2",
       learnMoreId: "fslm2",
       downloadLink: fwhyflashcard,
@@ -207,8 +207,8 @@ const future = () => {
         3: "bottom-2 right-1", // Bottom right
       },
       popupImages: [
-        { id: 1, src: fwhy2, alt: "Why popup image 1" },
-        { id: 2, src: fwhy1, alt: "Why popup image 2" },
+        { id: 1, src: fwhy2, alt: "Diagram titled 'Concepts that enable problem solving' showing overlapping diamond shapes. The largest diamond contains 'Design thinking' at the top. Three medium diamonds inside show 'Open innovation' on the left, 'Systems thinking' on the right, and concepts like 'Collaboration, co-creation', 'Dealing with uncertainty, empathy', and 'Partnering for shared value'. At the center where all diamonds intersect is 'Asking questions' in red text." },
+        { id: 2, src: fwhy1, alt: "Text excerpt explaining that becoming a value-adding CFO involves changing from 'Dr No' to 'Dr How': shifting from binary opposing choices to dynamically working through how the organisation might achieve its objectives given constraints and opportunities. Source: Chief Value Officer: the important evolution of the CFO (ACCA and BDO, 2023)" },
         { id: 3, src: why3, alt: "Why popup image 3" },
       ],
     },
@@ -216,7 +216,7 @@ const future = () => {
       title: "Who are the key recipients of an organisation's value?",
       description: "Finance leaders must consider a broad range of stakeholders who benefit from the organisation's performance. These include investors, customers, employees, communities and regulators. Creating sustainable value across all groups is fundamental to long-term business success and responsible leadership.",
       image: who111,
-      altText: "A team of hikers ascending a snowy mountain ridge, representing stakeholders working towards a common goal.", // ✅ UPDATED: Separate alt text
+      altText: "A team of hikers ascending a snowy mountain ridge, representing stakeholders working towards a common goal.  Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "fsdf3",
       learnMoreId: "fslm3",
       downloadLink: fwhoflashcard,
@@ -228,8 +228,8 @@ const future = () => {
         3: "bottom-2 right-1", // Bottom right
       },
       popupImages: [
-        { id: 1, src: fwho1, alt: "Who popup image 1" },
-        { id: 2, src: fwho2, alt: "Who popup image 2" },
+        { id: 1, src: fwho1, alt: "Clive Webb, ACCA Head of Business Management, stating: 'Creating and maintaining value is a cyclical activity, so there is a process of return of value from the stakeholders to the enablers." },
+        { id: 2, src: fwho2, alt: "Diagram titled 'The recipients of value' showing five stakeholder groups with their associated value outcomes. From left to right: 'Investors and other financial stakeholders' receive 'Positive cash flow, Profit / EBITDA, Sustainability'; 'Customers' receive 'Quality of product, Customer relationships'; 'Employees' receive 'Good jobs, Secure employment'; 'Community' receives 'Benefit in locations, Infrastructure'; and 'Regulators' receive 'Compliance, Risk management'. Red arrows point upward from each stakeholder to their respective value boxes." },
         { id: 3, src: what3, alt: "Who popup image 3" },
       ],
     },
@@ -237,7 +237,7 @@ const future = () => {
       title: "Where are finance professionals' roles changing?",
       description: "CFOs are expanding their influence across eight critical areas including strategy and business acumen, risk and control, technology and data, leadership, supply chain, investor management, consulting, and transactions. This shift reflects the evolving demands on finance professionals to lead digital transformation, drive sustainable value, and navigate complexity with confidence. As innovation continues to reshape business, developing the right capabilities across these areas is essential to staying competitive and future-ready.",
       image: where111,
-      altText: "A person stands on a bridge overlooking a modern, illuminated cityscape, symbolising a changing global role.", // ✅ UPDATED: Separate alt text
+      altText: "A person stands on a bridge overlooking a modern, illuminated cityscape, symbolising a changing global role.  Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "fsdf4",
       learnMoreId: "fslm4",
       downloadLink: fwhereflashcard,
@@ -249,8 +249,8 @@ const future = () => {
         3: "bottom-2 right-1", // Bottom right
       },
       popupImages: [
-        { id: 1, src: fwhere1, alt: "Where popup image 1" },
-        { id: 2, src: fwhere2, alt: "Where popup image 2" },
+        { id: 1, src: fwhere1, alt: "Sharon Machado, FCCA, Head of Sustainable Business, Policy & Insights, ACCA, and Yen-Pei Chen, CA ACCA, Freelance integrated reporting consultant, stating: 'The path to the CFO role could involve multiple sideways moves: from one function to another, from one sector to another, from one jurisdiction to another." },
+        { id: 2, src: fwhere2, alt: "Diagram titled 'The role of the CFO' showing 'Financial acumen' in a red-bordered box at the center, with red arrows connecting to eight surrounding boxes: 'Transactions', 'Strategy and business acumen', 'Risk and control', 'Technology and data', 'Leadership', 'Supply chain', 'Investor management', and 'Consulting'. Source note at bottom reads 'as defined in ACCA / IMA 2020'." },
         { id: 3, src: where3, alt: "Where popup image 3" },
       ],
     },
@@ -258,7 +258,7 @@ const future = () => {
       title: "How can organisations improve talent engagement and retention ",
       description: "As technology, especially AI, reshapes roles, it's important to support the development of both digital capabilities and human-centred skills like creativity and judgement. Additionally, employers need to recognise that many employees are seeking better pay and clearer growth opportunities, often looking outside their organisations when these aren't available internally.",
       image: How111,
-      altText: "Abstract overhead view of a plant with bright pink tentacle-like flowers floating on water.", // ✅ UPDATED: Separate alt text
+      altText: "Abstract overhead view of a plant with bright pink tentacle-like flowers floating on water. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "fsdf5",
       learnMoreId: "fslm5",
       downloadLink: fhowflashcard,
@@ -270,8 +270,8 @@ const future = () => {
         3: "bottom-2 right-1", // Bottom right
       },
       popupImages: [
-        { id: 1, src: fhow2, alt: "How popup image 1" },
-        { id: 2, src: fhow1, alt: "How popup image 2" },
+        { id: 1, src: fhow2, alt: "Infographic showing 58% represented by a row of 10 person icons, with 6 in red and 4 in gray. Caption reads: 'Respondents expecting their next career move to be outside of their current organisation'." },
+        { id: 2, src: fhow1, alt: "Jamie Lyon FCCA, Head of Skills, Sectors & Technology, ACCA, stating: 'High employability confidence among accountants raises the retention challenge for employers – with almost 60% of respondents seeing their next role being outside their current organisation, and 62% expecting to move within two years." },
         { id: 3, src: what3, alt: "How popup image 3" },
       ],
     },

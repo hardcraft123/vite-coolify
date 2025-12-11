@@ -164,7 +164,7 @@ const Interview = () => {
             img: company,
             title: "Align with company values",
             desc: "Learn the KAD model to showcase your knowledge, attitude and drive.",
-            alt: "Video thumbnail: Two ladies ladies on a split screen discussing aligning with company values. Click to play the video.",
+            alt: "Video thumbnail: Two ladies on a split screen discussing aligning with company values. Click to play the video.",
             additionalInfo: (
                 <>
                     <a
