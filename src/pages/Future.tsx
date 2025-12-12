@@ -742,7 +742,7 @@ const future = () => {
                           </div>
                         </a>
                       </div>
-                    ))}
+                    ))} 
                   </div>
 
                   {/* Right 35% Column (Empty or Content Placeholder) */}
