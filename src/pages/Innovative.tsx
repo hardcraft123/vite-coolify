@@ -467,7 +467,9 @@ const Innovative = () => {
                     {content.description}
                   </p>
 
-                  <div className="flex space-x-6 pt-4 tabs-links">
+                  <p className="text-sm">Follow the links to download the PDF version of our PI report and flashcard.</p>
+
+                  <div className="flex flex-col space-y-3 pt-0 tabs-links">
                     <span className="flex">
                       <a
                         id={content.learnMoreId}
@@ -476,7 +478,7 @@ const Innovative = () => {
                         rel="noopener noreferrer"
                         className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                       >
-                        Click here to learn more
+                        PI Report: AI (Artificial Intelligence) in the Finance Profession (PDF file xx KB size)
                       </a>
                       <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
                         <img src={arrow} className="w-4 h-4 pt-1" />
@@ -491,13 +493,12 @@ const Innovative = () => {
                         rel="noopener noreferrer"
                         className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                       >
-                        Download Flashcard
+                        Flashcard: What are the skills needed for AI literacy? (PDF file, xx  KB size)
                       </a>
                       <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
                         <img src={arrow} className="w-4 h-4 pt-1" />
                       </span>
                     </span>
-
                   </div>
                 </div>
 
