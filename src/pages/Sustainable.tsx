@@ -5,12 +5,12 @@ import accaflashcard from "../assets/image/accaflashcard.png";
 import sustaindark from "../assets/image/sustaindark.png";
 import inno from "../assets/image/inno.png";
 import img4 from "../assets/image/img4.png";
-import rightbanner from "../assets/image/rightbanner.png"
-import theme1 from "../assets/image/theme1.png"
-import theme2 from "../assets/image/theme2.png"
-import what1 from "../assets/image/what1.png"
-import what2 from "../assets/image/what2.png"
-import what3 from "../assets/image/what3.png"
+import rightbanner from "../assets/image/rightbanner.png";
+import theme1 from "../assets/image/theme1.png";
+import theme2 from "../assets/image/theme2.png";
+import what1 from "../assets/image/what1.png";
+import what2 from "../assets/image/what2.png";
+import what3 from "../assets/image/what3.png";
 import swflashcard1 from "../assets/image/swflashcard1.pdf";
 import shflashcard1 from "../assets/image/shflashcard1.pdf";
 import swhflashcard1 from "../assets/image/swhflashcard1.pdf";
@@ -29,17 +29,17 @@ import where from "../assets/image/where.png";
 import How from "../assets/image/How.png";
 import { X } from "lucide-react";
 import bulb from "../assets/image/bulb.png";
-import person from "../assets/image/person.png"
+import person from "../assets/image/person.png";
 import arrow from "../assets/image/arrow.png";
 import leftarrow from "../assets/image/leftarrow.png";
-import why1 from "../assets/image/why1.png"
-import why2 from "../assets/image/why2.png"
-import why3 from "../assets/image/why3.png"
-import who1 from "../assets/image/who1.png"
-import where1 from "../assets/image/where1.png"
-import where2 from "../assets/image/where2.png"
-import where3 from "../assets/image/where3.png"
-import how1 from "../assets/image/how1.png"
+import why1 from "../assets/image/why1.png";
+import why2 from "../assets/image/why2.png";
+import why3 from "../assets/image/why3.png";
+import who1 from "../assets/image/who1.png";
+import where1 from "../assets/image/where1.png";
+import where2 from "../assets/image/where2.png";
+import where3 from "../assets/image/where3.png";
+import how1 from "../assets/image/how1.png";
 import how2 from "../assets/image/how2.png";
 import why0 from "../assets/image/why0.png";
 import why00 from "../assets/image/why00.png";
@@ -51,11 +51,12 @@ import who0 from "../assets/image/who0.png";
 import how0 from "../assets/image/how0.png";
 import how00 from "../assets/image/how00.png";
 
-
-
 const Sustainable = () => {
   const [activeTab, setActiveTab] = useState("what");
-  const [activePopup, setActivePopup] = useState<{ tab: string; icon: number } | null>(null);
+  const [activePopup, setActivePopup] = useState<{
+    tab: string;
+    icon: number;
+  } | null>(null);
   const [showPinkBox, setShowPinkBox] = useState(true);
   const [showContent, setShowContent] = useState(false);
   const buttonRefs = useRef<{ [key: number]: HTMLButtonElement | null }>({});
@@ -65,35 +66,39 @@ const Sustainable = () => {
   // **ADDED: Get location to check if user came from flashcard page**
   const location = useLocation();
   const cameFromFlashcard = location.state?.fromFlashcard === true;
+  const currentRoute = location.pathname;
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
+      if (
+        popupRef.current &&
+        !popupRef.current.contains(event.target as Node)
+      ) {
         closePopup(); // Close popup on outside click
       }
     }
 
     if (activePopup) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [activePopup]); // Only run effect when popup changes
 
   // ESC key functionality to close popup
   useEffect(() => {
     function handleEscapeKey(event: KeyboardEvent) {
-      if (event.key === 'Escape' && activePopup) {
+      if (event.key === "Escape" && activePopup) {
         closePopup();
       }
     }
 
-    document.addEventListener('keydown', handleEscapeKey);
+    document.addEventListener("keydown", handleEscapeKey);
 
     return () => {
-      document.removeEventListener('keydown', handleEscapeKey);
+      document.removeEventListener("keydown", handleEscapeKey);
     };
   }, [activePopup]);
 
@@ -126,19 +131,43 @@ const Sustainable = () => {
     {
       id: "why",
       label: "Why",
-      icon: <img src={bulb} alt="Why" className=" object-contain why-buttons" style={{ width: '10px' }} />,
+      icon: (
+        <img
+          src={bulb}
+          alt="Why"
+          className=" object-contain why-buttons"
+          style={{ width: "10px" }}
+        />
+      ),
     },
-    { id: "who", label: "Who", icon: <img src={person} alt="person" className="object-contain" style={{ width: '15px' }} />, },
-    { id: "where", label: "Where", icon: <FiMapPin className="text-red-500" /> },
+    {
+      id: "who",
+      label: "Who",
+      icon: (
+        <img
+          src={person}
+          alt="person"
+          className="object-contain"
+          style={{ width: "15px" }}
+        />
+      ),
+    },
+    {
+      id: "where",
+      label: "Where",
+      icon: <FiMapPin className="text-red-500" />,
+    },
     { id: "how", label: "How", icon: <FiSettings className="text-red-500" /> },
   ];
 
   const contentData = {
     what: {
       title: "What is Sustainable Business?",
-      description: "Sustainable finance refers to financial tools and investments that support environmentally sustainable and socially responsible business practices. It promotes long-term value by integrating economic viability, social equity, and environmental protection into financial decision making.",
+      description:
+        "Sustainable finance refers to financial tools and investments that support environmentally sustainable and socially responsible business practices. It promotes long-term value by integrating economic viability, social equity, and environmental protection into financial decision making.",
       image: rightbanner,
-      altText: "Aerial view of a large solar panel farm covering rolling hills at sunset, illustrating sustainable finance. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for What tab
+      altText:
+        "Aerial view of a large solar panel farm covering rolling hills at sunset, illustrating sustainable finance. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for What tab
       downloadId: "sbdf1",
       learnMoreId: "sblm1",
       downloadLink: swflashcard1, // What tab download link
@@ -150,21 +179,35 @@ const Sustainable = () => {
         3: "bottom-4 right-4", // Bottom right
       },
       popupImages: [
-        { id: 1, src: what2, alt: "The triple bottom line formula for Sustainable Business: Economic Viability + Environmental Protection + Social Equity." },
-        { id: 2, src: what1, alt: "Quote by John Lelliott OBE, FCCA: A monumental migration to sustainable economies and businesses is required, and that is something that we as a profession want to be – and can be – one of the groups driving." },
-        { id: 3, src: what3, alt: "Bar chart showing global regional opportunities based on ACCA and IMA GECS 2023 survey." },
+        {
+          id: 1,
+          src: what2,
+          alt: "The triple bottom line formula for Sustainable Business: Economic Viability + Environmental Protection + Social Equity.",
+        },
+        {
+          id: 2,
+          src: what1,
+          alt: "Quote by John Lelliott OBE, FCCA: A monumental migration to sustainable economies and businesses is required, and that is something that we as a profession want to be – and can be – one of the groups driving.",
+        },
+        {
+          id: 3,
+          src: what3,
+          alt: "Bar chart showing global regional opportunities based on ACCA and IMA GECS 2023 survey.",
+        },
       ],
       popupSizes: {
-        1: { width: '400px', rightOffset: '0px' }, // What tab, icon 1
-        2: { width: '500px', rightOffset: '0px' }, // What tab, icon 2
-        3: { width: '500px', rightOffset: '0px' }, // What tab, icon 3
+        1: { width: "400px", rightOffset: "0px" }, // What tab, icon 1
+        2: { width: "500px", rightOffset: "0px" }, // What tab, icon 2
+        3: { width: "500px", rightOffset: "0px" }, // What tab, icon 3
       },
     },
     why: {
       title: "Why the need to implement sustainability?",
-      description: "Climate and sustainability are significant drivers for organisations, both large and small. As governments recognise the need to address the climate emergency, organisations must respond with their own plans to achieve carbon neutrality, net-zero, or similar defined targets.",
+      description:
+        "Climate and sustainability are significant drivers for organisations, both large and small. As governments recognise the need to address the climate emergency, organisations must respond with their own plans to achieve carbon neutrality, net-zero, or similar defined targets.",
       image: why,
-      altText: "Aerial view of a dense, healthy mangrove forest winding through blue-green waterways. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for Why tab
+      altText:
+        "Aerial view of a dense, healthy mangrove forest winding through blue-green waterways. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for Why tab
       downloadId: "sbdf2",
       learnMoreId: "sblm2",
       downloadLink: swhyflashcard1, // You can replace this with why-specific PDF when available
@@ -176,21 +219,35 @@ const Sustainable = () => {
         3: "top-50% right-4 ", // Middle right
       },
       popupImages: [
-        { id: 1, src: why0, alt: "81% of global finance professionals say significant change is needed to reach net-zero by source ACCA and IMA Global Economic Conditions Survey, Q2 2022." },
-        { id: 2, src: why000, alt: "Emmeline Skelton, Head of Sustainability, ACCA: Sustainability is a business approach to creating long-term value... built on the assumption that developing such strategies fosters company longevity." },
-        { id: 3, src: why00, alt: "A graphic showing business priorities: climate and sustainability, talent, information asset, digitalised customers, and supply chains, linked by continuous transformation." },
+        {
+          id: 1,
+          src: why0,
+          alt: "81% of global finance professionals say significant change is needed to reach net-zero by source ACCA and IMA Global Economic Conditions Survey, Q2 2022.",
+        },
+        {
+          id: 2,
+          src: why000,
+          alt: "Emmeline Skelton, Head of Sustainability, ACCA: Sustainability is a business approach to creating long-term value... built on the assumption that developing such strategies fosters company longevity.",
+        },
+        {
+          id: 3,
+          src: why00,
+          alt: "A graphic showing business priorities: climate and sustainability, talent, information asset, digitalised customers, and supply chains, linked by continuous transformation.",
+        },
       ],
       popupSizes: {
-        1: { width: '500px', rightOffset: '0px' }, // Why tab, icon 1
-        2: { width: '550px', rightOffset: '0px' }, // Why tab, icon 2
-        3: { width: '600px', rightOffset: '0px' }, // Why tab, icon 3
+        1: { width: "500px", rightOffset: "0px" }, // Why tab, icon 1
+        2: { width: "550px", rightOffset: "0px" }, // Why tab, icon 2
+        3: { width: "600px", rightOffset: "0px" }, // Why tab, icon 3
       },
     },
     who: {
       title: "Who creates the ESG framework?",
-      description: "Accountants, in collaboration with sustainability leads and senior leadership, play a key role in creating ESG frameworks. They define material risks, set measurable KPIs, and ensure transparent disclosures, aligning ESG with strategy, reporting standards and investor expectations.",
+      description:
+        "Accountants, in collaboration with sustainability leads and senior leadership, play a key role in creating ESG frameworks. They define material risks, set measurable KPIs, and ensure transparent disclosures, aligning ESG with strategy, reporting standards and investor expectations.",
       image: who,
-      altText: "Three colleagues in professional attire are discussing a topic during an office meeting. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for Who tab
+      altText:
+        "Three colleagues in professional attire are discussing a topic during an office meeting. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for Who tab
       downloadId: "sbdf3",
       learnMoreId: "sblm3",
       downloadLink: swhoflashcard1, // You can replace this with who-specific PDF when available
@@ -200,17 +257,23 @@ const Sustainable = () => {
         1: "top-1/2 left-4 transform -translate-y-1/2", // Middle left
       },
       popupImages: [
-        { id: 1, src: who0, alt: "Quote on the necessity of accountancy and finance professionals for ESG clarity and green transition funding by Emmeline Skelton, Head of Sustainability, ACCA." },
+        {
+          id: 1,
+          src: who0,
+          alt: "Quote on the necessity of accountancy and finance professionals for ESG clarity and green transition funding by Emmeline Skelton, Head of Sustainability, ACCA.",
+        },
       ],
       popupSizes: {
-        1: { width: '500px', rightOffset: '0px' }, // Who tab, icon 1
+        1: { width: "500px", rightOffset: "0px" }, // Who tab, icon 1
       },
     },
     where: {
       title: "Where does accountancy play a role in ESG?",
-      description: "Accountants are central to the ESG journey. They provide the frameworks, assurance and reporting expertise needed to drive meaningful sustainability outcomes. Their work touches strategy, risk, compliance, and decision support.",
+      description:
+        "Accountants are central to the ESG journey. They provide the frameworks, assurance and reporting expertise needed to drive meaningful sustainability outcomes. Their work touches strategy, risk, compliance, and decision support.",
       image: where,
-      altText: "A worker in a navy jacket holds a tablet, appearing to inspect a row of solar panels or industrial equipment. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for Where tab
+      altText:
+        "A worker in a navy jacket holds a tablet, appearing to inspect a row of solar panels or industrial equipment. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for Where tab
       downloadId: "sbdf4",
       learnMoreId: "sblm4",
       downloadLink: swhflashcard1, // You can replace this with where-specific PDF when available
@@ -222,21 +285,35 @@ const Sustainable = () => {
         3: "top-50% right-0 ", // Middle right
       },
       popupImages: [
-        { id: 1, src: where0, alt: "Statistic: 63% of finance professionals consider using green finance but lack the internal skills to support it effectively, based on the GECS survey." },
-        { id: 2, src: where000, alt: "List of five ways to drive sustainability: Help define net-zero targets, Develop ESG strategies, Identify costs and opportunities, Enhance green finance understanding, and Set policies for ESG data." },
-        { id: 3, src: where00, alt: "List of 12 roles of a finance professional in ESG, including assessing maturity, defining models, implementing strategies, and managing data." },
+        {
+          id: 1,
+          src: where0,
+          alt: "Statistic: 63% of finance professionals consider using green finance but lack the internal skills to support it effectively, based on the GECS survey.",
+        },
+        {
+          id: 2,
+          src: where000,
+          alt: "List of five ways to drive sustainability: Help define net-zero targets, Develop ESG strategies, Identify costs and opportunities, Enhance green finance understanding, and Set policies for ESG data.",
+        },
+        {
+          id: 3,
+          src: where00,
+          alt: "List of 12 roles of a finance professional in ESG, including assessing maturity, defining models, implementing strategies, and managing data.",
+        },
       ],
       popupSizes: {
-        1: { width: '500px', rightOffset: '0px' }, // Where tab, icon 1
-        2: { width: '550px', rightOffset: '0px' }, // Where tab, icon 2
-        3: { width: '400px', rightOffset: '00px' }, // Where tab, icon 3
+        1: { width: "500px", rightOffset: "0px" }, // Where tab, icon 1
+        2: { width: "550px", rightOffset: "0px" }, // Where tab, icon 2
+        3: { width: "400px", rightOffset: "00px" }, // Where tab, icon 3
       },
     },
     how: {
       title: "How do organisations embed sustainability?",
-      description: "Organisations embed sustainability by aligning ESG goals with strategy, ensuring governance oversight, using credible data, adopting green finance, and building team capabilities. Finance professionals play a key role in integrating ESG across planning, risk and reporting.",
+      description:
+        "Organisations embed sustainability by aligning ESG goals with strategy, ensuring governance oversight, using credible data, adopting green finance, and building team capabilities. Finance professionals play a key role in integrating ESG across planning, risk and reporting.",
       image: How,
-      altText: "Close-up of a finger pointing at complex numerical data on a spreadsheet or financial report. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for How tab
+      altText:
+        "Close-up of a finger pointing at complex numerical data on a spreadsheet or financial report. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for How tab
       downloadId: "sbdf5",
       learnMoreId: "sblm5",
       downloadLink: shflashcard1, // You can replace this with how-specific PDF when available
@@ -247,12 +324,20 @@ const Sustainable = () => {
         2: "top-4 right-4", // Top right
       },
       popupImages: [
-        { id: 1, src: how00, alt: "Emmeline Skelton, Head of Sustainability, ACCA: The sustainability journey that organisations need to embark on involves defining net-zero strategies and setting time-bound targets relevant to the value chain." },
-        { id: 2, src: how0, alt: "Diagram outlining the 8-step sustainability journey: Establish ESG strategy, Set targets, Define transition finance requirements, Enable ESG data management, and Establish ESG protocols and controls." },
+        {
+          id: 1,
+          src: how00,
+          alt: "Emmeline Skelton, Head of Sustainability, ACCA: The sustainability journey that organisations need to embark on involves defining net-zero strategies and setting time-bound targets relevant to the value chain.",
+        },
+        {
+          id: 2,
+          src: how0,
+          alt: "Diagram outlining the 8-step sustainability journey: Establish ESG strategy, Set targets, Define transition finance requirements, Enable ESG data management, and Establish ESG protocols and controls.",
+        },
       ],
       popupSizes: {
-        1: { width: '480px', rightOffset: '0px' }, // How tab, icon 1
-        2: { width: '740px', rightOffset: '-25px' }, // How tab, icon 2
+        1: { width: "480px", rightOffset: "0px" }, // How tab, icon 1
+        2: { width: "740px", rightOffset: "-25px" }, // How tab, icon 2
       },
     },
   };
@@ -350,8 +435,17 @@ const Sustainable = () => {
         </div>
         <div className="margin-acca container mx-auto relative z-10 sustainable-banner">
           <div className="">
-            <h1 className="" style={{ fontSize: '70px', lineHeight: '60px', color: "#ffff", whiteSpace: "0%", fontWeight: 700 }}>
-              Sustainable Business<span style={{ color: '#D20024' }}>.</span>
+            <h1
+              className=""
+              style={{
+                fontSize: "70px",
+                lineHeight: "60px",
+                color: "#ffff",
+                whiteSpace: "0%",
+                fontWeight: 700,
+              }}
+            >
+              Sustainable Business<span style={{ color: "#D20024" }}>.</span>
             </h1>
           </div>
         </div>
@@ -360,59 +454,98 @@ const Sustainable = () => {
       {/* Main Content of the page */}
       <section className="pt-0 sm:pt-10 pb-6">
         <div className="custom-container">
-          <div className={`md:grid md:grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex transition-all duration-500 ${showContent ? 'content-fade-in opacity-100' : 'opacity-0'}`}>
-
+          <div
+            className={`md:grid md:grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex transition-all duration-500 ${
+              showContent ? "content-fade-in opacity-100" : "opacity-0"
+            }`}
+          >
             {/* Sidebar for desktop*/}
-            <div className="col-span-2 space-y-2 sidebar-desktop">
-
+            <div className="col-span-2 w-[10rem] sidebar-desktop">
+              {/* Back to Home */}
               <a href="/" className="block">
                 <div className="cursor-pointer back-to-home group">
                   <img
                     src={backtohome}
                     alt="Back arrow"
                     className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
-                    style={{ width: '22px', height: '16px' }}
+                    style={{ width: "22px", height: "16px" }}
                   />
-                  <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
+                  <span style={{ fontSize: "16px", fontWeight: "500" }}>
+                    Back to
+                  </span>
                   <br />
-                  <span className="home-align" style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
+                  <span
+                    className="home-align"
+                    style={{ fontSize: "22px", fontWeight: "500" }}
+                  >
+                    {" "}
+                    Home
+                  </span>
                 </div>
               </a>
 
-              <a href="/flashcards" className="cursor-pointer block">
-                <img
-                  src={accaflashcard}
-                  alt="Acca Flashcards"
-                  className="w-full h-full object-cover ips-image"
-                />
-              </a>
-              <a href="" className="cursor-pointer block img-class">
-                <img
-                  src={sustaindark}
-                  alt="Sustainable Business"
-                  className="w-full h-full object-cover ips-image"
-                />
-              </a>
-              <a href="/innovative" className="cursor-pointer block">
-                <img
-                  src={inno}
-                  alt="Innovative Tech"
-                  className="w-full h-full object-cover ips-image"
-                />
-              </a>
-              <a href="/future" className="cursor-pointer block img-class">
-                <img
-                  src={img4}
-                  alt="Future SKills"
-                  className="w-full h-full object-cover ips-image"
-                />
-              </a>
+              {/* Navigation Items - Container with border */}
+              <div className="border border-gray-400 overflow-hidden">
+                {[
+                  { path: "/flashcards", label: "ACCA Flashcards" },
+                  { path: "/sustainable", label: "Sustainable Business" },
+                  { path: "/innovative", label: "Innovative Tech" },
+                  { path: "/future", label: "Future Skills" },
+                ].map((item, index) => (
+                  <a
+                    key={item.path}
+                    href={item.path}
+                    className={`
+        flex items-center px-3 py-2
+        border-b border-gray-300 last:border-b-0
+        relative
+        min-h-[32px]
+        ${
+          currentRoute === item.path
+            ? "border-l-2 border-l-black bg-white"
+            : "bg-white hover:bg-gray-50"
+        }
+      `}
+                    style={
+                      currentRoute === item.path
+                        ? {
+                            marginRight: "-1px",
+                          }
+                        : {}
+                    }
+                  >
+                    <span
+                      className={`
+         text-[11px] leading-4 ${index === 0 ? "ml-2" : "ml-6"}
+        ${
+          currentRoute === item.path
+            ? "text-black font-medium"
+            : "text-gray-500 font-normal"
+        }
+      `}
+                    >
+                      {item.label}
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
 
             {/* Sidebar Mobile*/}
             <div className="w-screen max-w-none col-span-2 space-y-0 sidebar-mobile display-side relative left-1/2 -translate-x-1/2 sm:static sm:w-full sm:max-w-full">
               <a href="" className="cursor-pointer block navigation">
-                <a href="/"><span> Home /</span></a> <a href="flashcards"><span>ACCA PI Flashcards /</span></a><a href="#"><span style={{ fontWeight: '600' }}> Sustainable Business</span></a>
+                <a href="/">
+                  <span> Home /</span>
+                </a>{" "}
+                <a href="flashcards">
+                  <span>ACCA PI Flashcards /</span>
+                </a>
+                <a href="#">
+                  <span style={{ fontWeight: "600" }}>
+                    {" "}
+                    Sustainable Business
+                  </span>
+                </a>
               </a>
             </div>
 
@@ -424,10 +557,11 @@ const Sustainable = () => {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`tab-gap button-style flex items-center px-6 py-3 transition-colors duration-200 ${activeTab === tab.id
-                      ? " font-bold"
-                      : "border-color text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                      }`}
+                    className={`tab-gap button-style flex items-center px-6 py-3 transition-colors duration-200 ${
+                      activeTab === tab.id
+                        ? " font-bold"
+                        : "border-color text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                    }`}
                   >
                     <span className="mr-2">{tab.icon}</span>
                     {tab.label}
@@ -438,7 +572,6 @@ const Sustainable = () => {
 
               {/* Tab Content */}
               <div className="grid md:grid-cols-[65%_35%] gap-6 max-w-7xl mx-auto mobile-gap">
-
                 {/* Left Content */}
                 <div className="space-y-6">
                   <h2 className="h2-fonts h2-tabs">
@@ -446,9 +579,7 @@ const Sustainable = () => {
                     <span style={{ color: "#C80000" }}>?</span>
                   </h2>
 
-                  <p className="tabs-para">
-                    {content.description}
-                  </p>
+                  <p className="tabs-para">{content.description}</p>
 
                   <div className="flex space-x-6 pt-4 tabs-links">
                     <span className="flex">
@@ -461,7 +592,10 @@ const Sustainable = () => {
                       >
                         Click here to learn more
                       </a>
-                      <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
+                      <span
+                        className="inline-flex items-center ml-2"
+                        style={{ color: "#C80000" }}
+                      >
                         <img src={arrow} className="w-4 h-4 pt-1" />
                       </span>
                     </span>
@@ -476,11 +610,13 @@ const Sustainable = () => {
                       >
                         Download Flashcard
                       </a>
-                      <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
+                      <span
+                        className="inline-flex items-center ml-2"
+                        style={{ color: "#C80000" }}
+                      >
                         <img src={arrow} className="w-4 h-4 pt-1" />
                       </span>
                     </span>
-
                   </div>
                 </div>
 
@@ -497,9 +633,12 @@ const Sustainable = () => {
                     {/* Interactive Icons - Dynamic positioning based on active tab */}
                     <div className="absolute inset-0 position-set">
                       {content.visibleIcons.map((iconNumber) => (
-                        <div key={iconNumber} className={`absolute ${content.iconPositions[iconNumber]}`}>
+                        <div
+                          key={iconNumber}
+                          className={`absolute ${content.iconPositions[iconNumber]}`}
+                        >
                           <button
-                            ref={(el) => buttonRefs.current[iconNumber] = el}
+                            ref={(el) => (buttonRefs.current[iconNumber] = el)}
                             onClick={() => handleIconClick(iconNumber)}
                             className="w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group"
                           >
@@ -507,38 +646,56 @@ const Sustainable = () => {
                           </button>
 
                           {/* Popup for current icon */}
-                          {activePopup && activePopup.tab === activeTab && activePopup.icon === iconNumber && (
-                            <div
-                              ref={popupRef}
-                              className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden mobile-popup-center"
-                              style={{
-                                width: content.popupSizes[iconNumber]?.width || '470px',
-                                maxWidth: '90vw',
-                                right: content.popupSizes[iconNumber]?.rightOffset || '0px'
-                              }}
-                            >
-                              <div className="relative">
-                                <button
-                                  onClick={closePopup}
-                                  className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center max-[425px]:flex"
-                                >
-                                  <X className="h-4 w-4" />
-                                </button>
+                          {activePopup &&
+                            activePopup.tab === activeTab &&
+                            activePopup.icon === iconNumber && (
+                              <div
+                                ref={popupRef}
+                                className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden mobile-popup-center"
+                                style={{
+                                  width:
+                                    content.popupSizes[iconNumber]?.width ||
+                                    "470px",
+                                  maxWidth: "90vw",
+                                  right:
+                                    content.popupSizes[iconNumber]
+                                      ?.rightOffset || "0px",
+                                }}
+                              >
+                                <div className="relative">
+                                  <button
+                                    onClick={closePopup}
+                                    className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center max-[425px]:flex"
+                                  >
+                                    <X className="h-4 w-4" />
+                                  </button>
 
-                                <div className="">
-                                  <img
-                                    src={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].src}
-                                    alt={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].alt}
-                                    className="w-full h-auto object-contain rounded-lg"
-                                    onError={(e) => {
-                                      console.error('Image failed to load:', e.currentTarget.src);
-                                      e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
-                                    }}
-                                  />
+                                  <div className="">
+                                    <img
+                                      src={
+                                        contentData[
+                                          activePopup.tab as keyof typeof contentData
+                                        ].popupImages[activePopup.icon - 1].src
+                                      }
+                                      alt={
+                                        contentData[
+                                          activePopup.tab as keyof typeof contentData
+                                        ].popupImages[activePopup.icon - 1].alt
+                                      }
+                                      className="w-full h-auto object-contain rounded-lg"
+                                      onError={(e) => {
+                                        console.error(
+                                          "Image failed to load:",
+                                          e.currentTarget.src
+                                        );
+                                        e.currentTarget.src =
+                                          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=";
+                                      }}
+                                    />
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          )}
+                            )}
                         </div>
                       ))}
                     </div>
@@ -553,7 +710,9 @@ const Sustainable = () => {
 
               {/* Related Themes */}
               <div className="mt-12 theme-css">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Related Themes</h4>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                  Related Themes
+                </h4>
 
                 {/* Divider line */}
                 <div className="bg-[#CF001B] h-[2px] w-[60px] mb-4"></div>
@@ -563,7 +722,10 @@ const Sustainable = () => {
                   <div className="flex gap-6 justify-start">
                     {themes.map((theme) => (
                       <div key={theme.id} className="w-1/2 overflow-hidden">
-                        <a href={theme.id === 1 ? "/innovative" : "/future"} className="cursor-pointer block">
+                        <a
+                          href={theme.id === 1 ? "/innovative" : "/future"}
+                          className="cursor-pointer block"
+                        >
                           <div className="relative">
                             <img
                               src={theme.image}

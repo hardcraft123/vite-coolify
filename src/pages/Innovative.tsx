@@ -66,6 +66,8 @@ const Innovative = () => {
   // **ADDED: Get location to check if user came from flashcard page**
   const location = useLocation();
   const cameFromFlashcard = location.state?.fromFlashcard === true;
+  const currentRoute = location.pathname;
+
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -369,51 +371,60 @@ const Innovative = () => {
         <div className="custom-container">
           <div className={`md:grid md:grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex transition-all duration-500 ${showContent ? 'content-fade-in opacity-100' : 'opacity-0'}`}>
 
-            {/* Sidebar for desktop*/}
-            <div className="col-span-2 space-y-2 sidebar-desktop">
-              <a href="/" className="block">
-  <div className="cursor-pointer back-to-home group">
-    <img
-      src={backtohome}
-      alt="Back arrow"
-      className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
-      style={{ width: '22px', height: '16px' }}
-    />
-    <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
-    <br />
-    <span className="home-align" style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
-  </div>
-</a>
+          <div className="col-span-2 w-[10rem] sidebar-desktop">
+  {/* Back to Home */}
+   <a href="/" className="block">
+                                <div className="cursor-pointer back-to-home group">
+                                    <img
+                                        src={backtohome}
+                                        alt="Back arrow"
+                                        className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
+                                        style={{ width: '22px', height: '16px' }}
+                                    />
+                                    <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
+                                    <br />
+                                    <span className="home-align" style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
+                                </div>
+                            </a>
 
-              <a href="/flashcards" className="cursor-pointer block">
-                <img
-                  src={accaflashcard}
-                  alt="Acca Flashcards"
-                  className="w-full h-full object-cover ips-image"
-                />
-              </a>
-              <a href="/sustainable" className="cursor-pointer block img-class">
-                <img
-                  src={sustain10}
-                  alt="Sustainable Business"
-                  className="w-full h-full object-cover ips-image"
-                />
-              </a>
-              <a href="#" className="cursor-pointer block">
-                <img
-                  src={innovativedark}
-                  alt="Innovative Tech"
-                  className="w-full h-full object-cover ips-image"
-                />
-              </a>
-              <a href="/future" className="cursor-pointer block img-class">
-                <img
-                  src={future1}
-                  alt="Future SKills"
-                  className="w-full h-full object-cover ips-image"
-                />
-              </a>
-            </div>
+  {/* Navigation Items - Container with border */}
+<div className="border border-gray-400 overflow-hidden">
+  {[
+    { path: '/flashcards', label: 'ACCA Flashcards' },
+    { path: '/sustainable', label: 'Sustainable Business' },
+    { path: '/innovative', label: 'Innovative Tech' },
+    { path: '/future', label: 'Future Skills' }
+  ].map((item, index) => (
+    <a
+      key={item.path}
+      href={item.path}
+      className={`
+        flex items-center px-3 py-2
+        border-b border-gray-300 last:border-b-0
+        relative
+        min-h-[32px]
+        ${currentRoute === item.path
+          ? 'border-l-2 border-l-black bg-white'
+          : 'bg-white hover:bg-gray-50'
+        }
+      `}
+      style={currentRoute === item.path ? { 
+        marginRight: '-1px'
+      } : {}}
+    >
+      <span className={`
+        text-[11px] leading-4 ${index === 0 ? 'ml-2' : 'ml-6'}
+        ${currentRoute === item.path 
+          ? 'text-black font-medium' 
+          : 'text-gray-500 font-normal'
+        }
+      `}>
+        {item.label}
+      </span>
+    </a>
+  ))}
+</div>
+</div>
 
             {/* Sidebar Mobile*/}
             <div className="w-screen max-w-none col-span-2 space-y-0 sidebar-mobile display-side relative left-1/2 -translate-x-1/2 sm:static sm:w-full sm:max-w-full">
