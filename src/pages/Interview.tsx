@@ -38,24 +38,24 @@ const Interview = () => {
   const [currentVideoUrl, setCurrentVideoUrl] = useState("");
   const location = useLocation();
   const currentRoute = location.pathname;
-    const [userCountry, setUserCountry] = useState<string | null>(null);
+  const [userCountry, setUserCountry] = useState<string | null>(null);
 
-    // Determine user geolocation via IP on mount
-    useEffect(() => {
-        fetch("https://ipapi.co/json/")
-            .then((res) => res.json())
-            .then((data) => {
-                if (data && data.country_code) {
-                    setUserCountry(data.country_code);
-                } else {
-                    setUserCountry(null);
-                }
-            })
-            .catch((err) => {
-                console.error("Geolocation fetch error:", err);
-                setUserCountry(null);
-            });
-    }, []);
+  // Determine user geolocation via IP on mount
+  useEffect(() => {
+    fetch("https://ipapi.co/json/")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.country_code) {
+          setUserCountry(data.country_code);
+        } else {
+          setUserCountry(null);
+        }
+      })
+      .catch((err) => {
+        console.error("Geolocation fetch error:", err);
+        setUserCountry(null);
+      });
+  }, []);
 
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
@@ -66,263 +66,305 @@ const Interview = () => {
     else if (theme === "future") navigate("/future");
   };
 
-    const videos = [
-        {
-            id: "video1",
-            img: Impactfulcv,
-            title: "Create an impactful CV",
-            desc: "Craft a CV that stands out and showcases your skills and experience.",
-            alt: "Video thumbnail: A man in a white shirt speaking about creating an impactful CV. Click to play the video.",
-            additionalInfo: (
-                <>
-                    Download our sample introductory letter and email template to kickstart your job application. You can{" "}
-                    <a
-                        id="download-vid1"
-                        href={sample}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className=" underline" style={{ color: "#c80000" }}
-                    >
-                        download
-                    </a>{" "}
-                    the template here.
-                </>
-            ),
-            urls: {
-                india: "https://www.youtube.com/embed/6-liW6XjIHI",
-                global: "https://www.youtube.com/embed/gSPoXh-NYso?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=2",
-                china: "https://play.webvideocore.net/popplayer.php?it=4j7fhilmxwcg&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+  const videos = [
+    {
+      id: "video1",
+      img: Impactfulcv,
+      title: "Create an impactful CV",
+      desc: "Craft a CV that stands out and showcases your skills and experience.",
+      alt: "Video thumbnail: A man in a white shirt speaking about creating an impactful CV. Click to play the video.",
+      additionalInfo: (
+        <>
+          Download our sample introductory letter and email template to
+          kickstart your job application. You can{" "}
+          <a
+            id="download-vid1"
+            href={sample}
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" underline"
+            style={{ color: "#c80000" }}
+          >
+            download
+          </a>{" "}
+          the template here.
+        </>
+      ),
+      urls: {
+        india: "https://www.youtube.com/embed/6-liW6XjIHI",
+        global:
+          "https://www.youtube.com/embed/gSPoXh-NYso?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=2",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=4j7fhilmxwcg&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-        {
-            id: "video2",
-            img: firstimpression,
-            title: "Make a great first impression",
-            desc: "Learn how to build confidence and present yourself professionally for interviews.",
-            alt: "Video thumbnail: A woman in a white shirt speaking about making a great first impression. Click to play the video.",
-            urls: {
-                india: "https://www.youtube.com/embed/La_bgTB2KpQ",
-                global: "https://www.youtube.com/embed/w3z2luoImbA?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=4",
-                china: "https://play.webvideocore.net/popplayer.php?it=aljoltv1x28k&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+    {
+      id: "video2",
+      img: firstimpression,
+      title: "Make a great first impression",
+      desc: "Learn how to build confidence and present yourself professionally for interviews.",
+      alt: "Video thumbnail: A woman in a white shirt speaking about making a great first impression. Click to play the video.",
+      urls: {
+        india: "https://www.youtube.com/embed/La_bgTB2KpQ",
+        global:
+          "https://www.youtube.com/embed/w3z2luoImbA?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=4",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=aljoltv1x28k&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-        {
-            id: "video3",
-            img: linkedin,
-            title: "Crafting a strong LinkedIn profile",
-            desc: "Learn to craft a powerful LinkedIn profile that gets you noticed.",
-            alt: "Video thumbnail: Video thumbnail: A lady and a man speaking on a split screen about crafting a strong LinkedIn profile. Click to play.",
-            urls: {
-                india: "https://www.youtube-nocookie.com/embed/VOj5X9UM6u0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=11",
-                global: "https://www.youtube.com/embed/GOZZWuxafIM?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=5",
-                china: "https://play.webvideocore.net/popplayer.php?it=2tbit3m63z6s&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+    {
+      id: "video3",
+      img: linkedin,
+      title: "Crafting a strong LinkedIn profile",
+      desc: "Learn to craft a powerful LinkedIn profile that gets you noticed.",
+      alt: "Video thumbnail: Video thumbnail: A lady and a man speaking on a split screen about crafting a strong LinkedIn profile. Click to play.",
+      urls: {
+        india:
+          "https://www.youtube-nocookie.com/embed/VOj5X9UM6u0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=11",
+        global:
+          "https://www.youtube.com/embed/GOZZWuxafIM?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=5",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=2tbit3m63z6s&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-        {
-            id: "video4",
-            img: dressing,
-            title: "Dressing for interview success",
-            desc: "Discover how the right attire and grooming can boost your confidence.",
-            alt: "Video thumbnail: A woman in a blue top speaking about dressing for interview success. Click to play the video.",
-            urls: {
-                india: "https://www.youtube.com/embed/HWGRJMSFNtQ",
-                global: "https://www.youtube.com/embed/7pPoEVPsZjw?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=3",
-                china: "https://play.webvideocore.net/popplayer.php?it=36ee0oaif328&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+    {
+      id: "video4",
+      img: dressing,
+      title: "Dressing for interview success",
+      desc: "Discover how the right attire and grooming can boost your confidence.",
+      alt: "Video thumbnail: A woman in a blue top speaking about dressing for interview success. Click to play the video.",
+      urls: {
+        india: "https://www.youtube.com/embed/HWGRJMSFNtQ",
+        global:
+          "https://www.youtube.com/embed/7pPoEVPsZjw?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=3",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=36ee0oaif328&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-        {
-            id: "video5",
-            img: crafting1,
-            title: "Crafting a strong introduction",
-            desc: "Learn to craft an introduction that highlights your value and makes an impact.",
-            alt: "Video thumbnail: A man in a white shirt smiling about crafting a strong introduction. Click to play the video.",
-            urls: {
-                india: "https://www.youtube.com/embed/5oAyw8_wkJA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=9",
-                global: "https://www.youtube.com/embed/8JbwV3xL2xk?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=7",
-                china: "https://play.webvideocore.net/popplayer.php?it=5du2329sf74s&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+    {
+      id: "video5",
+      img: crafting1,
+      title: "Crafting a strong introduction",
+      desc: "Learn to craft an introduction that highlights your value and makes an impact.",
+      alt: "Video thumbnail: A man in a white shirt smiling about crafting a strong introduction. Click to play the video.",
+      urls: {
+        india:
+          "https://www.youtube.com/embed/5oAyw8_wkJA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=9",
+        global:
+          "https://www.youtube.com/embed/8JbwV3xL2xk?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=7",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=5du2329sf74s&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-        {
-            id: "video6",
-            img: questions1,
-            title: "Questions on challenges faced",
-            desc: "Learn to use the CAR model to answer tough questions with confidence.",
-            alt: "Video thumbnail: A man in a dark shirt speaking about challenges faced in an interview. Click to play the video.",
-            additionalInfo: (
-                <>
-                    <a
-                        id="download-vid6"
-                        href={car}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline"
-                        style={{ color: "#c80000" }}
-                    >
-                        Download
-                    </a>{" "}
-                    the worksheet and ace your next interview.
-                </>
-            ),
-            urls: {
-                india: "https://www.youtube.com/embed/_yC-krL_pFk?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=8",
-                global: "https://www.youtube.com/embed/eRbfSU4NdzQ?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=6",
-                china: "https://play.webvideocore.net/popplayer.php?it=81rthdxmss8w&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+    {
+      id: "video6",
+      img: questions1,
+      title: "Questions on challenges faced",
+      desc: "Learn to use the CAR model to answer tough questions with confidence.",
+      alt: "Video thumbnail: A man in a dark shirt speaking about challenges faced in an interview. Click to play the video.",
+      additionalInfo: (
+        <>
+          <a
+            id="download-vid6"
+            href={car}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+            style={{ color: "#c80000" }}
+          >
+            Download
+          </a>{" "}
+          the worksheet and ace your next interview.
+        </>
+      ),
+      urls: {
+        india:
+          "https://www.youtube.com/embed/_yC-krL_pFk?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=8",
+        global:
+          "https://www.youtube.com/embed/eRbfSU4NdzQ?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=6",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=81rthdxmss8w&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-        {
-            id: "video7",
-            img: stregnth,
-            title: "Share strengths and growth areas",
-            desc: "Learn to be authentic and show growth when discussing strengths and weaknesses.",
-            alt: "Video thumbnail: Two presenters, a woman smiling and a man giving an 'OK' sign, on sharing strengths. Click to play.",
-            urls: {
-                india: "https://www.youtube.com/embed/x1dczGAiAdM?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=7",
-                global: "https://www.youtube.com/embed/-qIPEw8gslk?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=8",
-                china: "https://play.webvideocore.net/popplayer.php?it=9zba881v7fcc&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+    {
+      id: "video7",
+      img: stregnth,
+      title: "Share strengths and growth areas",
+      desc: "Learn to be authentic and show growth when discussing strengths and weaknesses.",
+      alt: "Video thumbnail: Two presenters, a woman smiling and a man giving an 'OK' sign, on sharing strengths. Click to play.",
+      urls: {
+        india:
+          "https://www.youtube.com/embed/x1dczGAiAdM?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=7",
+        global:
+          "https://www.youtube.com/embed/-qIPEw8gslk?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=8",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=9zba881v7fcc&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-        {
-            id: "video8",
-            img: learning,
-            title: "Speak with impact about your learning",
-            desc: "Learn to use the DLA model to showcase your skills and learning with impact.",
-            alt: "Video thumbnail of a woman speaking about learning and career impact. Click to play the video.",
-            additionalInfo: (
-                <>
-                    <a
-                        id="download-vid8"
-                        href={dla}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline" style={{ color: "#c80000" }}
-                    >
-                        Download
-                    </a>{" "} the worksheet here.
-                </>
-            ),
-            urls: {
-                india: "https://www.youtube.com/embed/z6jc1EWAdJM?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=1",
-                global: "https://www.youtube.com/embed/U9o1Mrw0LXk?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=9",
-                china: "https://play.webvideocore.net/popplayer.php?it=1ckcu6ctez8g&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+    {
+      id: "video8",
+      img: learning,
+      title: "Speak with impact about your learning",
+      desc: "Learn to use the DLA model to showcase your skills and learning with impact.",
+      alt: "Video thumbnail of a woman speaking about learning and career impact. Click to play the video.",
+      additionalInfo: (
+        <>
+          <a
+            id="download-vid8"
+            href={dla}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+            style={{ color: "#c80000" }}
+          >
+            Download
+          </a>{" "}
+          the worksheet here.
+        </>
+      ),
+      urls: {
+        india:
+          "https://www.youtube.com/embed/z6jc1EWAdJM?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=1",
+        global:
+          "https://www.youtube.com/embed/U9o1Mrw0LXk?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=9",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=1ckcu6ctez8g&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-        {
-            id: "video9",
-            img: company,
-            title: "Align with company values",
-            desc: "Learn the KAD model to showcase your knowledge, attitude and drive.",
-            alt: "Video thumbnail: Two ladies ladies on a split screen discussing aligning with company values. Click to play the video.",
-            additionalInfo: (
-                <>
-                    <a
-                        id="download-vid9"
-                        href={kad}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline" style={{ color: "#c80000" }}
-                    >
-                        Download
-                    </a>{" "} our KAD model template to apply what you've learned and start preparing with confidence.
+    {
+      id: "video9",
+      img: company,
+      title: "Align with company values",
+      desc: "Learn the KAD model to showcase your knowledge, attitude and drive.",
+      alt: "Video thumbnail: Two ladies ladies on a split screen discussing aligning with company values. Click to play the video.",
+      additionalInfo: (
+        <>
+          <a
+            id="download-vid9"
+            href={kad}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+            style={{ color: "#c80000" }}
+          >
+            Download
+          </a>{" "}
+          our KAD model template to apply what you've learned and start
+          preparing with confidence.
+        </>
+      ),
+      urls: {
+        india:
+          "https://www.youtube.com/embed/2GlePBy_rNs?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=5",
+        global:
+          "https://www.youtube.com/embed/ItUJV_Of4Cw?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=10",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=4i7kpp9kwayo&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-                </>
-            ),
-            urls: {
-                india: "https://www.youtube.com/embed/2GlePBy_rNs?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=5",
-                global: "https://www.youtube.com/embed/ItUJV_Of4Cw?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=10",
-                china: "https://play.webvideocore.net/popplayer.php?it=4i7kpp9kwayo&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+    {
+      id: "video10",
+      img: conversation,
+      title: "Navigate salary and growth conversations",
+      desc: "Learn to navigate salary and career growth conversations with confidence.",
+      alt: "Video thumbnail: A man wearing a blue shirt discussing salary and growth conversations. Click to play the video.",
+      urls: {
+        india:
+          "https://www.youtube.com/embed/Vt-3DNffKqY?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=6",
+        global:
+          "https://www.youtube.com/embed/qqzWfAV7NGE?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=11",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=kzpjqzez91ws&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-        {
-            id: "video10",
-            img: conversation,
-            title: "Navigate salary and growth conversations",
-            desc: "Learn to navigate salary and career growth conversations with confidence.",
-            alt: "Video thumbnail: A man wearing a blue shirt discussing salary and growth conversations. Click to play the video.",
-            urls: {
-                india: "https://www.youtube.com/embed/Vt-3DNffKqY?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=6",
-                global: "https://www.youtube.com/embed/qqzWfAV7NGE?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=11",
-                china: "https://play.webvideocore.net/popplayer.php?it=kzpjqzez91ws&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+    {
+      id: "video11",
+      img: expertise,
+      title: "Address questions beyond your expertise",
+      desc: "Learn to show your adaptability and growth mindset in an interview.",
+      alt: "Video thumbnail: Three presenters on a split screen discussing questions beyond your expertise. Click to play.",
+      urls: {
+        india:
+          "https://www.youtube.com/embed/Oiu77R4y6LA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=4",
+        global:
+          "https://www.youtube.com/embed/tBjN4Ynzc2U?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=12",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=4kemznvetncw&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-        {
-            id: "video11",
-            img: expertise,
-            title: "Address questions beyond your expertise",
-            desc: "Learn to show your adaptability and growth mindset in an interview.",
-            alt: "Video thumbnail: Three presenters on a split screen discussing questions beyond your expertise. Click to play.",
-            urls: {
-                india: "https://www.youtube.com/embed/Oiu77R4y6LA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=4",
-                global: "https://www.youtube.com/embed/tBjN4Ynzc2U?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=12",
-                china: "https://play.webvideocore.net/popplayer.php?it=4kemznvetncw&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+    {
+      id: "video12",
+      img: asking2,
+      title: "Ask the right questions",
+      desc: "Learn what questions to ask in an interview to show initiative.",
+      alt: "Video thumbnail: A woman speaking about asking the right questions. Click to play the video.",
+      urls: {
+        india:
+          "https://www.youtube.com/embed/bAuMjFsX1b0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=3",
+        global:
+          "https://www.youtube.com/embed/tMoRNjRi7Ck?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=13",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=2s8paki17ois&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-        {
-            id: "video12",
-            img: asking2,
-            title: "Ask the right questions",
-            desc: "Learn what questions to ask in an interview to show initiative.",
-            alt: "Video thumbnail: A woman speaking about asking the right questions. Click to play the video.",
-            urls: {
-                india: "https://www.youtube.com/embed/bAuMjFsX1b0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=3",
-                global: "https://www.youtube.com/embed/tMoRNjRi7Ck?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=13",
-                china: "https://play.webvideocore.net/popplayer.php?it=2s8paki17ois&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+    {
+      id: "video13",
+      img: practice,
+      title: "Top interview practice tips",
+      desc: "Master your interview with our step-by-step guide to effective practice.",
+      alt: "Video thumbnail: A man in a dark shirt speaking about top interview practice tips. Click to play the video.",
+      urls: {
+        india: "https://www.youtube.com/embed/sg3mZQaniF0",
+        global:
+          "https://www.youtube.com/embed/-BVe0ux1EdE?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=14",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=crhdxgwu8lc0&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
 
-        {
-            id: "video13",
-            img: practice,
-            title: "Top interview practice tips",
-            desc: "Master your interview with our step-by-step guide to effective practice.",
-            alt: "Video thumbnail: A man in a dark shirt speaking about top interview practice tips. Click to play the video.",
-            urls: {
-                india: "https://www.youtube.com/embed/sg3mZQaniF0",
-                global: "https://www.youtube.com/embed/-BVe0ux1EdE?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=14",
-                china: "https://play.webvideocore.net/popplayer.php?it=crhdxgwu8lc0&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        },
+    {
+      id: "video14",
+      img: reflect,
+      title: "Reflect after your interview",
+      desc: "Learn to manage post-interview stress and turn waiting into learning.",
+      alt: "Video thumbnail: Four presenters on a quad split screen speaking about reflecting after an interview. Click to play.",
+      urls: {
+        india: "https://www.youtube.com/embed/lZ6123JBNdg",
+        global:
+          "https://www.youtube.com/embed/AtLPKAXQlLM?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=15",
+        china:
+          "https://play.webvideocore.net/popplayer.php?it=5xwfqfcsbt8o&is_link=1&auto_play=0&aspect_ratio=16:9",
+      },
+    },
+  ];
 
-        {
-            id: "video14",
-            img: reflect,
-            title: "Reflect after your interview",
-            desc: "Learn to manage post-interview stress and turn waiting into learning.",
-            alt: "Video thumbnail: Four presenters on a quad split screen speaking about reflecting after an interview. Click to play.",
-            urls: {
-                india: "https://www.youtube.com/embed/lZ6123JBNdg",
-                global: "https://www.youtube.com/embed/AtLPKAXQlLM?list=PLhCTkN6YWdPkU7e2o8uHlj4cPuL_lMscY&index=15",
-                china: "https://play.webvideocore.net/popplayer.php?it=5xwfqfcsbt8o&is_link=1&auto_play=0&aspect_ratio=16:9"
-            }
-        }   
+  const getVideoUrlForCountry = (video: (typeof videos)[number]): string => {
+    if (userCountry === "IN") {
+      return video.urls.india;
+    } else if (userCountry === "CN") {
+      return video.urls.china;
+    } else {
+      return video.urls.global;
+    }
+  };
 
-    ];
-
-    const getVideoUrlForCountry = (video: typeof videos[number]): string => {
-        if (userCountry === "IN") {
-            return video.urls.india;
-        } else if (userCountry === "CN") {
-            return video.urls.china;
-        } else {
-            return video.urls.global;
-        }
-    };
-
-    const handlePlayVideo = (video: typeof videos[number]) => {
-        const selectedUrl = getVideoUrlForCountry(video);
-        setCurrentVideoUrl(selectedUrl);
-        setIsVideoModalOpen(true);
-    };
+  const handlePlayVideo = (video: (typeof videos)[number]) => {
+    const selectedUrl = getVideoUrlForCountry(video);
+    setCurrentVideoUrl(selectedUrl);
+    setIsVideoModalOpen(true);
+  };
 
   const closeVideoModal = () => {
     setIsVideoModalOpen(false);
@@ -379,14 +421,15 @@ const Interview = () => {
       <section className="pt-10 pb-6 interview-page">
         <div className="custom-container">
           <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex">
-            {/* Sidebar desktop */}
-            <div className="col-span-2 w-[9rem] sidebar-desktop">
+            {/* Sidebar Desktop for Interview Page */}
+            <div className="col-span-2 w-[10rem] sidebar-desktop border-r border-gray-300 max-md:hidden md:block">
+              {/* Back to Home */}
               <a href="/" className="block">
                 <div className="cursor-pointer back-to-home group">
                   <img
                     src={backtohome}
                     alt="Back arrow"
-                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-1"
+                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
                     style={{ width: "22px", height: "16px" }}
                   />
                   <span style={{ fontSize: "16px", fontWeight: "500" }}>
@@ -397,42 +440,79 @@ const Interview = () => {
                     className="home-align"
                     style={{ fontSize: "22px", fontWeight: "500" }}
                   >
-                    {" "}
                     Home
                   </span>
                 </div>
               </a>
 
-              <div className="border border-gray-400 overflow-hidden">
-                <a
-                  href="/flashcards"
-                  className={`
-        flex items-center justify-center px-0 py-2
-        relative
-        ${
-          currentRoute === "/flashcards"
-            ? "border-l-2 border-l-black bg-white"
-            : "bg-white hover:bg-gray-50"
-        }
-      `}
-                  style={
-                    currentRoute === "/flashcards"
-                      ? {
-                          marginRight: "-1px",
-                        }
-                      : {}
-                  }
-                >
-                  <span
-                    className={`
-        text-[11px] my-0 leading-4
-         text-gray-800 font-medium
-      `}
+              {/* Navigation Items */}
+              <nav aria-label="Main navigation">
+                <ul className="overflow-hidden list-none p-0 m-0">
+                  {/* Interview Prep Series - Top Level (Active on this page) */}
+                  <li
+                    className={`border-t border-b border-gray-300 border-l-0 bg-white hover:bg-gray-50 ${
+                      currentRoute === "/interview" ? "mr-[-1px]" : ""
+                    }`}
                   >
-                    ACCA Flashcards
-                  </span>
-                </a>
-              </div>
+                    <div
+                      className={
+                        currentRoute === "/interview"
+                          ? ""
+                          : "border-r-4 border-r-gray-400"
+                      }
+                    >
+                      <a
+                        href="/interview"
+                        className={`
+              flex items-center px-3 py-2
+              min-h-[32px]
+              w-full
+              text-[11px] leading-4 ml-2
+              ${
+                currentRoute === "/interview"
+                  ? "text-black font-medium"
+                  : "text-gray-500 font-normal hover:text-gray-700"
+              }
+            `}
+                      >
+                        Interview Prep Series
+                      </a>
+                    </div>
+                  </li>
+
+                  {/* ACCA Flashcards - Top Level */}
+                  <li
+                    className={`border-b border-gray-300 border-l-0 bg-white hover:bg-gray-50 ${
+                      currentRoute === "/flashcards" ? "mr-[-1px]" : ""
+                    }`}
+                  >
+                    <div
+                      className={
+                        currentRoute === "/flashcards"
+                          ? ""
+                          : "border-r-4 border-r-gray-400"
+                      }
+                    >
+                      <a
+                        href="/flashcards"
+                        className={`
+              flex items-center px-3 py-2
+              min-h-[32px]
+              w-full
+              text-[11px] leading-4 ml-2
+              ${
+                currentRoute === "/flashcards"
+                  ? "text-black font-medium"
+                  : "text-gray-500 font-normal hover:text-gray-700"
+              }
+            `}
+                      >
+                        ACCA Flashcards
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
             </div>
 
             {/* Interview Prep Series */}
@@ -449,75 +529,75 @@ const Interview = () => {
                 you in building skills that stand out.
               </p>
 
-                            {/* Video Grid */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 row-gaps">
-                                {videos.map((video, index) => (
-                                    <div key={index} className="flex flex-col">
-                                        <div className="flex items-center justify-center overflow-hidden relative">
-                                            <div className="relative w-full h-full cursor-pointer">
-                                                <img
-                                                    src={video.img}
-                                                    alt={video.alt}
-                                                    className="w-full h-full object-cover"
-                                                />
-                                                <div
-                                                    className="absolute inset-0"
-                                                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.45)' }}
-                                                ></div>
-                                                <button
-                                                    onClick={() => handlePlayVideo(video)}
-                                                    className="absolute inset-0 flex items-center justify-center"
-                                                >
-                                                    <div className="w-auto h-auto flex items-center justify-center hover:scale-110 transition-transform">
-                                                        <img
-                                                            src={videoicon}
-                                                            alt="Play video"
-                                                            className="videoicon"
-                                                        />
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <h3 className="mt-4">{video.title}</h3>
-                                        <p className="mt-2 text-gray-600 text-sm">{video.desc}</p>
-                                        <div className="mt-2 text-gray-700 text-sm addiinfo">
-                                            {video.additionalInfo}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Video Modal */}
-            <Dialog open={isVideoModalOpen} onOpenChange={setIsVideoModalOpen}>
-                <DialogContent className="max-w-none w-screen h-screen p-0 bg-color">
-                    <DialogClose asChild>
+              {/* Video Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 row-gaps">
+                {videos.map((video, index) => (
+                  <div key={index} className="flex flex-col">
+                    <div className="flex items-center justify-center overflow-hidden relative">
+                      <div className="relative w-full h-full cursor-pointer">
+                        <img
+                          src={video.img}
+                          alt={video.alt}
+                          className="w-full h-full object-cover"
+                        />
+                        <div
+                          className="absolute inset-0"
+                          style={{ backgroundColor: "rgba(0, 0, 0, 0.45)" }}
+                        ></div>
                         <button
-                            className="absolute top-4 right-4 z-50 text-white hover:text-gray-300 transition-colors videocross"
-                            onClick={closeVideoModal}
+                          onClick={() => handlePlayVideo(video)}
+                          className="absolute inset-0 flex items-center justify-center"
                         >
-                            <X size={32} />
+                          <div className="w-auto h-auto flex items-center justify-center hover:scale-110 transition-transform">
+                            <img
+                              src={videoicon}
+                              alt="Play video"
+                              className="videoicon"
+                            />
+                          </div>
                         </button>
-                    </DialogClose>
-                    <div className="w-full h-full flex items-center justify-center">
-                        <div className="w-full max-w-6xl aspect-video">
-                            {currentVideoUrl && (
-                                <iframe
-                                    src={currentVideoUrl}
-                                    className="w-full h-full"
-                                    frameBorder="0"
-                                    allow="autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                    title="Interview Prep Video"
-                                />
-                            )}
-                        </div>
+                      </div>
                     </div>
-                </DialogContent>
-            </Dialog>
+                    <h3 className="mt-4">{video.title}</h3>
+                    <p className="mt-2 text-gray-600 text-sm">{video.desc}</p>
+                    <div className="mt-2 text-gray-700 text-sm addiinfo">
+                      {video.additionalInfo}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Modal */}
+      <Dialog open={isVideoModalOpen} onOpenChange={setIsVideoModalOpen}>
+        <DialogContent className="max-w-none w-screen h-screen p-0 bg-color">
+          <DialogClose asChild>
+            <button
+              className="absolute top-4 right-4 z-50 text-white hover:text-gray-300 transition-colors videocross"
+              onClick={closeVideoModal}
+            >
+              <X size={32} />
+            </button>
+          </DialogClose>
+          <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full max-w-6xl aspect-video">
+              {currentVideoUrl && (
+                <iframe
+                  src={currentVideoUrl}
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="Interview Prep Video"
+                />
+              )}
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <Footer />
     </div>

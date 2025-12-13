@@ -73,8 +73,9 @@ const Flashcards = () => {
       <section className="pt-10 pb-6 flashcard-page">
         <div className="custom-container">
           <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex">
-            {/* Sidebar desktop*/}
-            <div className="col-span-2 w-[9rem] sidebar-desktop">
+            {/* Sidebar Desktop for Flashcards Page */}
+            <div className="col-span-2 w-[10rem] sidebar-desktop border-r border-gray-300 max-md:hidden md:block">
+              {/* Back to Home */}
               <a href="/" className="block">
                 <div className="cursor-pointer back-to-home group">
                   <img
@@ -91,42 +92,79 @@ const Flashcards = () => {
                     className="home-align"
                     style={{ fontSize: "22px", fontWeight: "500" }}
                   >
-                    {" "}
                     Home
                   </span>
                 </div>
               </a>
-              {/* Navigation Item */}
-              <div className="border border-gray-400 overflow-hidden">
-                <a
-                  href="/interview"
-                  className={`
-        flex items-center justify-center px-0 py-2
-        relative
-        ${
-          currentRoute === "/interview"
-            ? "border-l-2 border-l-black bg-white"
-            : "bg-white hover:bg-gray-50"
-        }
-      `}
-                  style={
-                    currentRoute === "/interview"
-                      ? {
-                          marginRight: "-1px",
-                        }
-                      : {}
-                  }
-                >
-                  <span
-                    className={`
-        text-[11px] my-0 leading-4
-         text-gray-800 font-medium
-      `}
+
+              {/* Navigation Items */}
+              <nav aria-label="Main navigation">
+                <ul className="overflow-hidden list-none p-0 m-0">
+                  {/* Interview Prep Series - Top Level */}
+                  <li
+                    className={`border-t border-b border-gray-300 border-l-0 bg-white hover:bg-gray-50 ${
+                      currentRoute === "/interview" ? "mr-[-1px]" : ""
+                    }`}
                   >
-                    Interview Prep Series
-                  </span>
-                </a>
-              </div>
+                    <div
+                      className={
+                        currentRoute === "/interview"
+                          ? ""
+                          : "border-r-4 border-r-gray-400"
+                      }
+                    >
+                      <a
+                        href="/interview"
+                        className={`
+              flex items-center px-3 py-2
+              min-h-[32px]
+              w-full
+              text-[11px] leading-4 ml-2
+              ${
+                currentRoute === "/interview"
+                  ? "text-black font-medium"
+                  : "text-gray-500 font-normal hover:text-gray-700"
+              }
+            `}
+                      >
+                        Interview Prep Series
+                      </a>
+                    </div>
+                  </li>
+
+                  {/* ACCA Flashcards - Top Level (Active on this page) */}
+                  <li
+                    className={`border-b border-gray-300 border-l-0 bg-white hover:bg-gray-50 ${
+                      currentRoute === "/flashcards" ? "mr-[-1px]" : ""
+                    }`}
+                  >
+                    <div
+                      className={
+                        currentRoute === "/flashcards"
+                          ? ""
+                          : "border-r-4 border-r-gray-400"
+                      }
+                    >
+                      <a
+                        href="/flashcards"
+                        className={`
+              flex items-center px-3 py-2
+              min-h-[32px]
+              w-full
+              text-[11px] leading-4 ml-2
+              ${
+                currentRoute === "/flashcards"
+                  ? "text-black font-medium"
+                  : "text-gray-500 font-normal hover:text-gray-700"
+              }
+            `}
+                      >
+                        ACCA Flashcards
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
             </div>
 
             {/* Sidebar Mobile*/}
