@@ -464,8 +464,8 @@ const Innovative = () => {
               showContent ? "content-fade-in opacity-100" : "opacity-0"
             }`}
           >
-            {/* Sidebar Desktop */}
-            <div className="col-span-2 w-[10rem] sidebar-desktop">
+            {/* Sidebar Desktop for Innovative Tech Page */}
+            <div className="col-span-2 w-[10rem] sidebar-desktop border-r border-gray-300 max-md:hidden md:block">
               {/* Back to Home */}
               <a href="/" className="block">
                 <div className="cursor-pointer back-to-home group">
@@ -488,43 +488,75 @@ const Innovative = () => {
                 </div>
               </a>
 
-              {/* Navigation Items - Container with NO border */}
-              <nav aria-label="ACCA Flashcards navigation">
+              {/* Navigation Items */}
+              <nav aria-label="Main navigation">
                 <ul className="overflow-hidden list-none p-0 m-0">
-                  {/* Main ACCA Flashcards item */}
+                  {/* Interview Prep Series - Top Level */}
                   <li
-                    className={`
-          border-t border-b border-gray-300 border-l-0 border-r
-          ${
-            currentRoute === "/flashcards"
-              ? "border-r-4 border-r-gray-400 bg-white"
-              : "border-r border-gray-300 bg-white hover:bg-gray-50"
-          }
-        `}
+                    className={`border-t border-b border-gray-300 border-l-0 bg-white hover:bg-gray-50 ${
+                      currentRoute === "/interview" ? "mr-[-1px]" : ""
+                    }`}
                   >
-                    <a
-                      href="/flashcards"
-                      className={`
-            flex items-center px-3 py-2
-            relative
-            min-h-[32px]
-            w-full
-            ${
-              currentRoute === "/flashcards"
-                ? "text-black font-medium"
-                : "text-gray-500 font-normal hover:text-gray-700"
-            }
-          `}
+                    <div
+                      className={
+                        currentRoute === "/interview"
+                          ? ""
+                          : "border-r-4 border-r-gray-400"
+                      }
                     >
-                      <span className="text-[11px] leading-4 ml-2">
-                        ACCA Flashcards
-                      </span>
-                    </a>
+                      <a
+                        href="/interview"
+                        className={`
+              flex items-center px-3 py-2
+              min-h-[32px]
+              w-full
+              text-[11px] leading-4 ml-2
+              ${
+                currentRoute === "/interview"
+                  ? "text-black font-medium"
+                  : "text-gray-500 font-normal hover:text-gray-700"
+              }
+            `}
+                      >
+                        Interview Prep Series
+                      </a>
+                    </div>
                   </li>
 
-                  {/* Sub-items - Nested list */}
-                  <li className="border-b border-gray-300 last:border-b-0 border-l-0 border-r-0">
-                    <ul className="list-none p-0 m-0">
+                  {/* ACCA Flashcards - Top Level with Children */}
+                  <li
+                    className={`border-b border-gray-300 border-l-0 bg-white ${
+                      currentRoute === "/flashcards" ? "mr-[-1px]" : ""
+                    }`}
+                  >
+                    {/* ACCA Flashcards Parent Link - Conditional border */}
+                    <div
+                      className={
+                        currentRoute === "/flashcards"
+                          ? ""
+                          : "border-r-4 border-r-gray-400"
+                      }
+                    >
+                      <a
+                        href="/flashcards"
+                        className={`
+              flex items-center px-3 py-2
+              min-h-[32px]
+              w-full
+              text-[11px] leading-4 ml-2
+              ${
+                currentRoute === "/flashcards"
+                  ? "text-black font-medium"
+                  : "text-gray-500 font-normal hover:text-gray-700"
+              }
+            `}
+                      >
+                        ACCA Flashcards
+                      </a>
+                    </div>
+
+                    {/* ACCA Flashcards Children - Nested list with NO border */}
+                    <ul className="list-none p-0 m-0 border-t border-gray-200">
                       {[
                         { path: "/sustainable", label: "Sustainable Business" },
                         { path: "/innovative", label: "Innovative Tech" },
@@ -532,37 +564,26 @@ const Innovative = () => {
                       ].map((item) => (
                         <li
                           key={item.path}
-                          className={`
-                border-t border-b border-gray-200 border-l-0 border-r
-                ${
-                  currentRoute === item.path
-                    ? "border-r-4 border-r-gray-400 bg-white"
-                    : "border-r border-gray-300 bg-white hover:bg-gray-50"
-                }
-              `}
+                          className={`border-b border-gray-200 last:border-b-0 bg-white hover:bg-gray-50 ${
+                            currentRoute === item.path ? "mr-[-1px]" : ""
+                          }`}
                         >
                           <a
                             href={item.path}
                             className={`
-                               flex items-center px-3 py-2
-                               relative
-                               min-h-[32px]
-                               w-full
-                               pl-6
-                             `}
+                  flex items-center px-3 py-2
+                  min-h-[32px]
+                  w-full
+                  pl-6
+                  text-[11px] leading-4
+                  ${
+                    currentRoute === item.path
+                      ? "text-black font-medium"
+                      : "text-gray-500 font-normal hover:text-gray-700"
+                  }
+                `}
                           >
-                            <span
-                              className={`
-      text-[11px] leading-4
-      ${
-        currentRoute === item.path
-          ? "text-black font-medium"
-          : "text-gray-500 font-normal hover:text-gray-700"
-      }
-    `}
-                            >
-                              {item.label}
-                            </span>
+                            {item.label}
                           </a>
                         </li>
                       ))}
@@ -636,7 +657,7 @@ const Innovative = () => {
                         PI Report: AI (Artificial Intelligence) in the Finance
                         Profession (PDF file 1.22 mb size)
                       </a>
-                     <span
+                      <span
                         className="inline-flex items-center ml-1"
                         style={{ color: "rgb(200, 0, 0)" }}
                       >

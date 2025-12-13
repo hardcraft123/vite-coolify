@@ -459,113 +459,118 @@ const Sustainable = () => {
               showContent ? "content-fade-in opacity-100" : "opacity-0"
             }`}
           >
-            {/* Sidebar Desktop for Sustainable Page */}
-            <div className="col-span-2 w-[10rem] sidebar-desktop">
-              {/* Back to Home */}
-              <a href="/" className="block">
-                <div className="cursor-pointer back-to-home group">
-                  <img
-                    src={backtohome}
-                    alt="Back arrow"
-                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
-                    style={{ width: "22px", height: "16px" }}
-                  />
-                  <span style={{ fontSize: "16px", fontWeight: "500" }}>
-                    Back to
-                  </span>
-                  <br />
-                  <span
-                    className="home-align"
-                    style={{ fontSize: "22px", fontWeight: "500" }}
-                  >
-                    Home
-                  </span>
-                </div>
-              </a>
+       {/* Sidebar Desktop for Sustainable Page */}
+<div className="col-span-2 w-[10rem] sidebar-desktop border-r border-gray-300 max-md:hidden md:block">
+  {/* Back to Home */}
+  <a href="/" className="block">
+    <div className="cursor-pointer back-to-home group">
+      <img
+        src={backtohome}
+        alt="Back arrow"
+        className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
+        style={{ width: "22px", height: "16px" }}
+      />
+      <span style={{ fontSize: "16px", fontWeight: "500" }}>
+        Back to
+      </span>
+      <br />
+      <span 
+        className="home-align"
+        style={{ fontSize: "22px", fontWeight: "500" }}
+      >
+        Home
+      </span>
+    </div>
+  </a>
 
-              {/* Navigation Items - Container with NO border */}
-              <nav aria-label="ACCA Flashcards navigation">
-                <ul className="overflow-hidden list-none p-0 m-0">
-                  {/* Main ACCA Flashcards item */}
-                  <li
-                    className={`
-          border-t border-b border-gray-300 border-l-0 border-r
-          ${
-            currentRoute === "/flashcards"
-              ? "border-r-4 border-r-gray-400 bg-white"
-              : "border-r border-gray-300 bg-white hover:bg-gray-50"
-          }
-        `}
-                  >
-                    <a
-                      href="/flashcards"
-                      className={`
-            flex items-center px-3 py-2
-            relative
-            min-h-[32px]
-            w-full
-            ${
-              currentRoute === "/flashcards"
-                ? "text-black font-medium"
-                : "text-gray-500 font-normal hover:text-gray-700"
-            }
-          `}
-                    >
-                      <span className="text-[11px] leading-4 ml-2">
-                        ACCA Flashcards
-                      </span>
-                    </a>
-                  </li>
+  {/* Navigation Items */}
+  <nav aria-label="Main navigation">
+    <ul className="overflow-hidden list-none p-0 m-0">
+      {/* Interview Prep Series - Top Level */}
+      <li className={`border-t border-b border-gray-300 border-l-0 bg-white hover:bg-gray-50 ${
+        currentRoute === "/interview" ? "mr-[-1px]" : ""
+      }`}>
+        <div className={currentRoute === "/interview" ? "" : "border-r-4 border-r-gray-400"}>
+          <a 
+            href="/interview"
+            className={`
+              flex items-center px-3 py-2
+              min-h-[32px]
+              w-full
+              text-[11px] leading-4 ml-2
+              ${
+                currentRoute === "/interview"
+                  ? "text-black font-medium"
+                  : "text-gray-500 font-normal hover:text-gray-700"
+              }
+            `}
+          >
+            Interview Prep Series
+          </a>
+        </div>
+      </li>
 
-                  {/* Sub-items - Nested list */}
-                  <li className="border-b border-gray-300 last:border-b-0 border-l-0 border-r-0">
-                    <ul className="list-none p-0 m-0">
-                      {[
-                        { path: "/sustainable", label: "Sustainable Business" },
-                        { path: "/innovative", label: "Innovative Tech" },
-                        { path: "/future", label: "Future Skills" },
-                      ].map((item) => (
-                        <li
-                          key={item.path}
-                          className={`
-                border-t border-b border-gray-200 border-l-0 border-r
-                ${
-                  currentRoute === item.path
-                    ? "border-r-4 border-r-gray-400 bg-white"
-                    : "border-r border-gray-300 bg-white hover:bg-gray-50"
-                }
-              `}
-                        >
-                          <a
-                            href={item.path}
-                            className={`
+      {/* ACCA Flashcards - Top Level with Children */}
+      <li className={`border-b border-gray-300 border-l-0 bg-white ${
+        currentRoute === "/flashcards" ? "mr-[-1px]" : ""
+      }`}>
+        {/* ACCA Flashcards Parent Link - Conditional border */}
+        <div className={currentRoute === "/flashcards" ? "" : "border-r-4 border-r-gray-400"}>
+          <a 
+            href="/flashcards"
+            className={`
+              flex items-center px-3 py-2
+              min-h-[32px]
+              w-full
+              text-[11px] leading-4 ml-2
+              ${
+                currentRoute === "/flashcards"
+                  ? "text-black font-medium"
+                  : "text-gray-500 font-normal hover:text-gray-700"
+              }
+            `}
+          >
+            ACCA Flashcards
+          </a>
+        </div>
+
+        {/* ACCA Flashcards Children - Nested list with NO border */}
+        <ul className="list-none p-0 m-0 border-t border-gray-200">
+          {[
+            { path: "/sustainable", label: "Sustainable Business" },
+            { path: "/innovative", label: "Innovative Tech" },
+            { path: "/future", label: "Future Skills" },
+          ].map((item) => (
+            <li
+              key={item.path}
+              className={`border-b border-gray-200 last:border-b-0 bg-white hover:bg-gray-50 ${
+                currentRoute === item.path ? "mr-[-1px]" : ""
+              }`}
+            >
+              <a 
+                href={item.path}
+                className={`
                   flex items-center px-3 py-2
-                  relative
                   min-h-[32px]
                   w-full
                   pl-6
+                  text-[11px] leading-4
+                  ${
+                    currentRoute === item.path
+                      ? "text-black font-medium"
+                      : "text-gray-500 font-normal hover:text-gray-700"
+                  }
                 `}
-                          >
-                            <span
-                              className={`
-                    text-[11px] leading-4
-                    ${
-                      currentRoute === item.path
-                        ? "text-black font-medium"
-                        : "text-gray-500 font-normal hover:text-gray-700"
-                    }
-                  `}
-                            >
-                              {item.label}
-                            </span>
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
 
             {/* Sidebar Mobile*/}
             <div className="w-screen max-w-none col-span-2 space-y-0 sidebar-mobile display-side relative left-1/2 -translate-x-1/2 sm:static sm:w-full sm:max-w-full">
