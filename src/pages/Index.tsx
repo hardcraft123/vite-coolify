@@ -148,7 +148,7 @@ const Index = () => {
                 </ul>
 
                 <span className="inline-flex items-center justify-center align-baseline">
-                  <Link to="/interview" className="inline-flex items-center">
+                  <Link to="/interview-prep-series" className="inline-flex items-center">
                     Sharpen your interview skills
                   </Link>
                   <span
@@ -207,7 +207,7 @@ const Index = () => {
                 </ul>
 
                 <span className="inline-flex items-center justify-center align-baseline">
-                  <Link to="/flashcards" className="inline-flex items-center">
+                  <Link to="/acca-flashcards" className="inline-flex items-center">
                     Start building your skills with flashcards
                   </Link>
                   <span

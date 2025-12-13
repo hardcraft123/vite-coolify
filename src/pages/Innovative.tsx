@@ -494,25 +494,25 @@ const Innovative = () => {
                   {/* Interview Prep Series - Top Level */}
                   <li
                     className={`border-t border-b border-gray-300 border-l-0 bg-white hover:bg-gray-50 ${
-                      currentRoute === "/interview" ? "mr-[-1px]" : ""
+                      currentRoute === "/interview-prep-series" ? "mr-[-1px]" : ""
                     }`}
                   >
                     <div
                       className={
-                        currentRoute === "/interview"
+                        currentRoute === "/interview-prep-series"
                           ? ""
                           : "border-r-4 border-r-gray-400"
                       }
                     >
                       <a
-                        href="/interview"
+                        href="/interview-prep-series"
                         className={`
               flex items-center px-3 py-2
               min-h-[32px]
               w-full
               text-[11px] leading-4 ml-2
               ${
-                currentRoute === "/interview"
+                currentRoute === "/interview-prep-series"
                   ? "text-black font-medium"
                   : "text-gray-500 font-normal hover:text-gray-700"
               }
@@ -526,26 +526,26 @@ const Innovative = () => {
                   {/* ACCA Flashcards - Top Level with Children */}
                   <li
                     className={`border-b border-gray-300 border-l-0 bg-white ${
-                      currentRoute === "/flashcards" ? "mr-[-1px]" : ""
+                      currentRoute === "/acca-flashcards" ? "mr-[-1px]" : ""
                     }`}
                   >
                     {/* ACCA Flashcards Parent Link - Conditional border */}
                     <div
                       className={
-                        currentRoute === "/flashcards"
+                        currentRoute === "/acca-flashcards"
                           ? ""
                           : "border-r-4 border-r-gray-400"
                       }
                     >
                       <a
-                        href="/flashcards"
+                        href="/acca-flashcards"
                         className={`
               flex items-center px-3 py-2
               min-h-[32px]
               w-full
               text-[11px] leading-4 ml-2
               ${
-                currentRoute === "/flashcards"
+                currentRoute === "/acca-flashcards"
                   ? "text-black font-medium"
                   : "text-gray-500 font-normal hover:text-gray-700"
               }
@@ -559,8 +559,8 @@ const Innovative = () => {
                     <ul className="list-none p-0 m-0 border-t border-gray-200">
                       {[
                         { path: "/sustainable-business", label: "Sustainable Business" },
-                        { path: "/innovative", label: "Innovative Tech" },
-                        { path: "/future", label: "Future Skills" },
+                        { path: "/innovative-tech", label: "Innovative Tech" },
+                        { path: "/future-skills", label: "Future Skills" },
                       ].map((item) => (
                         <li
                           key={item.path}
@@ -818,7 +818,7 @@ const Innovative = () => {
                     {themes.map((theme) => (
                       <div key={theme.id} className="w-1/2 overflow-hidden">
                         <a
-                          href={theme.id === 1 ? "/sustainable-business" : "/future"}
+                          href={theme.id === 1 ? "/sustainable-business" : "/future-skills"}
                           className="cursor-pointer block"
                         >
                           <div className="relative">

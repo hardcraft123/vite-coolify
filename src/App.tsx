@@ -26,11 +26,11 @@ const App = () => (
          {/* <CookieConsent /> */}
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/flashcards" element={<Flashcards />} /> {/* ✅ Flashcards route */}
-          <Route path="/interview" element={<Interview />} /> {/* ✅ Interview route */}
+          <Route path="/acca-flashcards" element={<Flashcards />} /> {/* ✅ Flashcards route */}
+          <Route path="/interview-prep-series" element={<Interview />} /> {/* ✅ Interview route */}
           <Route path="/sustainable-business" element={<Sustainable />} />
-          <Route path="/innovative" element={<Innovative />} />
-          <Route path="/future" element={<Future />} />
+          <Route path="/innovative-tech" element={<Innovative />} />
+          <Route path="/future-skills" element={<Future />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
