@@ -459,7 +459,7 @@ const Sustainable = () => {
               showContent ? "content-fade-in opacity-100" : "opacity-0"
             }`}
           >
-            {/* Sidebar for desktop*/}
+            {/* Sidebar Desktop for Sustainable Page */}
             <div className="col-span-2 w-[10rem] sidebar-desktop">
               {/* Back to Home */}
               <a href="/" className="block">
@@ -478,57 +478,93 @@ const Sustainable = () => {
                     className="home-align"
                     style={{ fontSize: "22px", fontWeight: "500" }}
                   >
-                    {" "}
                     Home
                   </span>
                 </div>
               </a>
 
-              {/* Navigation Items - Container with border */}
-              <div className="border border-gray-400 overflow-hidden">
-                {[
-                  { path: "/flashcards", label: "ACCA Flashcards" },
-                  { path: "/sustainable", label: "Sustainable Business" },
-                  { path: "/innovative", label: "Innovative Tech" },
-                  { path: "/future", label: "Future Skills" },
-                ].map((item, index) => (
-                  <a
-                    key={item.path}
-                    href={item.path}
+              {/* Navigation Items - Container with NO border */}
+              <nav aria-label="ACCA Flashcards navigation">
+                <ul className="overflow-hidden list-none p-0 m-0">
+                  {/* Main ACCA Flashcards item */}
+                  <li
                     className={`
-        flex items-center px-3 py-2
-        border-b border-gray-300 last:border-b-0
-        relative
-        min-h-[32px]
-        ${
-          currentRoute === item.path
-            ? "border-l-2 border-l-black bg-white"
-            : "bg-white hover:bg-gray-50"
-        }
-      `}
-                    style={
-                      currentRoute === item.path
-                        ? {
-                            marginRight: "-1px",
-                          }
-                        : {}
-                    }
+          border-t border-b border-gray-300 border-l-0 border-r
+          ${
+            currentRoute === "/flashcards"
+              ? "border-r-4 border-r-gray-400 bg-white"
+              : "border-r border-gray-300 bg-white hover:bg-gray-50"
+          }
+        `}
                   >
-                    <span
+                    <a
+                      href="/flashcards"
                       className={`
-         text-[11px] leading-4 ${index === 0 ? "ml-2" : "ml-6"}
-        ${
-          currentRoute === item.path
-            ? "text-black font-medium"
-            : "text-gray-500 font-normal"
-        }
-      `}
+            flex items-center px-3 py-2
+            relative
+            min-h-[32px]
+            w-full
+            ${
+              currentRoute === "/flashcards"
+                ? "text-black font-medium"
+                : "text-gray-500 font-normal hover:text-gray-700"
+            }
+          `}
                     >
-                      {item.label}
-                    </span>
-                  </a>
-                ))}
-              </div>
+                      <span className="text-[11px] leading-4 ml-2">
+                        ACCA Flashcards
+                      </span>
+                    </a>
+                  </li>
+
+                  {/* Sub-items - Nested list */}
+                  <li className="border-b border-gray-300 last:border-b-0 border-l-0 border-r-0">
+                    <ul className="list-none p-0 m-0">
+                      {[
+                        { path: "/sustainable", label: "Sustainable Business" },
+                        { path: "/innovative", label: "Innovative Tech" },
+                        { path: "/future", label: "Future Skills" },
+                      ].map((item) => (
+                        <li
+                          key={item.path}
+                          className={`
+                border-t border-b border-gray-200 border-l-0 border-r
+                ${
+                  currentRoute === item.path
+                    ? "border-r-4 border-r-gray-400 bg-white"
+                    : "border-r border-gray-300 bg-white hover:bg-gray-50"
+                }
+              `}
+                        >
+                          <a
+                            href={item.path}
+                            className={`
+                  flex items-center px-3 py-2
+                  relative
+                  min-h-[32px]
+                  w-full
+                  pl-6
+                `}
+                          >
+                            <span
+                              className={`
+                    text-[11px] leading-4
+                    ${
+                      currentRoute === item.path
+                        ? "text-black font-medium"
+                        : "text-gray-500 font-normal hover:text-gray-700"
+                    }
+                  `}
+                            >
+                              {item.label}
+                            </span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
             </div>
 
             {/* Sidebar Mobile*/}

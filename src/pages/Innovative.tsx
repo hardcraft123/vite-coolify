@@ -5,12 +5,12 @@ import accaflashcard from "../assets/image/accaflashcard.png";
 import sustain10 from "../assets/image/sustain10.png";
 import innovativedark from "../assets/image/innovativedark.png";
 import future1 from "../assets/image/future1.png";
-import what11 from "../assets/image/what11.png"
-import theme3 from "../assets/image/theme3.png"
-import theme2 from "../assets/image/theme2.png"
-import what1 from "../assets/image/what1.png"
-import what2 from "../assets/image/what2.png"
-import what3 from "../assets/image/what3.png"
+import what11 from "../assets/image/what11.png";
+import theme3 from "../assets/image/theme3.png";
+import theme2 from "../assets/image/theme2.png";
+import what1 from "../assets/image/what1.png";
+import what2 from "../assets/image/what2.png";
+import what3 from "../assets/image/what3.png";
 import iwhatflashcard1 from "../assets/image/iwhatflashcard1.pdf";
 import iwhereflashcard1 from "../assets/image/iwhereflashcard1.pdf";
 import iwhyflashcard1 from "../assets/image/iwhyflashcard1.pdf";
@@ -29,34 +29,36 @@ import where11 from "../assets/image/where11.png";
 import how11 from "../assets/image/how11.png";
 import { X } from "lucide-react";
 import bulb from "../assets/image/bulb.png";
-import person from "../assets/image/person.png"
+import person from "../assets/image/person.png";
 import arrow from "../assets/image/arrow.png";
 import leftarrow from "../assets/image/leftarrow.png";
-import why1 from "../assets/image/why1.png"
-import why2 from "../assets/image/why2.png"
-import why3 from "../assets/image/why3.png"
-import who1 from "../assets/image/who1.png"
-import where1 from "../assets/image/where1.png"
-import where2 from "../assets/image/where2.png"
-import where3 from "../assets/image/where3.png"
-import how1 from "../assets/image/how1.png"
-import how2 from "../assets/image/how2.png"
-import iwhat1 from "../assets/image/iwhat1.png"
-import iwhat2 from "../assets/image/iwhat2.png"
-import iwhy1 from "../assets/image/iwhy1.png"
-import iwhy2 from "../assets/image/iwhy2.png"
-import iwho1 from "../assets/image/iwho1.png"
-import iwho2 from "../assets/image/iwho2.png"
-import iwhere1 from "../assets/image/iwhere1.png"
-import iwhere2 from "../assets/image/iwhere2.png"
-import ihow1 from "../assets/image/ihow1.png"
-import ihow2 from "../assets/image/ihow2.png"
+import why1 from "../assets/image/why1.png";
+import why2 from "../assets/image/why2.png";
+import why3 from "../assets/image/why3.png";
+import who1 from "../assets/image/who1.png";
+import where1 from "../assets/image/where1.png";
+import where2 from "../assets/image/where2.png";
+import where3 from "../assets/image/where3.png";
+import how1 from "../assets/image/how1.png";
+import how2 from "../assets/image/how2.png";
+import iwhat1 from "../assets/image/iwhat1.png";
+import iwhat2 from "../assets/image/iwhat2.png";
+import iwhy1 from "../assets/image/iwhy1.png";
+import iwhy2 from "../assets/image/iwhy2.png";
+import iwho1 from "../assets/image/iwho1.png";
+import iwho2 from "../assets/image/iwho2.png";
+import iwhere1 from "../assets/image/iwhere1.png";
+import iwhere2 from "../assets/image/iwhere2.png";
+import ihow1 from "../assets/image/ihow1.png";
+import ihow2 from "../assets/image/ihow2.png";
 import backtohome from "../assets/image/backtohome.png";
-
 
 const Innovative = () => {
   const [activeTab, setActiveTab] = useState("what");
-  const [activePopup, setActivePopup] = useState<{ tab: string; icon: number } | null>(null);
+  const [activePopup, setActivePopup] = useState<{
+    tab: string;
+    icon: number;
+  } | null>(null);
   const [showPinkBox, setShowPinkBox] = useState(true);
   const [showContent, setShowContent] = useState(false);
   const buttonRefs = useRef<{ [key: number]: HTMLButtonElement | null }>({});
@@ -67,36 +69,39 @@ const Innovative = () => {
   const location = useLocation();
   const cameFromFlashcard = location.state?.fromFlashcard === true;
   const currentRoute = location.pathname;
-
+  console.log("Current Route:", currentRoute);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
+      if (
+        popupRef.current &&
+        !popupRef.current.contains(event.target as Node)
+      ) {
         closePopup(); // Close popup on outside click
       }
     }
 
     if (activePopup) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [activePopup]); // Only run effect when popup changes
 
   // ESC key functionality to close popup
   useEffect(() => {
     function handleEscapeKey(event: KeyboardEvent) {
-      if (event.key === 'Escape' && activePopup) {
+      if (event.key === "Escape" && activePopup) {
         closePopup();
       }
     }
 
-    document.addEventListener('keydown', handleEscapeKey);
+    document.addEventListener("keydown", handleEscapeKey);
 
     return () => {
-      document.removeEventListener('keydown', handleEscapeKey);
+      document.removeEventListener("keydown", handleEscapeKey);
     };
   }, [activePopup]);
 
@@ -129,19 +134,43 @@ const Innovative = () => {
     {
       id: "why",
       label: "Why",
-      icon: <img src={bulb} alt="Why" className=" object-contain why-buttons" style={{ width: '10px' }} />,
+      icon: (
+        <img
+          src={bulb}
+          alt="Why"
+          className=" object-contain why-buttons"
+          style={{ width: "10px" }}
+        />
+      ),
     },
-    { id: "who", label: "Who", icon: <img src={person} alt="person" className="object-contain" style={{ width: '15px' }} />, },
-    { id: "where", label: "Where", icon: <FiMapPin className="text-red-500" /> },
+    {
+      id: "who",
+      label: "Who",
+      icon: (
+        <img
+          src={person}
+          alt="person"
+          className="object-contain"
+          style={{ width: "15px" }}
+        />
+      ),
+    },
+    {
+      id: "where",
+      label: "Where",
+      icon: <FiMapPin className="text-red-500" />,
+    },
     { id: "how", label: "How", icon: <FiSettings className="text-red-500" /> },
   ];
 
   const contentData = {
     what: {
       title: "What are the skills needed for AI literacy?",
-      description: "AI Literacy would mean combining technical insight with human insight and soft skills. Professionals must grasp programming, AI/ML concepts, and data governance while also strengthening problem-solving, ethical reasoning, and communication. These skills are essential for responsible and future-ready decision making.",
+      description:
+        "AI Literacy would mean combining technical insight with human insight and soft skills. Professionals must grasp programming, AI/ML concepts, and data governance while also strengthening problem-solving, ethical reasoning, and communication. These skills are essential for responsible and future-ready decision making.",
       image: what11,
-      altText: "Person wearing AR glasses and touching a large digital screen, representing AI literacy and future skills. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
+      altText:
+        "Person wearing AR glasses and touching a large digital screen, representing AI literacy and future skills. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "itdf1",
       learnMoreId: "itlm1",
       downloadLink: iwhatflashcard1, // What tab download link
@@ -158,20 +187,31 @@ const Innovative = () => {
         3: { width: "470px", rightOffset: "-0px" },
       },
       popupImages: [
-        { id: 1, src: iwhat2, alt: "Clive Webb, Lead author, ACCA: AI can help professionals make better decisions, optimise operations, and deliver improved insights." },
-        { id: 2, src: iwhat1, alt: "Technical skills: Programming and data analytics, AI and machine learning understanding, Data governance and management. Business and soft skills: Problem solving and critical thinking, Communicating complex insights, Ethical reasoning." },
+        {
+          id: 1,
+          src: iwhat2,
+          alt: "Clive Webb, Lead author, ACCA: AI can help professionals make better decisions, optimise operations, and deliver improved insights.",
+        },
+        {
+          id: 2,
+          src: iwhat1,
+          alt: "Technical skills: Programming and data analytics, AI and machine learning understanding, Data governance and management. Business and soft skills: Problem solving and critical thinking, Communicating complex insights, Ethical reasoning.",
+        },
         { id: 3, src: what3, alt: "What popup image 3" },
       ],
     },
     why: {
       title: "Why are accountants still essential?",
-      description: "AI has great potential to support people in accounting and other fields. Instead of replacing human skills, it is now seen as a tool that helps accountants do their work better.",
+      description:
+        "AI has great potential to support people in accounting and other fields. Instead of replacing human skills, it is now seen as a tool that helps accountants do their work better.",
       image: why11,
-      altText: "A hand uses a smartphone resting on a monitor, representing the integration of AI tools in daily work. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
+      altText:
+        "A hand uses a smartphone resting on a monitor, representing the integration of AI tools in daily work. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "itdf2",
       learnMoreId: "itlm2",
       downloadLink: iwhyflashcard1, // What tab download link
-      learnMoreLink: "https://www.accaglobal.com/gb/en/professional-insights/technology/digital-horizons.html", // External Learn More link
+      learnMoreLink:
+        "https://www.accaglobal.com/gb/en/professional-insights/technology/digital-horizons.html", // External Learn More link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-2 left-1", // Top left
@@ -184,20 +224,31 @@ const Innovative = () => {
         3: { width: "470px", rightOffset: "-45px" },
       },
       popupImages: [
-        { id: 1, src: iwhy1, alt: "Alistair Brisbourne, Head of Technology, ACCA: The adoption of AI increases rather than decreases the importance of experts." },
-        { id: 2, src: iwhy2, alt: "There has been only 1% increase in automation since 2020, and estimations in the expected level of automation have also receded slightly (from 47% of tasks to 42% of tasks). Source: World Economic Forum (WEF) Future of Jobs 2023 report." },
+        {
+          id: 1,
+          src: iwhy1,
+          alt: "Alistair Brisbourne, Head of Technology, ACCA: The adoption of AI increases rather than decreases the importance of experts.",
+        },
+        {
+          id: 2,
+          src: iwhy2,
+          alt: "There has been only 1% increase in automation since 2020, and estimations in the expected level of automation have also receded slightly (from 47% of tasks to 42% of tasks). Source: World Economic Forum (WEF) Future of Jobs 2023 report.",
+        },
         { id: 3, src: why3, alt: "Why popup image 3" },
       ],
     },
     who: {
       title: "Who drives AI adoption in accounting?",
-      description: "Successful AI adoption depends on everyone from Entry-Level to the C-suite. Entry-level professionals typically develop data literacy and technical skills. Mid-level roles focus on analytics and compliance. Senior managers lead stakeholder engagement and risk management, while C-suite executives drive AI strategy and governance.",
+      description:
+        "Successful AI adoption depends on everyone from Entry-Level to the C-suite. Entry-level professionals typically develop data literacy and technical skills. Mid-level roles focus on analytics and compliance. Senior managers lead stakeholder engagement and risk management, while C-suite executives drive AI strategy and governance.",
       image: who11,
-      altText: "Three colleagues collaborate in a modern, well-lit office lounge, representing broad AI adoption. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
+      altText:
+        "Three colleagues collaborate in a modern, well-lit office lounge, representing broad AI adoption. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "itdf3",
       learnMoreId: "itlm3",
       downloadLink: iwhoflashcard1, // What tab download link
-      learnMoreLink: "https://stories.accaglobal.com/ai-monitor_talent-skills-focus/responsible-ai-adoption/index.html", // What tab learn more link
+      learnMoreLink:
+        "https://stories.accaglobal.com/ai-monitor_talent-skills-focus/responsible-ai-adoption/index.html", // What tab learn more link
       visibleIcons: [1, 2], // Only show icon 1 for this tab
       iconPositions: {
         1: "top-1/2 left-1/2 transform -translate-y-1/2", // Middle left
@@ -208,20 +259,31 @@ const Innovative = () => {
         3: { width: "470px", rightOffset: "-45px" },
       },
       popupImages: [
-        { id: 1, src: iwho1, alt: "Organizational relationships and creation of value diagram showing three layers: Recipients (Investors and other financial stakeholders, Customers, Employees, Community, Regulators), Converters (Performance management and measurement connecting Operations and processes, Data, and Technology), and Enablers (Financial, Manufactured, Intellectual, Human, Social and relationship, Natural). Arrows show flow and relationships between elements with Return loop." },
-        { id: 2, src: iwho2, alt: "Professionals adopting AI: Entry level professionals, Mid-level professionals, Senior managers and directors, C-suite executives." },
+        {
+          id: 1,
+          src: iwho1,
+          alt: "Organizational relationships and creation of value diagram showing three layers: Recipients (Investors and other financial stakeholders, Customers, Employees, Community, Regulators), Converters (Performance management and measurement connecting Operations and processes, Data, and Technology), and Enablers (Financial, Manufactured, Intellectual, Human, Social and relationship, Natural). Arrows show flow and relationships between elements with Return loop.",
+        },
+        {
+          id: 2,
+          src: iwho2,
+          alt: "Professionals adopting AI: Entry level professionals, Mid-level professionals, Senior managers and directors, C-suite executives.",
+        },
         { id: 3, src: what3, alt: "Who popup image 3" },
       ],
     },
     where: {
       title: "Where does AI add value?",
-      description: "AI offers clear value in four areas namely sustainability reporting, insight generation, compliance monitoring, and process efficiency. It enhances ESG analysis, automates control testing, and delivers real-time financial intelligence. Accountants use AI to improve decision quality while maintaining trust and transparency.",
+      description:
+        "AI offers clear value in four areas namely sustainability reporting, insight generation, compliance monitoring, and process efficiency. It enhances ESG analysis, automates control testing, and delivers real-time financial intelligence. Accountants use AI to improve decision quality while maintaining trust and transparency.",
       image: where11,
-      altText: "A man in a casual shirt interacts with a vibrant, illuminated digital screen. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
+      altText:
+        "A man in a casual shirt interacts with a vibrant, illuminated digital screen. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "itdf4",
       learnMoreId: "itlm4",
       downloadLink: iwhereflashcard1, // What tab download link
-      learnMoreLink: "https://www.accaglobal.com/gb/en/professional-insights/technology/digital-horizons.html", // What tab learn more link
+      learnMoreLink:
+        "https://www.accaglobal.com/gb/en/professional-insights/technology/digital-horizons.html", // What tab learn more link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-0 left-4", // Top left
@@ -234,20 +296,31 @@ const Innovative = () => {
         3: { width: "470px", rightOffset: "-45px" },
       },
       popupImages: [
-        { id: 1, src: iwhere1, alt: "Levels of trust in AI: For 'AI can increase the amount of time I have to focus on business-critical tasks' - 70% Agree, 9% Disagree, 15% Neutral, 5% Don't know. For 'I would rely on AI to perform business-critical tasks (e.g. settlements, internal control)' - 50% Agree, 21% Disagree, 22% Neutral, 6% Don't know." },
-        { id: 2, src: iwhere2, alt: "The components of value diagram showing Value at the center connected to four components: Sustainability, Insight generation, Compliance and control, and Transactional efficiency." },
+        {
+          id: 1,
+          src: iwhere1,
+          alt: "Levels of trust in AI: For 'AI can increase the amount of time I have to focus on business-critical tasks' - 70% Agree, 9% Disagree, 15% Neutral, 5% Don't know. For 'I would rely on AI to perform business-critical tasks (e.g. settlements, internal control)' - 50% Agree, 21% Disagree, 22% Neutral, 6% Don't know.",
+        },
+        {
+          id: 2,
+          src: iwhere2,
+          alt: "The components of value diagram showing Value at the center connected to four components: Sustainability, Insight generation, Compliance and control, and Transactional efficiency.",
+        },
         { id: 3, src: where3, alt: "Where popup image 3" },
       ],
-    }, 
+    },
     how: {
       title: "How do leading firms adopt AI successfully?",
-      description: "Top firms prioritise digital skills, strategic alignment, and ethical frameworks. They invest in continuous learning, promote experimentation, and collaborate across teams. These organisations view AI not just as a tool but as a strategic enabler of transformation.",
+      description:
+        "Top firms prioritise digital skills, strategic alignment, and ethical frameworks. They invest in continuous learning, promote experimentation, and collaborate across teams. These organisations view AI not just as a tool but as a strategic enabler of transformation.",
       image: how11,
-      altText: "Close-up of hands holding a tablet with a blurred business meeting in the background, illustrating technology adoption. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
+      altText:
+        "Close-up of hands holding a tablet with a blurred business meeting in the background, illustrating technology adoption. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
       downloadId: "itdf5",
       learnMoreId: "itlm5",
       downloadLink: ihowflashcard1, // What tab download link
-      learnMoreLink: "https://www.accaglobal.com/gb/en/professional-insights/technology/digital-horizons.html", // What tab learn more link
+      learnMoreLink:
+        "https://www.accaglobal.com/gb/en/professional-insights/technology/digital-horizons.html", // What tab learn more link
       visibleIcons: [1, 2], // Only show icons 1 and 2 for this tab
       iconPositions: {
         1: "bottom-5 left-4", // Bottom left
@@ -259,8 +332,16 @@ const Innovative = () => {
         3: { width: "470px", rightOffset: "-45px" },
       },
       popupImages: [
-        { id: 1, src: ihow2, alt: "Diagram showing AI as a strategic framework. A pentagon labeled 'AI literacy' sits at the center, surrounded by five interconnected boxes: 'Strategic vision' at the top, 'Investment financing' on the left, 'People, process, culture' at the bottom left, 'Data governance' at the bottom right, and 'Risk and compliance' on the right. Gray lines connect all elements in a circular flow." },
-        { id: 2, src: ihow1, alt: "Quote from Alistair Brisbourne, Head of Technology at ACCA, stating: 'Successful technology adoption is not just about implementing new systems but also about enabling people to use these systems effectively and to realise their personal benefits." },
+        {
+          id: 1,
+          src: ihow2,
+          alt: "Diagram showing AI as a strategic framework. A pentagon labeled 'AI literacy' sits at the center, surrounded by five interconnected boxes: 'Strategic vision' at the top, 'Investment financing' on the left, 'People, process, culture' at the bottom left, 'Data governance' at the bottom right, and 'Risk and compliance' on the right. Gray lines connect all elements in a circular flow.",
+        },
+        {
+          id: 2,
+          src: ihow1,
+          alt: "Quote from Alistair Brisbourne, Head of Technology at ACCA, stating: 'Successful technology adoption is not just about implementing new systems but also about enabling people to use these systems effectively and to realise their personal benefits.",
+        },
         { id: 3, src: what3, alt: "How popup image 3" },
       ],
     },
@@ -359,8 +440,17 @@ const Innovative = () => {
         </div>
         <div className="margin-acca container mx-auto relative z-10 sustainable-banner">
           <div className="">
-            <h1 className="" style={{ fontSize: '70px', lineHeight: '60px', color: "#ffff", whiteSpace: "0%", fontWeight: 700 }}>
-              Innovative Tech<span style={{ color: '#D20024' }}>.</span>
+            <h1
+              className=""
+              style={{
+                fontSize: "70px",
+                lineHeight: "60px",
+                color: "#ffff",
+                whiteSpace: "0%",
+                fontWeight: 700,
+              }}
+            >
+              Innovative Tech<span style={{ color: "#D20024" }}>.</span>
             </h1>
           </div>
         </div>
@@ -369,67 +459,131 @@ const Innovative = () => {
       {/* Main Content of the page */}
       <section className="pt-0 sm:pt-10 pb-6">
         <div className="custom-container">
-          <div className={`md:grid md:grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex transition-all duration-500 ${showContent ? 'content-fade-in opacity-100' : 'opacity-0'}`}>
+          <div
+            className={`md:grid md:grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex transition-all duration-500 ${
+              showContent ? "content-fade-in opacity-100" : "opacity-0"
+            }`}
+          >
+            {/* Sidebar Desktop */}
+            <div className="col-span-2 w-[10rem] sidebar-desktop">
+              {/* Back to Home */}
+              <a href="/" className="block">
+                <div className="cursor-pointer back-to-home group">
+                  <img
+                    src={backtohome}
+                    alt="Back arrow"
+                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
+                    style={{ width: "22px", height: "16px" }}
+                  />
+                  <span style={{ fontSize: "16px", fontWeight: "500" }}>
+                    Back to
+                  </span>
+                  <br />
+                  <span
+                    className="home-align"
+                    style={{ fontSize: "22px", fontWeight: "500" }}
+                  >
+                    Home
+                  </span>
+                </div>
+              </a>
 
-          <div className="col-span-2 w-[10rem] sidebar-desktop">
-  {/* Back to Home */}
-   <a href="/" className="block">
-                                <div className="cursor-pointer back-to-home group">
-                                    <img
-                                        src={backtohome}
-                                        alt="Back arrow"
-                                        className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
-                                        style={{ width: '22px', height: '16px' }}
-                                    />
-                                    <span style={{ fontSize: '16px', fontWeight: '500' }}>Back to</span>
-                                    <br />
-                                    <span className="home-align" style={{ fontSize: '22px', fontWeight: '500' }}> Home</span>
-                                </div>
-                            </a>
+              {/* Navigation Items - Container with NO border */}
+              <nav aria-label="ACCA Flashcards navigation">
+                <ul className="overflow-hidden list-none p-0 m-0">
+                  {/* Main ACCA Flashcards item */}
+                  <li
+                    className={`
+          border-t border-b border-gray-300 border-l-0 border-r
+          ${
+            currentRoute === "/flashcards"
+              ? "border-r-4 border-r-gray-400 bg-white"
+              : "border-r border-gray-300 bg-white hover:bg-gray-50"
+          }
+        `}
+                  >
+                    <a
+                      href="/flashcards"
+                      className={`
+            flex items-center px-3 py-2
+            relative
+            min-h-[32px]
+            w-full
+            ${
+              currentRoute === "/flashcards"
+                ? "text-black font-medium"
+                : "text-gray-500 font-normal hover:text-gray-700"
+            }
+          `}
+                    >
+                      <span className="text-[11px] leading-4 ml-2">
+                        ACCA Flashcards
+                      </span>
+                    </a>
+                  </li>
 
-  {/* Navigation Items - Container with border */}
-<div className="border border-gray-400 overflow-hidden">
-  {[
-    { path: '/flashcards', label: 'ACCA Flashcards' },
-    { path: '/sustainable', label: 'Sustainable Business' },
-    { path: '/innovative', label: 'Innovative Tech' },
-    { path: '/future', label: 'Future Skills' }
-  ].map((item, index) => (
-    <a
-      key={item.path}
-      href={item.path}
-      className={`
-        flex items-center px-3 py-2
-        border-b border-gray-300 last:border-b-0
-        relative
-        min-h-[32px]
-        ${currentRoute === item.path
-          ? 'border-l-2 border-l-black bg-white'
-          : 'bg-white hover:bg-gray-50'
-        }
-      `}
-      style={currentRoute === item.path ? { 
-        marginRight: '-1px'
-      } : {}}
-    >
-      <span className={`
-        text-[11px] leading-4 ${index === 0 ? 'ml-2' : 'ml-6'}
-        ${currentRoute === item.path 
-          ? 'text-black font-medium' 
-          : 'text-gray-500 font-normal'
-        }
-      `}>
-        {item.label}
-      </span>
-    </a>
-  ))}
-</div>
-</div>
+                  {/* Sub-items - Nested list */}
+                  <li className="border-b border-gray-300 last:border-b-0 border-l-0 border-r-0">
+                    <ul className="list-none p-0 m-0">
+                      {[
+                        { path: "/sustainable", label: "Sustainable Business" },
+                        { path: "/innovative", label: "Innovative Tech" },
+                        { path: "/future", label: "Future Skills" },
+                      ].map((item) => (
+                        <li
+                          key={item.path}
+                          className={`
+                border-t border-b border-gray-200 border-l-0 border-r
+                ${
+                  currentRoute === item.path
+                    ? "border-r-4 border-r-gray-400 bg-white"
+                    : "border-r border-gray-300 bg-white hover:bg-gray-50"
+                }
+              `}
+                        >
+                          <a
+                            href={item.path}
+                            className={`
+                               flex items-center px-3 py-2
+                               relative
+                               min-h-[32px]
+                               w-full
+                               pl-6
+                             `}
+                          >
+                            <span
+                              className={`
+      text-[11px] leading-4
+      ${
+        currentRoute === item.path
+          ? "text-black font-medium"
+          : "text-gray-500 font-normal hover:text-gray-700"
+      }
+    `}
+                            >
+                              {item.label}
+                            </span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
 
             {/* Sidebar Mobile*/}
             <div className="w-screen max-w-none col-span-2 space-y-0 sidebar-mobile display-side relative left-1/2 -translate-x-1/2 sm:static sm:w-full sm:max-w-full">
               <a href="" className="cursor-pointer block navigation">
-                <a href="/"><span> Home /</span></a> <a href="flashcards"><span>ACCA PI Flashcards /</span></a><a href="#"><span style={{ fontWeight: '600' }}> Innovative Tech.</span></a>
+                <a href="/">
+                  <span> Home /</span>
+                </a>{" "}
+                <a href="flashcards">
+                  <span>ACCA PI Flashcards /</span>
+                </a>
+                <a href="#">
+                  <span style={{ fontWeight: "600" }}> Innovative Tech.</span>
+                </a>
               </a>
             </div>
 
@@ -441,10 +595,11 @@ const Innovative = () => {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`tab-gap button-style flex items-center px-6 py-3 transition-colors duration-200 ${activeTab === tab.id
-                      ? " font-bold"
-                      : "border-color text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                      }`}
+                    className={`tab-gap button-style flex items-center px-6 py-3 transition-colors duration-200 ${
+                      activeTab === tab.id
+                        ? " font-bold"
+                        : "border-color text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                    }`}
                   >
                     <span className="mr-2">{tab.icon}</span>
                     {tab.label}
@@ -455,7 +610,6 @@ const Innovative = () => {
 
               {/* Tab Content */}
               <div className="grid md:grid-cols-[65%_35%] gap-6 max-w-7xl mx-auto mobile-gap">
-
                 {/* Left Content */}
                 <div className="space-y-6">
                   <h2 className="h2-fonts h2-tabs">
@@ -463,11 +617,12 @@ const Innovative = () => {
                     <span style={{ color: "#C80000" }}>?</span>
                   </h2>
 
-                  <p className="tabs-para">
-                    {content.description}
-                  </p>
+                  <p className="tabs-para">{content.description}</p>
 
-                  <p className="text-sm">Follow the links to download the PDF version of our PI report and flashcard.</p>
+                  <p className="text-sm">
+                    Follow the links to download the PDF version of our PI
+                    report and flashcard.
+                  </p>
 
                   <div className="flex flex-col space-y-3 pt-0 tabs-links">
                     <span className="flex">
@@ -478,9 +633,13 @@ const Innovative = () => {
                         rel="noopener noreferrer"
                         className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                       >
-                        PI Report: AI (Artificial Intelligence) in the Finance Profession (PDF file xx KB size)
+                        PI Report: AI (Artificial Intelligence) in the Finance
+                        Profession (PDF file 1.22 mb size)
                       </a>
-                      <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
+                      <span
+                        className="inline-flex items-center ml-2"
+                        style={{ color: "#C80000" }}
+                      >
                         <img src={arrow} className="w-4 h-4 pt-1" />
                       </span>
                     </span>
@@ -493,9 +652,13 @@ const Innovative = () => {
                         rel="noopener noreferrer"
                         className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                       >
-                        Flashcard: What are the skills needed for AI literacy? (PDF file, xx  KB size)
+                        Flashcard: What are the skills needed for AI literacy?
+                        (PDF file, 143 KB size)
                       </a>
-                      <span className="inline-flex items-center ml-2" style={{ color: '#C80000' }}>
+                      <span
+                        className="inline-flex items-center ml-2"
+                        style={{ color: "#C80000" }}
+                      >
                         <img src={arrow} className="w-4 h-4 pt-1" />
                       </span>
                     </span>
@@ -514,9 +677,12 @@ const Innovative = () => {
                     {/* Interactive Icons - Dynamic positioning based on active tab */}
                     <div className="absolute inset-0 position-set">
                       {content.visibleIcons.map((iconNumber) => (
-                        <div key={iconNumber} className={`absolute ${content.iconPositions[iconNumber]}`}>
+                        <div
+                          key={iconNumber}
+                          className={`absolute ${content.iconPositions[iconNumber]}`}
+                        >
                           <button
-                            ref={(el) => buttonRefs.current[iconNumber] = el}
+                            ref={(el) => (buttonRefs.current[iconNumber] = el)}
                             onClick={() => handleIconClick(iconNumber)}
                             className="w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group"
                           >
@@ -524,38 +690,58 @@ const Innovative = () => {
                           </button>
 
                           {/* Popup for current icon */}
-                          {activePopup && activePopup.tab === activeTab && activePopup.icon === iconNumber && (
-                            <div
-                              ref={popupRef}
-                              className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden mobile-popup-center innovative-popup"
-                              style={{
-                                width: contentData[activePopup.tab as keyof typeof contentData].popupSizes[activePopup.icon].width,
-                                maxWidth: '90vw',
-                                right: contentData[activePopup.tab as keyof typeof contentData].popupSizes[activePopup.icon].rightOffset
-                              }}
-                            >
-                              <div className="relative">
-                                <button
-                                  onClick={closePopup}
-                                  className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center max-[425px]:flex"
-                                >
-                                  <X className="h-4 w-4" />
-                                </button>
+                          {activePopup &&
+                            activePopup.tab === activeTab &&
+                            activePopup.icon === iconNumber && (
+                              <div
+                                ref={popupRef}
+                                className="absolute top-full right-0 mt-2 z-50 bg-white shadow-2xl overflow-hidden mobile-popup-center innovative-popup"
+                                style={{
+                                  width:
+                                    contentData[
+                                      activePopup.tab as keyof typeof contentData
+                                    ].popupSizes[activePopup.icon].width,
+                                  maxWidth: "90vw",
+                                  right:
+                                    contentData[
+                                      activePopup.tab as keyof typeof contentData
+                                    ].popupSizes[activePopup.icon].rightOffset,
+                                }}
+                              >
+                                <div className="relative">
+                                  <button
+                                    onClick={closePopup}
+                                    className="absolute top-2 right-2 z-10 w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center max-[425px]:flex"
+                                  >
+                                    <X className="h-4 w-4" />
+                                  </button>
 
-                                <div className="">
-                                  <img
-                                    src={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].src}
-                                    alt={contentData[activePopup.tab as keyof typeof contentData].popupImages[activePopup.icon - 1].alt}
-                                    className="w-full h-auto object-contain rounded-lg"
-                                    onError={(e) => {
-                                      console.error('Image failed to load:', e.currentTarget.src);
-                                      e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=';
-                                    }}
-                                  />
+                                  <div className="">
+                                    <img
+                                      src={
+                                        contentData[
+                                          activePopup.tab as keyof typeof contentData
+                                        ].popupImages[activePopup.icon - 1].src
+                                      }
+                                      alt={
+                                        contentData[
+                                          activePopup.tab as keyof typeof contentData
+                                        ].popupImages[activePopup.icon - 1].alt
+                                      }
+                                      className="w-full h-auto object-contain rounded-lg"
+                                      onError={(e) => {
+                                        console.error(
+                                          "Image failed to load:",
+                                          e.currentTarget.src
+                                        );
+                                        e.currentTarget.src =
+                                          "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMThweCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIG5vdCBmb3VuZDwvdGV4dD48L3N2Zz4=";
+                                      }}
+                                    />
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          )}
+                            )}
                         </div>
                       ))}
                     </div>
@@ -570,7 +756,9 @@ const Innovative = () => {
 
               {/* Related Themes */}
               <div className="mt-12 theme-css">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Related Themes</h4>
+                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                  Related Themes
+                </h4>
 
                 {/* Divider line */}
                 <div className="bg-[#CF001B] h-[2px] w-[60px] mb-4"></div>
@@ -580,7 +768,10 @@ const Innovative = () => {
                   <div className="flex gap-6 justify-start">
                     {themes.map((theme) => (
                       <div key={theme.id} className="w-1/2 overflow-hidden">
-                        <a href={theme.id === 1 ? "/sustainable" : "/future"} className="cursor-pointer block">
+                        <a
+                          href={theme.id === 1 ? "/sustainable" : "/future"}
+                          className="cursor-pointer block"
+                        >
                           <div className="relative">
                             <img
                               src={theme.image}
