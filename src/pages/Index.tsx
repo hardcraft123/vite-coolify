@@ -255,7 +255,7 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={optimized}
-                  alt="Optimised interview readiness"
+                  alt=""
                   className="object-cover opacity-100"
                   style={{}}
                 />
@@ -271,7 +271,7 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={impactful}
-                  alt="Impactful personal branding"
+                  alt=""
                   className="object-cover opacity-100"
                   style={{}}
                 />
@@ -287,7 +287,7 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={adaptive}
-                  alt="Flexible and analytical thinking"
+                  alt=""
                   className="object-cover opacity-100"
                   style={{}}
                 />
@@ -303,7 +303,7 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={effective}
-                  alt="Effective communication"
+                  alt=""
                   className="object-cover opacity-100"
                   style={{}}
                 />
@@ -320,7 +320,7 @@ const Index = () => {
               <div className="w-16 h-16 mx-auto mb-4">
                 <img
                   src={ethical}
-                  alt="Ethical decision-making"
+                  alt=""
                   className="object-cover opacity-100"
                   style={{}}
                 />
@@ -337,7 +337,7 @@ const Index = () => {
             <div className="w-16 h-16 mx-auto mb-4">
               <img
                 src={ethical}
-                alt="Ethical decision-making"
+                alt=""
                 className="object-cover opacity-100"
                 style={{}}
               />
