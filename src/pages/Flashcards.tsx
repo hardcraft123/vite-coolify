@@ -20,7 +20,7 @@ const Flashcards = () => {
     const theme = e.dataTransfer.getData("theme");
 
     if (theme === "sustainable")
-      navigate("/sustainable", { state: { fromFlashcard: true } });
+      navigate("/sustainable-business", { state: { fromFlashcard: true } });
     else if (theme === "innovative")
       navigate("/innovative", { state: { fromFlashcard: true } });
     else if (theme === "future")
@@ -196,7 +196,7 @@ const Flashcards = () => {
                   aria-label="Open Sustainable Module"
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
-                      navigate("/sustainable", {
+                      navigate("/sustainable-business", {
                         state: { fromFlashcard: true },
                       });
                     }
@@ -221,7 +221,7 @@ const Flashcards = () => {
                   aria-label="Open Sustainable Module"
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
-                      navigate("/sustainable", {
+                      navigate("/sustainable-business", {
                         state: { fromFlashcard: true },
                       });
                     }
@@ -246,7 +246,7 @@ const Flashcards = () => {
                   aria-label="Open Sustainable Module"
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
-                      navigate("/sustainable", {
+                      navigate("/sustainable-business", {
                         state: { fromFlashcard: true },
                       });
                     }
@@ -272,10 +272,10 @@ const Flashcards = () => {
                   }
                 >
                   <a
-                    href="/sustainable"
+                    href="/sustainable-business"
                     onClick={(e) => {
                       e.preventDefault();
-                      navigate("/sustainable", {
+                      navigate("/sustainable-business", {
                         state: { fromFlashcard: true },
                       });
                     }}

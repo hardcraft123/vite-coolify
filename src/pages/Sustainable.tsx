@@ -537,7 +537,7 @@ const Sustainable = () => {
         {/* ACCA Flashcards Children - Nested list with NO border */}
         <ul className="list-none p-0 m-0 border-t border-gray-200">
           {[
-            { path: "/sustainable", label: "Sustainable Business" },
+            { path: "/sustainable-business", label: "Sustainable Business" },
             { path: "/innovative", label: "Innovative Tech" },
             { path: "/future", label: "Future Skills" },
           ].map((item) => (

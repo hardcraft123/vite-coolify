@@ -564,7 +564,7 @@ const future = () => {
                     {/* ACCA Flashcards Children - Nested list with NO border */}
                     <ul className="list-none p-0 m-0 border-t border-gray-200">
                       {[
-                        { path: "/sustainable", label: "Sustainable Business" },
+                        { path: "/sustainable-business", label: "Sustainable Business" },
                         { path: "/innovative", label: "Innovative Tech" },
                         { path: "/future", label: "Future Skills" },
                       ].map((item) => (
@@ -815,7 +815,7 @@ const future = () => {
                     {themes.map((theme) => (
                       <div key={theme.id} className="w-1/2 overflow-hidden">
                         <a
-                          href={theme.id === 1 ? "/sustainable" : "/innovative"}
+                          href={theme.id === 1 ? "/sustainable-business" : "/innovative"}
                           className="cursor-pointer block"
                         >
                           <div className="relative">

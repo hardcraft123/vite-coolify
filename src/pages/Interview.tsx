@@ -61,7 +61,7 @@ const Interview = () => {
     e.preventDefault();
     const theme = e.dataTransfer.getData("theme");
 
-    if (theme === "sustainable") navigate("/sustainable");
+    if (theme === "sustainable") navigate("/sustainable-business");
     else if (theme === "innovative") navigate("/innovative");
     else if (theme === "future") navigate("/future");
   };
