@@ -557,7 +557,7 @@ const Sustainable = () => {
                   text-[11px] leading-4
                   ${
                     currentRoute === item.path
-                      ? "text-black font-medium"
+                      ? "text-black font-semibold"
                       : "text-gray-500 font-normal hover:text-gray-700"
                   }
                 `}

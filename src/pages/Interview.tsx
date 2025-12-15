@@ -470,7 +470,7 @@ const Interview = () => {
               text-[11px] leading-4 ml-2
               ${
                 currentRoute === "/interview-prep-series"
-                  ? "text-black font-medium"
+                  ? "text-black font-semibold"
                   : "text-gray-500 font-normal hover:text-gray-700"
               }
             `}
