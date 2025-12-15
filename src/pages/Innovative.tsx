@@ -6,8 +6,8 @@ import sustain10 from "../assets/image/sustain10.png";
 import innovativedark from "../assets/image/innovativedark.png";
 import future1 from "../assets/image/future1.png";
 import what11 from "../assets/image/what11.png";
-import theme3 from "../assets/image/theme3.png";
-import theme2 from "../assets/image/theme2.png";
+import theme3 from "../assets/image/sustainable-business.png";
+import theme2 from "../assets/image/future-skill.png";
 import what1 from "../assets/image/what1.png";
 import what2 from "../assets/image/what2.png";
 import what3 from "../assets/image/what3.png";
@@ -360,7 +360,7 @@ const Innovative = () => {
   const themes = [
     {
       id: 1,
-      title: "Innovative Tech",
+      title: "Sustainable Business",
       image: theme3,
     },
     {
@@ -574,7 +574,7 @@ const Innovative = () => {
                   flex items-center px-3 py-2
                   min-h-[32px]
                   w-full
-                  pl-6
+                  pl-8
                   text-[11px] leading-4
                   ${
                     currentRoute === item.path
@@ -821,12 +821,28 @@ const Innovative = () => {
                           href={theme.id === 1 ? "/sustainable-business" : "/future-skills"}
                           className="cursor-pointer block"
                         >
-                          <div className="relative">
+                         <div className="relative">
+                            {/* Image */}
                             <img
                               src={theme.image}
                               alt={theme.title}
                               className="w-full h-[200px] object-cover"
                             />
+
+                            {/* Text Overlay */}
+                            <div className="absolute bottom-0 right-0 bg-[#C80000] px-2 py-0.5">
+                              <span
+                                className="text-[#FFFFFF] text-right block"
+                                style={{
+                                  fontSize: "20px",
+                                  lineHeight: "32px",
+                                  fontWeight: 400,
+                                  letterSpacing: "0%",
+                                }}
+                              >
+                                {theme.title}
+                              </span>
+                            </div>
                           </div>
                         </a>
                       </div>

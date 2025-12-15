@@ -6,8 +6,8 @@ import sustaindark from "../assets/image/sustaindark.png";
 import inno from "../assets/image/inno.png";
 import img4 from "../assets/image/img4.png";
 import rightbanner from "../assets/image/rightbanner.png";
-import theme1 from "../assets/image/theme1.png";
-import theme2 from "../assets/image/theme2.png";
+import theme1 from "../assets/image/innovative-tech.png";
+import theme2 from "../assets/image/future-skill.png";
 import what1 from "../assets/image/what1.png";
 import what2 from "../assets/image/what2.png";
 import what3 from "../assets/image/what3.png";
@@ -553,7 +553,7 @@ const Sustainable = () => {
                   flex items-center px-3 py-2
                   min-h-[32px]
                   w-full
-                  pl-6
+                  pl-8
                   text-[11px] leading-4
                   ${
                     currentRoute === item.path
@@ -795,12 +795,28 @@ const Sustainable = () => {
                           href={theme.id === 1 ? "/innovative-tech" : "/future-skills"}
                           className="cursor-pointer block"
                         >
-                          <div className="relative">
+                         <div className="relative">
+                            {/* Image */}
                             <img
                               src={theme.image}
                               alt={theme.title}
                               className="w-full h-[200px] object-cover"
                             />
+
+                            {/* Text Overlay */}
+                            <div className="absolute bottom-0 right-0 bg-[#C80000] px-2 py-0.5">
+                              <span
+                                className="text-[#FFFFFF] text-right block"
+                                style={{
+                                  fontSize: "20px",
+                                  lineHeight: "32px",
+                                  fontWeight: 400,
+                                  letterSpacing: "0%",
+                                }}
+                              >
+                                {theme.title}
+                              </span>
+                            </div>
                           </div>
                         </a>
                       </div>

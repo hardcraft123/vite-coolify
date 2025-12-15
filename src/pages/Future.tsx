@@ -6,8 +6,8 @@ import sustainlight from "../assets/image/sustainlight.png";
 import inno from "../assets/image/inno.png";
 import futuredark from "../assets/image/futuredark.png";
 import what111 from "../assets/image/what111.png";
-import theme3 from "../assets/image/theme3.png";
-import theme1 from "../assets/image/theme1.png";
+import theme3 from "../assets/image/sustainable-business.png";
+import theme1 from "../assets/image/innovative-tech.png";
 import what1 from "../assets/image/what1.png";
 import what2 from "../assets/image/what2.png";
 import what3 from "../assets/image/what3.png";
@@ -366,12 +366,12 @@ const future = () => {
   const themes = [
     {
       id: 1,
-      title: "Innovative Tech",
+      title: "Sustainable Business",
       image: theme3,
     },
     {
       id: 2,
-      title: "Future Skills",
+      title: "Innovative Tech",
       image: theme1,
     },
   ];
@@ -500,7 +500,9 @@ const future = () => {
                   {/* Interview Prep Series - Top Level */}
                   <li
                     className={`border-t border-b border-gray-300 border-l-0 bg-white hover:bg-gray-50 ${
-                      currentRoute === "/interview-prep-series" ? "mr-[-1px]" : ""
+                      currentRoute === "/interview-prep-series"
+                        ? "mr-[-1px]"
+                        : ""
                     }`}
                   >
                     <div
@@ -564,7 +566,10 @@ const future = () => {
                     {/* ACCA Flashcards Children - Nested list with NO border */}
                     <ul className="list-none p-0 m-0 border-t border-gray-200">
                       {[
-                        { path: "/sustainable-business", label: "Sustainable Business" },
+                        {
+                          path: "/sustainable-business",
+                          label: "Sustainable Business",
+                        },
                         { path: "/innovative-tech", label: "Innovative Tech" },
                         { path: "/future-skills", label: "Future Skills" },
                       ].map((item) => (
@@ -580,7 +585,7 @@ const future = () => {
                   flex items-center px-3 py-2
                   min-h-[32px]
                   w-full
-                  pl-6
+                  pl-8
                   text-[11px] leading-4
                   ${
                     currentRoute === item.path
@@ -815,15 +820,35 @@ const future = () => {
                     {themes.map((theme) => (
                       <div key={theme.id} className="w-1/2 overflow-hidden">
                         <a
-                          href={theme.id === 1 ? "/sustainable-business" : "/innovative-tech"}
+                          href={
+                            theme.id === 1
+                              ? "/sustainable-business"
+                              : "/innovative-tech"
+                          }
                           className="cursor-pointer block"
                         >
                           <div className="relative">
+                            {/* Image */}
                             <img
                               src={theme.image}
                               alt={theme.title}
                               className="w-full h-[200px] object-cover"
                             />
+
+                            {/* Text Overlay */}
+                            <div className="absolute bottom-0 right-0 bg-[#C80000] px-2 py-0.5">
+                              <span
+                                className="text-[#FFFFFF] text-right block"
+                                style={{
+                                  fontSize: "20px",
+                                  lineHeight: "32px",
+                                  fontWeight: 400,
+                                  letterSpacing: "0%",
+                                }}
+                              >
+                                {theme.title}
+                              </span>
+                            </div>
                           </div>
                         </a>
                       </div>

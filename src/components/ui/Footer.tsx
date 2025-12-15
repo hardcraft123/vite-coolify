@@ -15,7 +15,7 @@ const Footer = () => {
               <img src={linkedin} alt="LinkedIn" className="w-4 h-4" />
             </a>
             <a href="https://www.instagram.com/acca.official/" target="_blank" className="w-8 h-8 bg-black rounded flex items-center justify-center hover:bg-gray-700">
-              <img src={Instagram} alt="X" className="w-4 h-4" />
+              <img src={Instagram} alt="Instagram" className="w-4 h-4" />
             </a>
             <a href="https://www.youtube.com/user/ACCAOfficial" target="_blank" className="w-8 h-8 bg-black rounded flex items-center justify-center hover:bg-gray-700">
               <img src={youtube} alt="YouTube" className="w-4 h-4" />
