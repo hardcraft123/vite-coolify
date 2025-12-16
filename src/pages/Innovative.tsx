@@ -502,7 +502,7 @@ const Innovative = () => {
             }`}
           >
             {/* Sidebar Desktop for Innovative Tech Page */}
-            <div className="col-span-2 w-[10rem] sidebar-desktop border-r border-gray-300 max-md:hidden md:block">
+            <div className="col-span-2 w-[11rem] sidebar-desktop border-r border-gray-300 max-md:hidden md:block">
               {/* Back to Home */}
               <a href="/" className="block">
                 <div className="cursor-pointer back-to-home group">
@@ -549,7 +549,7 @@ const Innovative = () => {
               flex items-center px-3 py-2
               min-h-[32px]
               w-full
-              text-[11px] leading-4 ml-2
+              text-[13px] leading-4 ml-2
               ${
                 currentRoute === "/interview-prep-series"
                   ? "text-black font-medium"
@@ -582,7 +582,7 @@ const Innovative = () => {
               flex items-center px-3 py-2
               min-h-[32px]
               w-full
-              text-[11px] leading-4 ml-2
+              text-[13px] leading-4 ml-2
               ${
                 currentRoute === "/acca-flashcards"
                   ? "text-black font-medium"
@@ -617,7 +617,7 @@ const Innovative = () => {
                   min-h-[32px]
                   w-full
                   pl-8
-                  text-[11px] leading-4
+                  text-[13px] leading-4
                   ${
                     currentRoute === item.path
                       ? "text-black font-semibold"

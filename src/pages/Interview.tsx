@@ -437,7 +437,7 @@ const Interview = () => {
         <div className="custom-container">
           <div className="grid grid-cols-12 gap-6 max-w-7xl mx-auto mobile-flex">
             {/* Sidebar Desktop for Interview Page */}
-            <div className="col-span-2 w-[10rem] sidebar-desktop border-r border-gray-300 max-md:hidden md:block">
+            <div className="col-span-2 w-[11rem] sidebar-desktop border-r border-gray-300 max-md:hidden md:block">
               {/* Back to Home */}
               <a href="/" className="block">
                 <div className="cursor-pointer back-to-home group">
@@ -484,7 +484,7 @@ const Interview = () => {
               flex items-center px-3 py-2
               min-h-[32px]
               w-full
-              text-[11px] leading-4 ml-2
+              text-[13px] leading-4 ml-2
               ${
                 currentRoute === "/interview-prep-series"
                   ? "text-black font-semibold"
@@ -516,7 +516,7 @@ const Interview = () => {
               flex items-center px-3 py-2
               min-h-[32px]
               w-full
-              text-[11px] leading-4 ml-2
+              text-[13px] leading-4 ml-2
               ${
                 currentRoute === "/acca-flashcards"
                   ? "text-black font-medium"
