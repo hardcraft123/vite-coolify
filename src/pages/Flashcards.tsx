@@ -207,7 +207,7 @@ const Flashcards = () => {
                 >
                   <img
                     src={sustainable}
-                    alt="Sustainable business"
+                    alt="Sustainable business: Text over a large glass building surrounded by lush green ivy."
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>
@@ -232,7 +232,7 @@ const Flashcards = () => {
                 >
                   <img
                     src={innovative}
-                    alt="Innovative tech"
+                    alt="Innovative tech: Text over a close-up of a 3D printer at work in a lab."
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>
@@ -255,7 +255,7 @@ const Flashcards = () => {
                 >
                   <img
                     src={future}
-                    alt="Future skills"
+                    alt="Future skills: Text over a person using a smartphone with blurred city lights in the background"
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>

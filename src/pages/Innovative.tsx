@@ -169,8 +169,7 @@ const Innovative = () => {
       description:
         "AI Literacy would mean combining technical insight with human insight and soft skills. Professionals must grasp programming, AI/ML concepts, and data governance while also strengthening problem-solving, ethical reasoning, and communication. These skills are essential for responsible and future-ready decision making.",
       image: what11,
-      altText:
-        "Person wearing AR glasses and touching a large digital screen, representing AI literacy and future skills. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
+      altText: "Person wearing AR glasses and touching a large digital screen", // ✅ UPDATED: Separate alt text
       downloadId: "itdf1",
       learnMoreId: "itlm1",
       downloadLink: iwhatflashcard1, // What tab download link
@@ -190,14 +189,18 @@ const Innovative = () => {
         {
           id: 1,
           src: iwhat2,
-          alt: "Clive Webb, Lead author, ACCA: AI can help professionals make better decisions, optimise operations, and deliver improved insights.",
+          alt: "Quote by Clive Webb, Lead author at ACCA: AI can help professionals make better decisions, optimize operations, and deliver improved insights",
+          iconLabel:
+            "Click to read the quote on AI by Clive Webb, Lead author at ACCA.",
         },
         {
           id: 2,
           src: iwhat1,
-          alt: "Technical skills: Programming and data analytics, AI and machine learning understanding, Data governance and management. Business and soft skills: Problem solving and critical thinking, Communicating complex insights, Ethical reasoning.",
+          alt: "Two skill categories: Technical skills include programming and data analytics, AI and machine learning understanding, and data governance. Business and soft skills include problem solving and critical thinking, communicating complex insights, and ethical reasoning",
+          iconLabel:
+            "Click to learn about the technical skills and business skills required for AI adoption",
         },
-        { id: 3, src: what3, alt: "What popup image 3" },
+        { id: 3, src: what3, alt: "What popup image 3", iconLabel: "Icon 3" },
       ],
     },
     why: {
@@ -205,8 +208,7 @@ const Innovative = () => {
       description:
         "AI has great potential to support people in accounting and other fields. Instead of replacing human skills, it is now seen as a tool that helps accountants do their work better.",
       image: why11,
-      altText:
-        "A hand uses a smartphone resting on a monitor, representing the integration of AI tools in daily work. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
+      altText: "Hand using a smartphone resting on a monitor",
       downloadId: "itdf2",
       learnMoreId: "itlm2",
       downloadLink: iwhyflashcard1, // What tab download link
@@ -227,14 +229,23 @@ const Innovative = () => {
         {
           id: 1,
           src: iwhy1,
-          alt: "Alistair Brisbourne, Head of Technology, ACCA: The adoption of AI increases rather than decreases the importance of experts.",
+          alt: "Quote by Alistair Brisbourne, Head of Technology at ACCA: The adoption of AI increases rather than decreases the importance of experts",
+          iconLabel:
+            "Click to read the quote on AI by Alistair Brisbourne, Head of Technology at ACCA",
         },
         {
           id: 2,
           src: iwhy2,
-          alt: "There has been only 1% increase in automation since 2020, and estimations in the expected level of automation have also receded slightly (from 47% of tasks to 42% of tasks). Source: World Economic Forum (WEF) Future of Jobs 2023 report.",
+          alt: "Statistics showing only 1% increase in automation since 2020, with expected automation levels declining from 47% to 42% of tasks. Source: World Economic Forum Future of Jobs 2023 report",
+          iconLabel:
+            "Click to view the automation statistics from the World Economic Forum Future of Jobs 2023 report",
         },
-        { id: 3, src: why3, alt: "Why popup image 3" },
+        {
+          id: 3,
+          src: why3,
+          alt: "Why popup image 3",
+          iconLabel: "Why popup image 3",
+        },
       ],
     },
     who: {
@@ -243,7 +254,7 @@ const Innovative = () => {
         "Successful AI adoption depends on everyone from Entry-Level to the C-suite. Entry-level professionals typically develop data literacy and technical skills. Mid-level roles focus on analytics and compliance. Senior managers lead stakeholder engagement and risk management, while C-suite executives drive AI strategy and governance.",
       image: who11,
       altText:
-        "Three colleagues collaborate in a modern, well-lit office lounge, representing broad AI adoption. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
+        "Three colleagues collaborating in a modern, well-lit office lounge", // ✅ UPDATED: Separate alt text
       downloadId: "itdf3",
       learnMoreId: "itlm3",
       downloadLink: iwhoflashcard1, // What tab download link
@@ -262,14 +273,23 @@ const Innovative = () => {
         {
           id: 1,
           src: iwho1,
-          alt: "Organizational relationships and creation of value diagram showing three layers: Recipients (Investors and other financial stakeholders, Customers, Employees, Community, Regulators), Converters (Performance management and measurement connecting Operations and processes, Data, and Technology), and Enablers (Financial, Manufactured, Intellectual, Human, Social and relationship, Natural). Arrows show flow and relationships between elements with Return loop.",
+          alt: "Organizational relationships diagram with three layers: Recipients including investors, customers, employees,community, and regulators; Converters linking performance management with operations, data, and technology; and Enablers covering financial, manufactured, intellectual, human, social, and natural capital. Arrows show flows and a return loop",
+          iconLabel:
+            "Click to understand the organizational structure of AI adoption in accounting",
         },
         {
           id: 2,
           src: iwho2,
-          alt: "Professionals adopting AI: Entry level professionals, Mid-level professionals, Senior managers and directors, C-suite executives.",
+          alt: "List of professionals adopting AI: Entry level professionals, Mid-level professionals, Senior managers and directors, and C-suite executives",
+          iconLabel:
+            "Click to learn about professionals adopting AI across different career levels",
         },
-        { id: 3, src: what3, alt: "Who popup image 3" },
+        {
+          id: 3,
+          src: what3,
+          alt: "Who popup image 3",
+          iconLabel: "Who popup image 3",
+        },
       ],
     },
     where: {
@@ -278,7 +298,7 @@ const Innovative = () => {
         "AI offers clear value in four areas namely sustainability reporting, insight generation, compliance monitoring, and process efficiency. It enhances ESG analysis, automates control testing, and delivers real-time financial intelligence. Accountants use AI to improve decision quality while maintaining trust and transparency.",
       image: where11,
       altText:
-        "A man in a casual shirt interacts with a vibrant, illuminated digital screen. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
+        "Man in a casual shirt interacting with a vibrant, illuminated digital screen", // ✅ UPDATED: Separate alt text
       downloadId: "itdf4",
       learnMoreId: "itlm4",
       downloadLink: iwhereflashcard1, // What tab download link
@@ -299,14 +319,22 @@ const Innovative = () => {
         {
           id: 1,
           src: iwhere1,
-          alt: "Levels of trust in AI: For 'AI can increase the amount of time I have to focus on business-critical tasks' - 70% Agree, 9% Disagree, 15% Neutral, 5% Don't know. For 'I would rely on AI to perform business-critical tasks (e.g. settlements, internal control)' - 50% Agree, 21% Disagree, 22% Neutral, 6% Don't know.",
+          alt: "Survey results on trust in AI among accountants. For AI, increasing time for business-critical tasks: 70% agree,9% disagree, 15% neutral, 5% don't know. For relying on AI for critical tasks: 50% agree, 21% disagree, 22% neutral, 6% don't know",
+          iconLabel:
+            "Click to view survey data on accountants' trust in AI for business tasks",
         },
         {
           id: 2,
           src: iwhere2,
-          alt: "The components of value diagram showing Value at the center connected to four components: Sustainability, Insight generation, Compliance and control, and Transactional efficiency.",
+          alt: "Diagram showing Value at the center connected to four components: Sustainability, Insight generation, Compliance and control, and Transactional efficiency",
+          iconLabel: "Click to understand the components of the value diagram",
         },
-        { id: 3, src: where3, alt: "Where popup image 3" },
+        {
+          id: 3,
+          src: where3,
+          alt: "Where popup image 3",
+          iconLabel: "Where popup image 3",
+        },
       ],
     },
     how: {
@@ -315,7 +343,7 @@ const Innovative = () => {
         "Top firms prioritise digital skills, strategic alignment, and ethical frameworks. They invest in continuous learning, promote experimentation, and collaborate across teams. These organisations view AI not just as a tool but as a strategic enabler of transformation.",
       image: how11,
       altText:
-        "Close-up of hands holding a tablet with a blurred business meeting in the background, illustrating technology adoption. Click on the icons to learn more.", // ✅ UPDATED: Separate alt text
+        "Close-up of hands holding a tablet with a blurred business meeting in the background", // ✅ UPDATED: Separate alt text
       downloadId: "itdf5",
       learnMoreId: "itlm5",
       downloadLink: ihowflashcard1, // What tab download link
@@ -335,14 +363,23 @@ const Innovative = () => {
         {
           id: 1,
           src: ihow2,
-          alt: "Diagram showing AI as a strategic framework. A pentagon labeled 'AI literacy' sits at the center, surrounded by five interconnected boxes: 'Strategic vision' at the top, 'Investment financing' on the left, 'People, process, culture' at the bottom left, 'Data governance' at the bottom right, and 'Risk and compliance' on the right. Gray lines connect all elements in a circular flow.",
+          alt: "Diagram showing AI strategic framework with AI literacy at the center as a pentagon, surrounded by five interconnected elements: Strategic vision, Investment financing, People process and culture, Data governance, and Risk and compliance, all connected in a circular flow",
+          iconLabel:
+            "Click to view the diagram on AI literacy as a strategic framework",
         },
         {
           id: 2,
           src: ihow1,
-          alt: "Quote from Alistair Brisbourne, Head of Technology at ACCA, stating: 'Successful technology adoption is not just about implementing new systems but also about enabling people to use these systems effectively and to realise their personal benefits.",
+          alt: "Quote by Alistair Brisbourne, Head of Technology at ACCA: Successful technology adoption is not just aboutimplementing new systems but also about enabling people to use these systems effectively and realize their personal benefits",
+          iconLabel:
+            "Click to read the quote on successful technology adoption by Alistair Brisbourne, Head of Technology at ACCA",
         },
-        { id: 3, src: what3, alt: "How popup image 3" },
+        {
+          id: 3,
+          src: what3,
+          alt: "How popup image 3",
+          iconLabel: "How popup image 3",
+        },
       ],
     },
   };
@@ -494,7 +531,9 @@ const Innovative = () => {
                   {/* Interview Prep Series - Top Level */}
                   <li
                     className={`border-t border-b border-gray-300 border-l-0 bg-white hover:bg-gray-50 ${
-                      currentRoute === "/interview-prep-series" ? "mr-[-1px]" : ""
+                      currentRoute === "/interview-prep-series"
+                        ? "mr-[-1px]"
+                        : ""
                     }`}
                   >
                     <div
@@ -558,7 +597,10 @@ const Innovative = () => {
                     {/* ACCA Flashcards Children - Nested list with NO border */}
                     <ul className="list-none p-0 m-0 border-t border-gray-200">
                       {[
-                        { path: "/sustainable-business", label: "Sustainable Business" },
+                        {
+                          path: "/sustainable-business",
+                          label: "Sustainable Business",
+                        },
                         { path: "/innovative-tech", label: "Innovative Tech" },
                         { path: "/future-skills", label: "Future Skills" },
                       ].map((item) => (
@@ -733,9 +775,16 @@ const Innovative = () => {
                           <button
                             ref={(el) => (buttonRefs.current[iconNumber] = el)}
                             onClick={() => handleIconClick(iconNumber)}
+                            aria-label={
+                              contentData[activeTab as keyof typeof contentData]
+                                .popupImages[iconNumber - 1].iconLabel
+                            }
                             className="w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group"
                           >
-                            <Plus className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis" />
+                            <Plus
+                              className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis"
+                              aria-hidden="true"
+                            />
                           </button>
 
                           {/* Popup for current icon */}
@@ -818,10 +867,14 @@ const Innovative = () => {
                     {themes.map((theme) => (
                       <div key={theme.id} className="w-1/2 overflow-hidden">
                         <a
-                          href={theme.id === 1 ? "/sustainable-business" : "/future-skills"}
+                          href={
+                            theme.id === 1
+                              ? "/sustainable-business"
+                              : "/future-skills"
+                          }
                           className="cursor-pointer block"
                         >
-                         <div className="relative">
+                          <div className="relative">
                             {/* Image */}
                             <img
                               src={theme.image}

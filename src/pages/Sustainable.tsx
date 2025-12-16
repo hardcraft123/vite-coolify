@@ -182,17 +182,22 @@ const Sustainable = () => {
         {
           id: 1,
           src: what2,
-          alt: "The triple bottom line formula for Sustainable Business: Economic Viability + Environmental Protection + Social Equity.",
+          alt: "Diagram showing the triple bottom line formula: Economic Viability plus Environmental Protection plus Social Equity equals Sustainable Business",
+          iconLabel:
+            "Click to learn about the triple bottom line formula for Sustainable Business",
         },
         {
           id: 2,
           src: what1,
-          alt: "Quote by John Lelliott OBE, FCCA: A monumental migration to sustainable economies and businesses is required, and that is something that we as a profession want to be – and can be – one of the groups driving.",
+          alt: "Quote by John Lelliott OBE, FCCA about the monumental migration to sustainable economies and businesses",
+          iconLabel: "Click to read the quote by John Lelliott OBE, FCCA",
         },
         {
           id: 3,
           src: what3,
           alt: "Bar chart showing global regional opportunities based on ACCA and IMA GECS 2023 survey.",
+          iconLabel:
+            "Click to view the bar chart showing global regional opportunities",
         },
       ],
       popupSizes: {
@@ -207,7 +212,7 @@ const Sustainable = () => {
         "Climate and sustainability are significant drivers for organisations, both large and small. As governments recognise the need to address the climate emergency, organisations must respond with their own plans to achieve carbon neutrality, net-zero, or similar defined targets.",
       image: why,
       altText:
-        "Aerial view of a dense, healthy mangrove forest winding through blue-green waterways. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for Why tab
+        "Aerial view of a dense, healthy mangrove forest winding through blue-green waterways",
       downloadId: "sbdf2",
       learnMoreId: "sblm2",
       downloadLink: swhyflashcard1, // You can replace this with why-specific PDF when available
@@ -223,16 +228,19 @@ const Sustainable = () => {
           id: 1,
           src: why0,
           alt: "81% of global finance professionals say significant change is needed to reach net-zero by source ACCA and IMA Global Economic Conditions Survey, Q2 2022.",
+          iconLabel: "Click to view the Global Economic Conditions Survey findings on net-zero goals",
         },
         {
           id: 2,
           src: why000,
-          alt: "Emmeline Skelton, Head of Sustainability, ACCA: Sustainability is a business approach to creating long-term value... built on the assumption that developing such strategies fosters company longevity.",
+          alt: "Quote by Emmeline Skelton, Head of Sustainability at ACCA, about sustainability as a business approach to creating long-term value",
+          iconLabel: "Click to read the quote on Sustainable Business by Emmeline Skelton, Head of Sustainability at ACCA",
         },
         {
           id: 3,
           src: why00,
-          alt: "A graphic showing business priorities: climate and sustainability, talent, information asset, digitalised customers, and supply chains, linked by continuous transformation.",
+          alt: "Infographic showing five business priorities: climate and sustainability, talent, information assets, digitalized customers, and supply chains, all linked by continuous transformation",
+          iconLabel: "Click to view the infographic showing continuous transformation for an organization",
         },
       ],
       popupSizes: {
@@ -247,7 +255,7 @@ const Sustainable = () => {
         "Accountants, in collaboration with sustainability leads and senior leadership, play a key role in creating ESG frameworks. They define material risks, set measurable KPIs, and ensure transparent disclosures, aligning ESG with strategy, reporting standards and investor expectations.",
       image: who,
       altText:
-        "Three colleagues in professional attire are discussing a topic during an office meeting. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for Who tab
+        "Three colleagues in professional attire discussing a topic during an office meeting.",
       downloadId: "sbdf3",
       learnMoreId: "sblm3",
       downloadLink: swhoflashcard1, // You can replace this with who-specific PDF when available
@@ -260,7 +268,8 @@ const Sustainable = () => {
         {
           id: 1,
           src: who0,
-          alt: "Quote on the necessity of accountancy and finance professionals for ESG clarity and green transition funding by Emmeline Skelton, Head of Sustainability, ACCA.",
+          alt: "Quote by Emmeline Skelton, Head of Sustainability at ACCA, on the necessity of accountancy and finance professionals for ESG clarity and green transition funding",
+          iconLabel: "Click to read the quote by Emmeline Skelton on the necessity of accountancy and finance professionals for ESG clarity",
         },
       ],
       popupSizes: {
@@ -273,7 +282,7 @@ const Sustainable = () => {
         "Accountants are central to the ESG journey. They provide the frameworks, assurance and reporting expertise needed to drive meaningful sustainability outcomes. Their work touches strategy, risk, compliance, and decision support.",
       image: where,
       altText:
-        "A worker in a navy jacket holds a tablet, appearing to inspect a row of solar panels or industrial equipment. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for Where tab
+        "Worker in a navy jacket holding a tablet while inspecting a row of solar panels", // ✅ ADDED: Separate alt text for Where tab
       downloadId: "sbdf4",
       learnMoreId: "sblm4",
       downloadLink: swhflashcard1, // You can replace this with where-specific PDF when available
@@ -288,17 +297,20 @@ const Sustainable = () => {
         {
           id: 1,
           src: where0,
-          alt: "Statistic: 63% of finance professionals consider using green finance but lack the internal skills to support it effectively, based on the GECS survey.",
+          alt: "Survey statistic: 63% of finance professionals consider using green finance but lack the internal skills to support it effectively, based on the Global Economic Conditions Survey",
+          iconLabel: "Click to view the Global Economic Conditions Survey findings on green finance skills",
         },
         {
           id: 2,
           src: where000,
-          alt: "List of five ways to drive sustainability: Help define net-zero targets, Develop ESG strategies, Identify costs and opportunities, Enhance green finance understanding, and Set policies for ESG data.",
+          alt: "List of five ways to drive sustainability: Help define net-zero targets, Develop ESG strategies, Identify costs and opportunities, Enhance green finance understanding, and Set policies for ESG data",
+          iconLabel: "Click to learn the five ways to drive Sustainable Business",
         },
         {
           id: 3,
           src: where00,
-          alt: "List of 12 roles of a finance professional in ESG, including assessing maturity, defining models, implementing strategies, and managing data.",
+          alt: "List of 12 roles of a finance professional in ESG, including assessing maturity, defining models, implementing strategies, and managing data",
+          iconLabel: "Click to learn about the role of accounting and finance professionals in ESG",
         },
       ],
       popupSizes: {
@@ -313,7 +325,7 @@ const Sustainable = () => {
         "Organisations embed sustainability by aligning ESG goals with strategy, ensuring governance oversight, using credible data, adopting green finance, and building team capabilities. Finance professionals play a key role in integrating ESG across planning, risk and reporting.",
       image: How,
       altText:
-        "Close-up of a finger pointing at complex numerical data on a spreadsheet or financial report. Click on the icons to learn more.", // ✅ ADDED: Separate alt text for How tab
+        "Close-up of a finger pointing at complex numerical data on a spreadsheet", 
       downloadId: "sbdf5",
       learnMoreId: "sblm5",
       downloadLink: shflashcard1, // You can replace this with how-specific PDF when available
@@ -327,12 +339,14 @@ const Sustainable = () => {
         {
           id: 1,
           src: how00,
-          alt: "Emmeline Skelton, Head of Sustainability, ACCA: The sustainability journey that organisations need to embark on involves defining net-zero strategies and setting time-bound targets relevant to the value chain.",
+          alt: "Quote by Emmeline Skelton, Head of Sustainability at ACCA, about defining net-zero strategies and setting time-bound targets relevant to the value chain",
+          iconLabel: "Click to read the quote on the sustainability journey by Emmeline Skelton, Head of Sustainability at ACCA",
         },
         {
           id: 2,
           src: how0,
-          alt: "Diagram outlining the 8-step sustainability journey: Establish ESG strategy, Set targets, Define transition finance requirements, Enable ESG data management, and Establish ESG protocols and controls.",
+          alt: "Diagram outlining the 8-step sustainability journey: Establish ESG strategy, Set targets, Define transition finance requirements, Enable ESG data management, and Establish ESG protocols and controls",
+          iconLabel: "Click to view the 8-step Sustainability Journey infographic",
         },
       ],
       popupSizes: {
@@ -459,41 +473,51 @@ const Sustainable = () => {
               showContent ? "content-fade-in opacity-100" : "opacity-0"
             }`}
           >
-       {/* Sidebar Desktop for Sustainable Page */}
-<div className="col-span-2 w-[10rem] sidebar-desktop border-r border-gray-300 max-md:hidden md:block">
-  {/* Back to Home */}
-  <a href="/" className="block">
-    <div className="cursor-pointer back-to-home group">
-      <img
-        src={backtohome}
-        alt="Back arrow"
-        className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
-        style={{ width: "22px", height: "16px" }}
-      />
-      <span style={{ fontSize: "16px", fontWeight: "500" }}>
-        Back to
-      </span>
-      <br />
-      <span 
-        className="home-align"
-        style={{ fontSize: "22px", fontWeight: "500" }}
-      >
-        Home
-      </span>
-    </div>
-  </a>
+            {/* Sidebar Desktop for Sustainable Page */}
+            <div className="col-span-2 w-[10rem] sidebar-desktop border-r border-gray-300 max-md:hidden md:block">
+              {/* Back to Home */}
+              <a href="/" className="block">
+                <div className="cursor-pointer back-to-home group">
+                  <img
+                    src={backtohome}
+                    alt="Back arrow"
+                    className="arrow inline-block align-middle mr-1 transition-transform duration-300 ease-in-out group-hover:-translate-x-2"
+                    style={{ width: "22px", height: "16px" }}
+                  />
+                  <span style={{ fontSize: "16px", fontWeight: "500" }}>
+                    Back to
+                  </span>
+                  <br />
+                  <span
+                    className="home-align"
+                    style={{ fontSize: "22px", fontWeight: "500" }}
+                  >
+                    Home
+                  </span>
+                </div>
+              </a>
 
-  {/* Navigation Items */}
-  <nav aria-label="Main navigation">
-    <ul className="overflow-hidden list-none p-0 m-0">
-      {/* Interview Prep Series - Top Level */}
-      <li className={`border-t border-b border-gray-300 border-l-0 bg-white hover:bg-gray-50 ${
-        currentRoute === "/interview-prep-series" ? "mr-[-1px]" : ""
-      }`}>
-        <div className={currentRoute === "/interview-prep-series" ? "" : "border-r-4 border-r-gray-400"}>
-          <a 
-            href="/interview-prep-series"
-            className={`
+              {/* Navigation Items */}
+              <nav aria-label="Main navigation">
+                <ul className="overflow-hidden list-none p-0 m-0">
+                  {/* Interview Prep Series - Top Level */}
+                  <li
+                    className={`border-t border-b border-gray-300 border-l-0 bg-white hover:bg-gray-50 ${
+                      currentRoute === "/interview-prep-series"
+                        ? "mr-[-1px]"
+                        : ""
+                    }`}
+                  >
+                    <div
+                      className={
+                        currentRoute === "/interview-prep-series"
+                          ? ""
+                          : "border-r-4 border-r-gray-400"
+                      }
+                    >
+                      <a
+                        href="/interview-prep-series"
+                        className={`
               flex items-center px-3 py-2
               min-h-[32px]
               w-full
@@ -504,21 +528,29 @@ const Sustainable = () => {
                   : "text-gray-500 font-normal hover:text-gray-700"
               }
             `}
-          >
-            Interview Prep Series
-          </a>
-        </div>
-      </li>
+                      >
+                        Interview Prep Series
+                      </a>
+                    </div>
+                  </li>
 
-      {/* ACCA Flashcards - Top Level with Children */}
-      <li className={`border-b border-gray-300 border-l-0 bg-white ${
-        currentRoute === "/acca-flashcards" ? "mr-[-1px]" : ""
-      }`}>
-        {/* ACCA Flashcards Parent Link - Conditional border */}
-        <div className={currentRoute === "/acca-flashcards" ? "" : "border-r-4 border-r-gray-400"}>
-          <a 
-            href="/acca-flashcards"
-            className={`
+                  {/* ACCA Flashcards - Top Level with Children */}
+                  <li
+                    className={`border-b border-gray-300 border-l-0 bg-white ${
+                      currentRoute === "/acca-flashcards" ? "mr-[-1px]" : ""
+                    }`}
+                  >
+                    {/* ACCA Flashcards Parent Link - Conditional border */}
+                    <div
+                      className={
+                        currentRoute === "/acca-flashcards"
+                          ? ""
+                          : "border-r-4 border-r-gray-400"
+                      }
+                    >
+                      <a
+                        href="/acca-flashcards"
+                        className={`
               flex items-center px-3 py-2
               min-h-[32px]
               w-full
@@ -529,27 +561,30 @@ const Sustainable = () => {
                   : "text-gray-500 font-normal hover:text-gray-700"
               }
             `}
-          >
-            ACCA Flashcards
-          </a>
-        </div>
+                      >
+                        ACCA Flashcards
+                      </a>
+                    </div>
 
-        {/* ACCA Flashcards Children - Nested list with NO border */}
-        <ul className="list-none p-0 m-0 border-t border-gray-200">
-          {[
-            { path: "/sustainable-business", label: "Sustainable Business" },
-            { path: "/innovative-tech", label: "Innovative Tech" },
-            { path: "/future-skills", label: "Future Skills" },
-          ].map((item) => (
-            <li
-              key={item.path}
-              className={`border-b border-gray-200 last:border-b-0 bg-white hover:bg-gray-50 ${
-                currentRoute === item.path ? "mr-[-1px]" : ""
-              }`}
-            >
-              <a 
-                href={item.path}
-                className={`
+                    {/* ACCA Flashcards Children - Nested list with NO border */}
+                    <ul className="list-none p-0 m-0 border-t border-gray-200">
+                      {[
+                        {
+                          path: "/sustainable-business",
+                          label: "Sustainable Business",
+                        },
+                        { path: "/innovative-tech", label: "Innovative Tech" },
+                        { path: "/future-skills", label: "Future Skills" },
+                      ].map((item) => (
+                        <li
+                          key={item.path}
+                          className={`border-b border-gray-200 last:border-b-0 bg-white hover:bg-gray-50 ${
+                            currentRoute === item.path ? "mr-[-1px]" : ""
+                          }`}
+                        >
+                          <a
+                            href={item.path}
+                            className={`
                   flex items-center px-3 py-2
                   min-h-[32px]
                   w-full
@@ -561,16 +596,16 @@ const Sustainable = () => {
                       : "text-gray-500 font-normal hover:text-gray-700"
                   }
                 `}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </li>
-    </ul>
-  </nav>
-</div>
+                          >
+                            {item.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
 
             {/* Sidebar Mobile*/}
             <div className="w-screen max-w-none col-span-2 space-y-0 sidebar-mobile display-side relative left-1/2 -translate-x-1/2 sm:static sm:w-full sm:max-w-full">
@@ -709,9 +744,16 @@ const Sustainable = () => {
                           <button
                             ref={(el) => (buttonRefs.current[iconNumber] = el)}
                             onClick={() => handleIconClick(iconNumber)}
+                            aria-label={
+                              contentData[activeTab as keyof typeof contentData]
+                                .popupImages[iconNumber - 1].iconLabel
+                            }
                             className="w-7 h-7 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200 group"
                           >
-                            <Plus className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis" />
+                            <Plus
+                              className="h-5 w-5 border border-[#CF001B] text-[#CF001B] rounded-full font-bold cssforthis"
+                              aria-hidden="true"
+                            />
                           </button>
 
                           {/* Popup for current icon */}
@@ -792,10 +834,14 @@ const Sustainable = () => {
                     {themes.map((theme) => (
                       <div key={theme.id} className="w-1/2 overflow-hidden">
                         <a
-                          href={theme.id === 1 ? "/innovative-tech" : "/future-skills"}
+                          href={
+                            theme.id === 1
+                              ? "/innovative-tech"
+                              : "/future-skills"
+                          }
                           className="cursor-pointer block"
                         >
-                         <div className="relative">
+                          <div className="relative">
                             {/* Image */}
                             <img
                               src={theme.image}
