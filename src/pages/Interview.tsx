@@ -31,6 +31,7 @@ import car from "../assets/image/car.pdf";
 import kad from "../assets/image/kad.pdf";
 import dla from "../assets/image/dla.pdf";
 import reflect from "../assets/image/reflect.png";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 
 const Interview = () => {
   const navigate = useNavigate();
@@ -72,7 +73,8 @@ const Interview = () => {
       img: Impactfulcv,
       title: "Create an impactful CV",
       desc: "Craft a CV that stands out and showcases your skills and experience.",
-      alt: "Video thumbnail: A man in a white shirt speaking about creating an impactful CV. Click to play the video.",
+      alt: "Man in a white shirt speaking about creating an impactful CV",
+      iconLabel: "Play video on creating an impactful CV",
       additionalInfo: (
         <>
           Download our sample introductory letter and email template to
@@ -104,7 +106,8 @@ const Interview = () => {
       img: firstimpression,
       title: "Make a great first impression",
       desc: "Learn how to build confidence and present yourself professionally for interviews.",
-      alt: "Video thumbnail: A woman in a white shirt speaking about making a great first impression. Click to play the video.",
+      alt: "Woman in a white shirt speaking about making a great first impression",
+      iconLabel: "Play video on making a great first impression",
       urls: {
         india: "https://www.youtube.com/embed/La_bgTB2KpQ",
         global:
@@ -119,7 +122,8 @@ const Interview = () => {
       img: linkedin,
       title: "Crafting a strong LinkedIn profile",
       desc: "Learn to craft a powerful LinkedIn profile that gets you noticed.",
-      alt: "Video thumbnail: Video thumbnail: A lady and a man speaking on a split screen about crafting a strong LinkedIn profile. Click to play.",
+      alt: "Woman and man on split screen speaking about crafting a strong LinkedIn profile",
+      iconLabel: "Play video on crafting a strong LinkedIn profile",
       urls: {
         india:
           "https://www.youtube-nocookie.com/embed/VOj5X9UM6u0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=11",
@@ -135,7 +139,8 @@ const Interview = () => {
       img: dressing,
       title: "Dressing for interview success",
       desc: "Discover how the right attire and grooming can boost your confidence.",
-      alt: "Video thumbnail: A woman in a blue top speaking about dressing for interview success. Click to play the video.",
+      alt: "Woman in a blue top speaking about dressing for interview success",
+      iconLabel: "Play video on dressing for interview success",
       urls: {
         india: "https://www.youtube.com/embed/HWGRJMSFNtQ",
         global:
@@ -150,7 +155,8 @@ const Interview = () => {
       img: crafting1,
       title: "Crafting a strong introduction",
       desc: "Learn to craft an introduction that highlights your value and makes an impact.",
-      alt: "Video thumbnail: A man in a white shirt smiling about crafting a strong introduction. Click to play the video.",
+      alt: "Man in a white shirt smiling while speaking about crafting a strong introduction",
+      iconLabel: "Play video on crafting a strong introduction",
       urls: {
         india:
           "https://www.youtube.com/embed/5oAyw8_wkJA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=9",
@@ -166,7 +172,8 @@ const Interview = () => {
       img: questions1,
       title: "Questions on challenges faced",
       desc: "Learn to use the CAR model to answer tough questions with confidence.",
-      alt: "Video thumbnail: A man in a dark shirt speaking about challenges faced in an interview. Click to play the video.",
+      alt: "Man in a dark shirt speaking about challenges faced in interviews",
+      iconLabel: "Play video on handling questions about challenges faced",
       additionalInfo: (
         <>
           <a
@@ -197,7 +204,8 @@ const Interview = () => {
       img: stregnth,
       title: "Share strengths and growth areas",
       desc: "Learn to be authentic and show growth when discussing strengths and weaknesses.",
-      alt: "Video thumbnail: Two presenters, a woman smiling and a man giving an 'OK' sign, on sharing strengths. Click to play.",
+      alt: "Two presenters, a woman smiling and a man giving an OK sign, discussing sharing strengths",
+      iconLabel: "Play video on sharing strengths and growth areas",
       urls: {
         india:
           "https://www.youtube.com/embed/x1dczGAiAdM?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=7",
@@ -213,7 +221,8 @@ const Interview = () => {
       img: learning,
       title: "Speak with impact about your learning",
       desc: "Learn to use the DLA model to showcase your skills and learning with impact.",
-      alt: "Video thumbnail of a woman speaking about learning and career impact. Click to play the video.",
+      alt: "Woman speaking about learning and career impact",
+      iconLabel: "Play video on speaking with impact about your learning",
       additionalInfo: (
         <>
           <a
@@ -244,7 +253,8 @@ const Interview = () => {
       img: company,
       title: "Align with company values",
       desc: "Learn the KAD model to showcase your knowledge, attitude and drive.",
-      alt: "Video thumbnail: Two ladies ladies on a split screen discussing aligning with company values. Click to play the video.",
+      alt: "Two women on split screen discussing aligning with company values",
+      iconLabel: "Play video on aligning with company values",
       additionalInfo: (
         <>
           <a
@@ -276,7 +286,8 @@ const Interview = () => {
       img: conversation,
       title: "Navigate salary and growth conversations",
       desc: "Learn to navigate salary and career growth conversations with confidence.",
-      alt: "Video thumbnail: A man wearing a blue shirt discussing salary and growth conversations. Click to play the video.",
+      alt: "Man in a blue shirt discussing salary and growth conversations",
+      iconLabel: "Play video on navigating salary and growth conversations",
       urls: {
         india:
           "https://www.youtube.com/embed/Vt-3DNffKqY?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=6",
@@ -292,7 +303,8 @@ const Interview = () => {
       img: expertise,
       title: "Address questions beyond your expertise",
       desc: "Learn to show your adaptability and growth mindset in an interview.",
-      alt: "Video thumbnail: Three presenters on a split screen discussing questions beyond your expertise. Click to play.",
+      alt: "Three presenters on split screen discussing questions beyond your expertise",
+      iconLabel: "Play video on addressing questions beyond your expertise",
       urls: {
         india:
           "https://www.youtube.com/embed/Oiu77R4y6LA?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=4",
@@ -308,7 +320,8 @@ const Interview = () => {
       img: asking2,
       title: "Ask the right questions",
       desc: "Learn what questions to ask in an interview to show initiative.",
-      alt: "Video thumbnail: A woman speaking about asking the right questions. Click to play the video.",
+      alt: "Woman speaking about asking the right questions",
+      iconLabel: "Play video on asking the right questions",
       urls: {
         india:
           "https://www.youtube.com/embed/bAuMjFsX1b0?list=PLECughgtWWpTUwbD0uwK3EUKVdaUyQLN_&index=3",
@@ -324,7 +337,8 @@ const Interview = () => {
       img: practice,
       title: "Top interview practice tips",
       desc: "Master your interview with our step-by-step guide to effective practice.",
-      alt: "Video thumbnail: A man in a dark shirt speaking about top interview practice tips. Click to play the video.",
+      alt: "Man in a dark shirt speaking about top interview practice tips",
+      iconLabel: "Play video on top interview practice tips",
       urls: {
         india: "https://www.youtube.com/embed/sg3mZQaniF0",
         global:
@@ -339,7 +353,8 @@ const Interview = () => {
       img: reflect,
       title: "Reflect after your interview",
       desc: "Learn to manage post-interview stress and turn waiting into learning.",
-      alt: "Video thumbnail: Four presenters on a quad split screen speaking about reflecting after an interview. Click to play.",
+      alt: "Four presenters on quad split screen speaking about reflecting after an interview",
+      iconLabel: "Play video on reflecting after your interview",
       urls: {
         india: "https://www.youtube.com/embed/lZ6123JBNdg",
         global:
@@ -451,7 +466,9 @@ const Interview = () => {
                   {/* Interview Prep Series - Top Level (Active on this page) */}
                   <li
                     className={`border-t border-b border-gray-300 border-l-0 bg-white hover:bg-gray-50 ${
-                      currentRoute === "/interview-prep-series" ? "mr-[-1px]" : ""
+                      currentRoute === "/interview-prep-series"
+                        ? "mr-[-1px]"
+                        : ""
                     }`}
                   >
                     <div
@@ -543,15 +560,18 @@ const Interview = () => {
                         <div
                           className="absolute inset-0"
                           style={{ backgroundColor: "rgba(0, 0, 0, 0.45)" }}
+                          aria-hidden="true"
                         ></div>
                         <button
                           onClick={() => handlePlayVideo(video)}
+                          aria-label={video.iconLabel}
                           className="absolute inset-0 flex items-center justify-center"
                         >
                           <div className="w-auto h-auto flex items-center justify-center hover:scale-110 transition-transform">
                             <img
                               src={videoicon}
-                              alt="Play video"
+                              alt=""
+                              aria-hidden="true"
                               className="videoicon"
                             />
                           </div>
