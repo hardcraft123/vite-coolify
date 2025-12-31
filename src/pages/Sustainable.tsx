@@ -172,6 +172,8 @@ const Sustainable = () => {
       learnMoreId: "sblm1",
       downloadLink: swflashcard1, // What tab download link
       learnMoreLink: Learn_more, // What tab learn more link
+      flashcardContent:"Download the flashcard on What is Sustainable Business?  (PDF file, 348 KB)",
+      reportLinkContent:"Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
       visibleIcons: [1, 2, 3], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-4 left-0", // Top right
@@ -217,6 +219,8 @@ const Sustainable = () => {
       learnMoreId: "sblm2",
       downloadLink: swhyflashcard1, // You can replace this with why-specific PDF when available
       learnMoreLink: Learn_more, // Why tab learn more link - you can change this to a different URL
+      flashcardContent:"Download the flashcard on Why the need to implement sustainability?  (PDF file, 133 KB)",
+      reportLinkContent:"Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
       visibleIcons: [1, 2, 3], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-4 left-4", // Top left
@@ -228,19 +232,22 @@ const Sustainable = () => {
           id: 1,
           src: why0,
           alt: "81% of global finance professionals say significant change is needed to reach net-zero by source ACCA and IMA Global Economic Conditions Survey, Q2 2022.",
-          iconLabel: "Click to view the Global Economic Conditions Survey findings on net-zero goals",
+          iconLabel:
+            "Click to view the Global Economic Conditions Survey findings on net-zero goals",
         },
         {
           id: 2,
           src: why000,
           alt: "Quote by Emmeline Skelton, Head of Sustainability at ACCA, about sustainability as a business approach to creating long-term value",
-          iconLabel: "Click to read the quote on Sustainable Business by Emmeline Skelton, Head of Sustainability at ACCA",
+          iconLabel:
+            "Click to read the quote on Sustainable Business by Emmeline Skelton, Head of Sustainability at ACCA",
         },
         {
           id: 3,
           src: why00,
           alt: "Infographic showing five business priorities: climate and sustainability, talent, information assets, digitalized customers, and supply chains, all linked by continuous transformation",
-          iconLabel: "Click to view the infographic showing continuous transformation for an organization",
+          iconLabel:
+            "Click to view the infographic showing continuous transformation for an organization",
         },
       ],
       popupSizes: {
@@ -260,6 +267,8 @@ const Sustainable = () => {
       learnMoreId: "sblm3",
       downloadLink: swhoflashcard1, // You can replace this with who-specific PDF when available
       learnMoreLink: Learn_more, // Who tab learn more link - you can change this to a different URL
+      flashcardContent:"Download the flashcard on Who creates the ESG framework? (PDF file, 146 KB)",
+      reportLinkContent:"Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
       visibleIcons: [1], // Only show icons 1 and 2 for this tab
       iconPositions: {
         1: "top-1/2 left-4 transform -translate-y-1/2", // Middle left
@@ -269,7 +278,8 @@ const Sustainable = () => {
           id: 1,
           src: who0,
           alt: "Quote by Emmeline Skelton, Head of Sustainability at ACCA, on the necessity of accountancy and finance professionals for ESG clarity and green transition funding",
-          iconLabel: "Click to read the quote by Emmeline Skelton on the necessity of accountancy and finance professionals for ESG clarity",
+          iconLabel:
+            "Click to read the quote by Emmeline Skelton on the necessity of accountancy and finance professionals for ESG clarity",
         },
       ],
       popupSizes: {
@@ -287,6 +297,8 @@ const Sustainable = () => {
       learnMoreId: "sblm4",
       downloadLink: swhflashcard1, // You can replace this with where-specific PDF when available
       learnMoreLink: Learn_more, // Where tab learn more link - you can change this to a different URL
+      flashcardContent:"Download the flashcard on Where does accountancy play a role in ESG? (PDF file, 104 KB)",
+      reportLinkContent:"Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
       visibleIcons: [1, 2, 3], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-0 left-0", // Top left
@@ -298,19 +310,22 @@ const Sustainable = () => {
           id: 1,
           src: where0,
           alt: "Survey statistic: 63% of finance professionals consider using green finance but lack the internal skills to support it effectively, based on the Global Economic Conditions Survey",
-          iconLabel: "Click to view the Global Economic Conditions Survey findings on green finance skills",
+          iconLabel:
+            "Click to view the Global Economic Conditions Survey findings on green finance skills",
         },
         {
           id: 2,
           src: where000,
           alt: "List of five ways to drive sustainability: Help define net-zero targets, Develop ESG strategies, Identify costs and opportunities, Enhance green finance understanding, and Set policies for ESG data",
-          iconLabel: "Click to learn the five ways to drive Sustainable Business",
+          iconLabel:
+            "Click to learn the five ways to drive Sustainable Business",
         },
         {
           id: 3,
           src: where00,
           alt: "List of 12 roles of a finance professional in ESG, including assessing maturity, defining models, implementing strategies, and managing data",
-          iconLabel: "Click to learn about the role of accounting and finance professionals in ESG",
+          iconLabel:
+            "Click to learn about the role of accounting and finance professionals in ESG",
         },
       ],
       popupSizes: {
@@ -325,11 +340,13 @@ const Sustainable = () => {
         "Organisations embed sustainability by aligning ESG goals with strategy, ensuring governance oversight, using credible data, adopting green finance, and building team capabilities. Finance professionals play a key role in integrating ESG across planning, risk and reporting.",
       image: How,
       altText:
-        "Close-up of a finger pointing at complex numerical data on a spreadsheet", 
+        "Close-up of a finger pointing at complex numerical data on a spreadsheet",
       downloadId: "sbdf5",
       learnMoreId: "sblm5",
       downloadLink: shflashcard1, // You can replace this with how-specific PDF when available
       learnMoreLink: Learn_more, // How tab learn more link - you can change this to a different URL
+      flashcardContent:"Download the flashcard on How do organisations embed sustainability? (PDF file, 137 KB)",
+      reportLinkContent:"Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
       visibleIcons: [1, 2], // Only show icons 1 and 2 for this tab
       iconPositions: {
         1: "bottom-4 left-4", // Bottom left
@@ -340,13 +357,15 @@ const Sustainable = () => {
           id: 1,
           src: how00,
           alt: "Quote by Emmeline Skelton, Head of Sustainability at ACCA, about defining net-zero strategies and setting time-bound targets relevant to the value chain",
-          iconLabel: "Click to read the quote on the sustainability journey by Emmeline Skelton, Head of Sustainability at ACCA",
+          iconLabel:
+            "Click to read the quote on the sustainability journey by Emmeline Skelton, Head of Sustainability at ACCA",
         },
         {
           id: 2,
           src: how0,
           alt: "Diagram outlining the 8-step sustainability journey: Establish ESG strategy, Set targets, Define transition finance requirements, Enable ESG data management, and Establish ESG protocols and controls",
-          iconLabel: "Click to view the 8-step Sustainability Journey infographic",
+          iconLabel:
+            "Click to view the 8-step Sustainability Journey infographic",
         },
       ],
       popupSizes: {
@@ -657,7 +676,7 @@ const Sustainable = () => {
 
                   <p className="tabs-para">{content.description}</p>
 
-                  <div className="flex space-x-6 pt-4 tabs-links">
+                  <div className="flex flex-col space-y-3 pt-0 tabs-links">
                     <span className="flex">
                       <a
                         id={content.learnMoreId}
@@ -666,7 +685,7 @@ const Sustainable = () => {
                         rel="noopener noreferrer"
                         className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                       >
-                        Click here to learn more
+                       PI Report: {contentData[activeTab].reportLinkContent}
                       </a>
                       <span
                         className="inline-flex items-center ml-2 mt-1"
@@ -698,8 +717,8 @@ const Sustainable = () => {
                         rel="noopener noreferrer"
                         className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                       >
-                        Download Flashcard
-                      </a>
+                      Flashcard: {contentData[activeTab].flashcardContent}
+                        </a>
                       <span
                         className="inline-flex items-center ml-2 mt-1"
                         style={{ color: "rgb(200, 0, 0)" }}

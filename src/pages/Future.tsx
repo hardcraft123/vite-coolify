@@ -208,6 +208,8 @@ const future = () => {
       downloadLink: fwhatflashcard,
       learnMoreLink: futurewhat2, // What tab learn more link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      flashcardContent:"Download the flashcard on What are the key qualities of a finance leader? (PDF file, 455 KB)",
+      reportLinkContent:"Download our report on Integrative Thinking: The Guide to Becoming A Value-Adding CFO (PDF file, 4.0 MB)",
       iconPositions: {
         1: "top-6 left-1", // Top left
         2: "top-2 right-7", // Middle right
@@ -243,6 +245,8 @@ const future = () => {
       downloadLink: fwhyflashcard,
       learnMoreLink: futurewhy1, // What tab learn more link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      flashcardContent:"Download the flashcard on  Why must a future-fit CFO be adaptable? (PDF file, 133 KB)",
+      reportLinkContent:"Download our report on Integrative Thinking: The Guide to Becoming A Value-Adding CFO (PDF file, 4.0 MB)",
       iconPositions: {
         1: "top-5 left-1", // Top left
         2: "top-5 right-2", // Middle right
@@ -277,6 +281,8 @@ const future = () => {
       downloadLink: fwhoflashcard,
       learnMoreLink: futurewho1, // What tab learn more link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      flashcardContent:"Download the flashcard on Who are the key recipients of an organisation's value? (PDF file, 124 KB)",
+      reportLinkContent:"Download our report on Chief  Value Officer – The Important Evolution of The CFO (PDF file, 3.8 MB)",
       iconPositions: {
         1: "top-2 left-6", // Top left
         2: "top-2 right-7 transform -translate-y-1/2", // Middle right
@@ -312,6 +318,8 @@ const future = () => {
       downloadLink: fwhereflashcard,
       learnMoreLink: futurewhere2, // What tab learn more link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      flashcardContent:"Download the flashcard on Where are finance professionals' roles changing? (PDF file, 141 KB)",
+      reportLinkContent:"Download our report on Chief  Value Officer – The Important Evolution of The CFO (PDF file, 3.8 MB)",
       iconPositions: {
         1: "top-8 left-8", // Top left
         2: "top-8 right-9 transform -translate-y-1/2", // Middle right
@@ -347,6 +355,8 @@ const future = () => {
       learnMoreLink:
         "https://stories.accaglobal.com/career-ladder-and-variety-of-work/index.html", // What tab learn more link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      flashcardContent:"Download the flashcard on How can organisations improve talent engagement and retention ? (PDF file, 162 KB)",
+      reportLinkContent:"Read our report on Career ladder and variety of work (HTML page)",
       iconPositions: {
         1: "top-5 left-5", // Top left
         2: "top-5 right-9 transform -translate-y-1/2", // Middle right
@@ -670,7 +680,7 @@ const future = () => {
 
                   <p className="tabs-para">{content.description}</p>
 
-                  <div className="flex space-x-6 pt-4 tabs-links">
+                  <div className="flex flex-col space-y-3 pt-0 tabs-links">
                     <span className="flex">
                       <a
                         id={content.learnMoreId}
@@ -679,7 +689,7 @@ const future = () => {
                         rel="noopener noreferrer"
                         className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                       >
-                        Click here to learn more
+                        PI Report: {contentData[activeTab].reportLinkContent}
                       </a>
                       <span
                         className="inline-flex items-center ml-2 mt-1"
@@ -711,7 +721,7 @@ const future = () => {
                         rel="noopener noreferrer"
                         className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                       >
-                        Download Flashcard
+                        Flashcard: {contentData[activeTab].flashcardContent}
                       </a>
                       <span
                         className="inline-flex items-center ml-2 mt-1"

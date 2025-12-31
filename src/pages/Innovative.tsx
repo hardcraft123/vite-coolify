@@ -175,6 +175,8 @@ const Innovative = () => {
       downloadLink: iwhatflashcard1, // What tab download link
       learnMoreLink: innovatewhat, // What tab learn more link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      flashcardContent:"Download the flashcard on What are the skills needed for AI literacy?  (PDF file, 144 KB)",
+      reportLinkContent:"Download our report on Artificial Intelligence in the Finance Profession (PDF file, 1.22 MB)",
       iconPositions: {
         1: "top-2 left-1", // Top left
         2: "top-2 right-1 transform -translate-y-1/2", // Middle right
@@ -215,6 +217,8 @@ const Innovative = () => {
       learnMoreLink:
         "https://www.accaglobal.com/gb/en/professional-insights/technology/digital-horizons.html", // External Learn More link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      flashcardContent:"Download the flashcard on Why are accountants still essential? (PDF file, 133KB)",
+      reportLinkContent:"Download our report on Digital Horizon: Technology, Innovation, and the Futures of Accounting (PDF file, 3.38 MB)",
       iconPositions: {
         1: "top-2 left-1", // Top left
         2: "top-2 right-1 transform -translate-y-1/2", // Middle right
@@ -261,6 +265,8 @@ const Innovative = () => {
       learnMoreLink:
         "https://stories.accaglobal.com/ai-monitor_talent-skills-focus/responsible-ai-adoption/index.html", // What tab learn more link
       visibleIcons: [1, 2], // Only show icon 1 for this tab
+      flashcardContent:"Download the flashcard on Who drives AI adoption in accounting? (PDF file, 124KB)",
+      reportLinkContent:"Read our report on How Everyone has a role to play in responsible adoption of AI (HTML page)",
       iconPositions: {
         1: "top-1/2 left-1/2 transform -translate-y-1/2", // Middle left
       },
@@ -305,6 +311,8 @@ const Innovative = () => {
       learnMoreLink:
         "https://www.accaglobal.com/gb/en/professional-insights/technology/digital-horizons.html", // What tab learn more link
       visibleIcons: [1, 2], // Configure which icons are visible for this tab
+      flashcardContent:"Download the flashcard on Where does AI add value? (PDF file, 129KB)",
+      reportLinkContent:"Download our report on Digital Horizon: Technology, Innovation, and the Futures of Accounting (PDF file, 3.38 MB)",
       iconPositions: {
         1: "top-0 left-4", // Top left
         2: "bottom-0 left-4", // Bottom left
@@ -350,6 +358,8 @@ const Innovative = () => {
       learnMoreLink:
         "https://www.accaglobal.com/gb/en/professional-insights/technology/digital-horizons.html", // What tab learn more link
       visibleIcons: [1, 2], // Only show icons 1 and 2 for this tab
+      flashcardContent:"Download the flashcard on How do leading firms adopt AI successfully? (PDF file, 133KB)",
+      reportLinkContent:"Download our report on Digital Horizon: Technology, Innovation, and the Futures of Accounting (PDF file, 3.38 MB)",
       iconPositions: {
         1: "bottom-5 left-4", // Bottom left
         2: "top-5 right-5", // Top right
@@ -696,8 +706,7 @@ const Innovative = () => {
                         rel="noopener noreferrer"
                         className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                       >
-                        PI Report: AI (Artificial Intelligence) in the Finance
-                        Profession (PDF file 1.22 mb size)
+                        PI Report: {contentData[activeTab].reportLinkContent}
                       </a>
                       <span
                         className="inline-flex items-center ml-1"
@@ -729,8 +738,7 @@ const Innovative = () => {
                         rel="noopener noreferrer"
                         className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                       >
-                        Flashcard: What are the skills needed for AI literacy?
-                        (PDF file, 143 KB size)
+                          Flashcard: {contentData[activeTab].flashcardContent}
                       </a>
                       <span
                         className="inline-flex items-center ml-2 mt-1"

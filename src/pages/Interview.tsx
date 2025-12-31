@@ -76,21 +76,17 @@ const Interview = () => {
       alt: "Man in a white shirt speaking about creating an impactful CV",
       iconLabel: "Play video on creating an impactful CV",
       additionalInfo: (
-        <>
-          Download our sample introductory letter and email template to
-          kickstart your job application. You can{" "}
-          <a
-            id="download-vid1"
-            href={sample}
-            target="_blank"
-            rel="noopener noreferrer"
-            className=" underline"
-            style={{ color: "#c80000" }}
-          >
-            download
-          </a>{" "}
-          the template here.
-        </>
+        <a
+          id="download-vid1"
+          href={sample}
+          target="_blank"
+          rel="noopener noreferrer"
+          className=" underline"
+          style={{ color: "#c80000" }}
+        >
+          Download our sample introductory letter and email template (PDF file,
+          59.8 KB)
+        </a>
       ),
       urls: {
         india: "https://www.youtube.com/embed/6-liW6XjIHI",
@@ -175,19 +171,16 @@ const Interview = () => {
       alt: "Man in a dark shirt speaking about challenges faced in interviews",
       iconLabel: "Play video on handling questions about challenges faced",
       additionalInfo: (
-        <>
-          <a
-            id="download-vid6"
-            href={car}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-            style={{ color: "#c80000" }}
-          >
-            Download
-          </a>{" "}
-          the worksheet and ace your next interview.
-        </>
+        <a
+          id="download-vid6"
+          href={car}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+          style={{ color: "#c80000" }}
+        >
+          Download the CAR model worksheet (PDF file, 91.3 KB)
+        </a>
       ),
       urls: {
         india:
@@ -224,19 +217,16 @@ const Interview = () => {
       alt: "Woman speaking about learning and career impact",
       iconLabel: "Play video on speaking with impact about your learning",
       additionalInfo: (
-        <>
-          <a
-            id="download-vid8"
-            href={dla}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-            style={{ color: "#c80000" }}
-          >
-            Download
-          </a>{" "}
-          the worksheet here.
-        </>
+        <a
+          id="download-vid8"
+          href={dla}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+          style={{ color: "#c80000" }}
+        >
+          Download the DLA model worksheet (PDF file, 93.4 KB)
+        </a>
       ),
       urls: {
         india:
@@ -256,20 +246,16 @@ const Interview = () => {
       alt: "Two women on split screen discussing aligning with company values",
       iconLabel: "Play video on aligning with company values",
       additionalInfo: (
-        <>
-          <a
-            id="download-vid9"
-            href={kad}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-            style={{ color: "#c80000" }}
-          >
-            Download
-          </a>{" "}
-          our KAD model template to apply what you've learned and start
-          preparing with confidence.
-        </>
+        <a
+          id="download-vid9"
+          href={kad}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+          style={{ color: "#c80000" }}
+        >
+          Download the KAD model template (PDF file, 94.7 KB)
+        </a>
       ),
       urls: {
         india:
