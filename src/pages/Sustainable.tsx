@@ -172,8 +172,10 @@ const Sustainable = () => {
       learnMoreId: "sblm1",
       downloadLink: swflashcard1, // What tab download link
       learnMoreLink: Learn_more, // What tab learn more link
-      flashcardContent:"Download the flashcard on What is Sustainable Business?  (PDF file, 348 KB)",
-      reportLinkContent:"Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
+      flashcardContent:
+        "Download the flashcard on What is Sustainable Business?  (PDF file, 348 KB)",
+      reportLinkContent:
+        "Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
       visibleIcons: [1, 2, 3], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-4 left-0", // Top right
@@ -219,8 +221,10 @@ const Sustainable = () => {
       learnMoreId: "sblm2",
       downloadLink: swhyflashcard1, // You can replace this with why-specific PDF when available
       learnMoreLink: Learn_more, // Why tab learn more link - you can change this to a different URL
-      flashcardContent:"Download the flashcard on Why the need to implement sustainability?  (PDF file, 133 KB)",
-      reportLinkContent:"Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
+      flashcardContent:
+        "Download the flashcard on Why the need to implement sustainability?  (PDF file, 133 KB)",
+      reportLinkContent:
+        "Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
       visibleIcons: [1, 2, 3], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-4 left-4", // Top left
@@ -267,8 +271,10 @@ const Sustainable = () => {
       learnMoreId: "sblm3",
       downloadLink: swhoflashcard1, // You can replace this with who-specific PDF when available
       learnMoreLink: Learn_more, // Who tab learn more link - you can change this to a different URL
-      flashcardContent:"Download the flashcard on Who creates the ESG framework? (PDF file, 146 KB)",
-      reportLinkContent:"Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
+      flashcardContent:
+        "Download the flashcard on Who creates the ESG framework? (PDF file, 146 KB)",
+      reportLinkContent:
+        "Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
       visibleIcons: [1], // Only show icons 1 and 2 for this tab
       iconPositions: {
         1: "top-1/2 left-4 transform -translate-y-1/2", // Middle left
@@ -297,8 +303,10 @@ const Sustainable = () => {
       learnMoreId: "sblm4",
       downloadLink: swhflashcard1, // You can replace this with where-specific PDF when available
       learnMoreLink: Learn_more, // Where tab learn more link - you can change this to a different URL
-      flashcardContent:"Download the flashcard on Where does accountancy play a role in ESG? (PDF file, 104 KB)",
-      reportLinkContent:"Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
+      flashcardContent:
+        "Download the flashcard on Where does accountancy play a role in ESG? (PDF file, 104 KB)",
+      reportLinkContent:
+        "Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
       visibleIcons: [1, 2, 3], // Configure which icons are visible for this tab
       iconPositions: {
         1: "top-0 left-0", // Top left
@@ -345,8 +353,10 @@ const Sustainable = () => {
       learnMoreId: "sblm5",
       downloadLink: shflashcard1, // You can replace this with how-specific PDF when available
       learnMoreLink: Learn_more, // How tab learn more link - you can change this to a different URL
-      flashcardContent:"Download the flashcard on How do organisations embed sustainability? (PDF file, 137 KB)",
-      reportLinkContent:"Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
+      flashcardContent:
+        "Download the flashcard on How do organisations embed sustainability? (PDF file, 137 KB)",
+      reportLinkContent:
+        "Download our report on Green Finance Skills: The Guide (PDF file, 7.2MB)",
       visibleIcons: [1, 2], // Only show icons 1 and 2 for this tab
       iconPositions: {
         1: "bottom-4 left-4", // Bottom left
@@ -683,9 +693,10 @@ const Sustainable = () => {
                         href={content.learnMoreLink}
                         target="_blank"
                         rel="noopener noreferrer"
+                        style={{ fontSize: "15px" }}
                         className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                       >
-                       PI Report: {contentData[activeTab].reportLinkContent}
+                        PI Report: {contentData[activeTab].reportLinkContent}
                       </a>
                       <span
                         className="inline-flex items-center ml-2 mt-1"
@@ -715,10 +726,11 @@ const Sustainable = () => {
                         href={content.downloadLink}
                         target="_blank"
                         rel="noopener noreferrer"
+                        style={{ fontSize: "15px" }}
                         className="text-red-600 hover:text-red-700 font-medium text-sm transition-colors duration-200 flex items-center"
                       >
-                      Flashcard: {contentData[activeTab].flashcardContent}
-                        </a>
+                        Flashcard: {contentData[activeTab].flashcardContent}
+                      </a>
                       <span
                         className="inline-flex items-center ml-2 mt-1"
                         style={{ color: "rgb(200, 0, 0)" }}
