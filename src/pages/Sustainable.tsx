@@ -134,7 +134,7 @@ const Sustainable = () => {
       icon: (
         <img
           src={bulb}
-          alt="Why"
+          alt=""
           className=" object-contain why-buttons"
           style={{ width: "10px" }}
         />
@@ -146,7 +146,7 @@ const Sustainable = () => {
       icon: (
         <img
           src={person}
-          alt="person"
+          alt=""
           className="object-contain"
           style={{ width: "15px" }}
         />
@@ -193,13 +193,13 @@ const Sustainable = () => {
         {
           id: 2,
           src: what1,
-          alt: "Quote by John Lelliott OBE, FCCA about the monumental migration to sustainable economies and businesses",
+          alt: "'A monumental migration to sustainable economies and businesses is required, and that is something that we as a profession want to be - and can be - one of the groups driving.' John Lelliott OBE, FCCA. Non-executive Director of the Environment Agency and ACCA Sustainability Global Forum Chair",
           iconLabel: "Click to read the quote by John Lelliott OBE, FCCA",
         },
         {
           id: 3,
           src: what3,
-          alt: "Bar chart showing global regional opportunities based on ACCA and IMA GECS 2023 survey.",
+          alt: "Bar chart showing the percentage of respondents who believe specific opportunities are important for their global region. Economic and Environmental opportunities are the most highly rated at 47% and 46% respectively, followed by Social and Governance at 38% each. 5% of respondents chose None and 1% chose Other. Source: ACCA and IMA GECS (2023).",
           iconLabel:
             "Click to view the bar chart showing global regional opportunities",
         },
@@ -852,9 +852,9 @@ const Sustainable = () => {
 
               {/* Related Themes */}
               <div className="mt-12 theme-css">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Related Themes
-                </h4>
+                </h3>
 
                 {/* Divider line */}
                 <div className="bg-[#CF001B] h-[2px] w-[60px] mb-4"></div>

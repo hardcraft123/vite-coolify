@@ -169,7 +169,7 @@ const future = () => {
       icon: (
         <img
           src={bulb}
-          alt="Why"
+          alt=""
           className=" object-contain why-buttons"
           style={{ width: "10px" }}
         />
@@ -181,7 +181,7 @@ const future = () => {
       icon: (
         <img
           src={person}
-          alt="person"
+          alt=""
           className="object-contain"
           style={{ width: "15px" }}
         />
@@ -855,9 +855,9 @@ const future = () => {
 
               {/* Related Themes */}
               <div className="mt-12 theme-css">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Related Themes
-                </h4>
+                </h3>
 
                 {/* Divider line */}
                 <div className="bg-[#CF001B] h-[2px] w-[60px] mb-4"></div>
