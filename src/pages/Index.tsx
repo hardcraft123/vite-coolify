@@ -373,7 +373,7 @@ const Index = () => {
               Find your next role
             </span>
             <span className="px-4 border-l border-white flex items-center justify-center flex-shrink-0">
-              <img src={right} alt="arrow" className="w-6 h-6" />
+              <img src={right} alt="" className="w-6 h-6" />
             </span>
           </a>
         </div>
