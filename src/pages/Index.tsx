@@ -97,7 +97,7 @@ const Index = () => {
           <div className="bg-[#CF001B] h-[2px] w-[64px] max-[425px]:w-[64px] mb-6"></div>
 
           <p className="">
-            The platform is designed to support both future members and members
+            The platform, part of the ACCA suite of Career Support Services, is designed to support both future members and members
             in developing the skills needed for the future. Download and access
             interactive flashcards on sustainable business, innovative
             technology, and future skills to stay ahead in a world shaped by AI
